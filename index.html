@@ -7,295 +7,175 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-/* ── TOKENS ─────────────────────────────────────────────────── */
 :root {
-  --bg:       #080e1c;
-  --surface:  #0f1829;
-  --card:     #141f33;
-  --border:   rgba(255,255,255,0.07);
-  --gold:     #f5a623;
-  --gold-dim: rgba(245,166,35,0.12);
-  --teal:     #2dd4bf;
-  --txt:      #e8edf5;
-  --txt-2:    #6b7a99;
-  --txt-3:    #3d4f6e;
+  --bg:#080e1c;--surface:#0f1829;--card:#141f33;--border:rgba(255,255,255,0.07);
+  --gold:#f5a623;--teal:#2dd4bf;--txt:#e8edf5;--txt-2:#6b7a99;--txt-3:#3d4f6e;
+  --green:#22c55e;--red:#ef4444;--orange:#f97316;
+  --s-bg:#3d2006;--s-co:#f5a623;--s-bar:#f5a623;
+  --a-bg:#0d2e13;--a-co:#4ade80;--a-bar:#22c55e;
+  --b-bg:#0c1e40;--b-co:#60a5fa;--b-bar:#3b82f6;
+  --c-bg:#1a0d35;--c-co:#a78bfa;--c-bar:#7c3aed;
+  --d-bg:#1a1f2b;--d-co:#94a3b8;--d-bar:#475569;
+  --radius:10px;--font-d:'Space Grotesk',system-ui,sans-serif;
+  --font-m:'JetBrains Mono',monospace;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--txt);font-family:var(--font-d);font-size:15px;line-height:1.6;min-height:100vh}
+.wrap{max-width:960px;margin:0 auto;padding:0 16px 60px}
 
-  --s-bg:  #3d2006; --s-co: #f5a623; --s-bar: #f5a623;
-  --a-bg:  #0d2e13; --a-co: #4ade80; --a-bar: #22c55e;
-  --b-bg:  #0c1e40; --b-co: #60a5fa; --b-bar: #3b82f6;
-  --c-bg:  #1a0d35; --c-co: #a78bfa; --c-bar: #7c3aed;
-  --d-bg:  #1a1f2b; --d-co: #94a3b8; --d-bar: #475569;
+/* HEADER */
+header{border-bottom:1px solid var(--border);padding:20px 0 16px;display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.logo-row{display:flex;align-items:center;gap:10px}
+.site-title{font-size:20px;font-weight:700}
+.site-title span{color:var(--gold)}
+.subtitle{font-size:12px;color:var(--txt-2);margin-top:2px}
+.meta-pill{font-family:var(--font-m);font-size:11px;color:var(--txt-2);background:var(--card);border:1px solid var(--border);border-radius:20px;padding:5px 12px;white-space:nowrap;align-self:center}
+.meta-pill.live{border-color:var(--teal);color:var(--teal)}
+.dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--teal);margin-right:5px;animation:pulse 1.5s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
 
-  --radius: 10px;
-  --font-d: 'Space Grotesk', system-ui, sans-serif;
-  --font-m: 'JetBrains Mono', monospace;
-}
+/* TABS */
+.tabs{display:flex;gap:0;border-bottom:1px solid var(--border);margin:20px 0 0}
+.tab{padding:10px 20px;font-size:13px;font-weight:500;cursor:pointer;color:var(--txt-2);border-bottom:2px solid transparent;transition:all .15s}
+.tab:hover{color:var(--txt)}
+.tab.act{color:var(--gold);border-bottom-color:var(--gold)}
 
-/* ── RESET ───────────────────────────────────────────────────── */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body {
-  background: var(--bg);
-  color: var(--txt);
-  font-family: var(--font-d);
-  font-size: 15px;
-  line-height: 1.6;
-  min-height: 100vh;
-}
+/* STATS */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:16px 0}
+@media(max-width:560px){.stats{grid-template-columns:repeat(2,1fr)}}
+.stat{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:14px 12px;text-align:center}
+.stat-val{font-size:26px;font-weight:700;font-family:var(--font-m);line-height:1}
+.stat-lbl{font-size:11px;color:var(--txt-2);margin-top:4px}
 
-/* ── LAYOUT ──────────────────────────────────────────────────── */
-.wrap { max-width: 900px; margin: 0 auto; padding: 0 16px 60px; }
+/* ACCURACY BAR */
+.acc-bar{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:14px 16px;margin-bottom:16px;display:flex;align-items:center;gap:16px}
+.acc-label{font-size:12px;color:var(--txt-2);white-space:nowrap}
+.acc-track{flex:1;height:8px;background:rgba(255,255,255,0.06);border-radius:4px;overflow:hidden}
+.acc-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--green),var(--teal));transition:width .8s ease}
+.acc-pct{font-family:var(--font-m);font-size:14px;font-weight:600;color:var(--teal);white-space:nowrap}
 
-/* ── HEADER ──────────────────────────────────────────────────── */
-header {
-  border-bottom: 1px solid var(--border);
-  padding: 20px 0 16px;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-.logo-row { display: flex; align-items: center; gap: 10px; }
-.trophy { font-size: 28px; }
-.site-title {
-  font-size: 20px;
-  font-weight: 700;
-  letter-spacing: -0.3px;
-}
-.site-title span { color: var(--gold); }
-.subtitle { font-size: 12px; color: var(--txt-2); margin-top: 2px; }
-.meta-pill {
-  font-family: var(--font-m);
-  font-size: 11px;
-  color: var(--txt-2);
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  padding: 5px 12px;
-  white-space: nowrap;
-  align-self: center;
-}
-.meta-pill.live { border-color: var(--teal); color: var(--teal); }
-.dot { display: inline-block; width: 6px; height: 6px;
-       border-radius: 50%; background: var(--teal);
-       margin-right: 5px; animation: pulse 1.5s infinite; }
-@keyframes pulse {
-  0%,100% { opacity: 1; } 50% { opacity: 0.3; }
-}
+/* FILTERS */
+.filters{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px}
+.fb{border:1px solid var(--border);border-radius:20px;padding:5px 14px;font-size:12px;font-weight:500;cursor:pointer;background:var(--card);color:var(--txt-2);font-family:var(--font-d);transition:all .15s}
+.fb:hover{border-color:var(--gold);color:var(--txt)}
+.fb.act{background:var(--gold);color:#000;border-color:var(--gold);font-weight:600}
 
-/* ── STATS ROW ───────────────────────────────────────────────── */
-.stats {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 8px;
-  margin: 20px 0;
-}
-@media (max-width: 560px) { .stats { grid-template-columns: repeat(2, 1fr); } }
-.stat {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 14px 12px;
-  text-align: center;
-}
-.stat-val {
-  font-size: 28px;
-  font-weight: 700;
-  font-family: var(--font-m);
-  line-height: 1;
-}
-.stat-lbl { font-size: 11px; color: var(--txt-2); margin-top: 4px; }
+/* MATCH GRID */
+.match-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+@media(max-width:560px){.match-grid{grid-template-columns:1fr}}
 
-/* ── FILTERS ─────────────────────────────────────────────────── */
-.filters {
-  display: flex;
-  gap: 6px;
-  flex-wrap: wrap;
-  margin-bottom: 16px;
-}
-.fb {
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  padding: 5px 14px;
-  font-size: 12px;
-  font-weight: 500;
-  font-family: var(--font-d);
-  cursor: pointer;
-  background: var(--card);
-  color: var(--txt-2);
-  transition: all 0.15s;
-}
-.fb:hover { border-color: var(--gold); color: var(--txt); }
-.fb.act { background: var(--gold); color: #000; border-color: var(--gold); font-weight: 600; }
+.mc{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:12px;border-left:3px solid;transition:transform .15s}
+.mc:hover{transform:translateY(-1px)}
+.mc.t-S{border-left-color:var(--s-bar)}
+.mc.t-A{border-left-color:var(--a-bar)}
+.mc.t-B{border-left-color:var(--b-bar)}
+.mc.t-C{border-left-color:var(--c-bar)}
+.mc.t-D{border-left-color:var(--d-bar)}
+.mc.correct{border-color:var(--green);border-width:1px 1px 1px 3px}
+.mc.wrong{border-color:var(--red);border-width:1px 1px 1px 3px}
+.mc.live-now{border-color:var(--orange);border-width:1px 1px 1px 3px;animation:livePulse 2s infinite}
+@keyframes livePulse{0%,100%{border-color:var(--orange)}50%{border-color:#7c3000}}
 
-/* ── MATCH CARD ──────────────────────────────────────────────── */
-.match-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 8px;
-}
-@media (max-width: 560px) { .match-grid { grid-template-columns: 1fr; } }
+.mc-top{display:flex;align-items:center;gap:6px;margin-bottom:6px}
+.mc-rank{font-family:var(--font-m);font-size:11px;color:var(--txt-3);min-width:24px}
+.mc-name{font-size:13px;font-weight:600;flex:1}
+.tier-badge{font-size:10px;font-weight:600;padding:2px 7px;border-radius:20px}
+.t-S .tier-badge{background:var(--s-bg);color:var(--s-co)}
+.t-A .tier-badge{background:var(--a-bg);color:var(--a-co)}
+.t-B .tier-badge{background:var(--b-bg);color:var(--b-co)}
+.t-C .tier-badge{background:var(--c-bg);color:var(--c-co)}
+.t-D .tier-badge{background:var(--d-bg);color:var(--d-co)}
 
-.mc {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 12px;
-  border-left: 3px solid;
-  transition: transform 0.15s, border-color 0.15s;
-}
-.mc:hover { transform: translateY(-1px); }
-.mc.t-S { border-left-color: var(--s-bar); }
-.mc.t-A { border-left-color: var(--a-bar); }
-.mc.t-B { border-left-color: var(--b-bar); }
-.mc.t-C { border-left-color: var(--c-bar); }
-.mc.t-D { border-left-color: var(--d-bar); }
+.mc-meta{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--txt-2);margin-bottom:7px;flex-wrap:wrap}
+.score-badge{font-family:var(--font-m);font-size:13px;font-weight:700;padding:2px 8px;border-radius:6px;background:rgba(255,255,255,0.06);margin-left:4px}
+.score-badge.correct{background:rgba(34,197,94,0.15);color:var(--green)}
+.score-badge.wrong{background:rgba(239,68,68,0.15);color:var(--red)}
+.score-badge.live-sc{background:rgba(249,115,22,0.15);color:var(--orange)}
 
-.mc-top { display: flex; align-items: center; gap: 6px; margin-bottom: 6px; }
-.mc-rank { font-family: var(--font-m); font-size: 11px; color: var(--txt-3); min-width: 24px; }
-.mc-name { font-size: 13px; font-weight: 600; flex: 1; }
-.tier-badge {
-  font-size: 10px; font-weight: 600;
-  padding: 2px 7px; border-radius: 20px;
-}
-.t-S .tier-badge { background: var(--s-bg); color: var(--s-co); }
-.t-A .tier-badge { background: var(--a-bg); color: var(--a-co); }
-.t-B .tier-badge { background: var(--b-bg); color: var(--b-co); }
-.t-C .tier-badge { background: var(--c-bg); color: var(--c-co); }
-.t-D .tier-badge { background: var(--d-bg); color: var(--d-co); }
+.bar-wrap{height:3px;background:rgba(255,255,255,0.06);border-radius:2px;overflow:hidden;margin-bottom:3px}
+.bar-fill{height:100%;border-radius:2px;width:0%;transition:width .8s cubic-bezier(.25,1,.5,1)}
+.t-S .bar-fill{background:var(--s-bar)}.t-A .bar-fill{background:var(--a-bar)}
+.t-B .bar-fill{background:var(--b-bar)}.t-C .bar-fill{background:var(--c-bar)}
+.t-D .bar-fill{background:var(--d-bar)}
+.mc.correct .bar-fill{background:var(--green)}
+.mc.wrong .bar-fill{background:var(--red)}
 
-.mc-meta {
-  display: flex; align-items: center; gap: 6px;
-  font-size: 11px; color: var(--txt-2); margin-bottom: 7px;
-}
-.bar-wrap {
-  height: 3px;
-  background: rgba(255,255,255,0.06);
-  border-radius: 2px;
-  overflow: hidden;
-  margin-bottom: 3px;
-}
-.bar-fill {
-  height: 100%;
-  border-radius: 2px;
-  width: 0%;
-  transition: width 0.8s cubic-bezier(0.25, 1, 0.5, 1);
-}
-.t-S .bar-fill { background: var(--s-bar); }
-.t-A .bar-fill { background: var(--a-bar); }
-.t-B .bar-fill { background: var(--b-bar); }
-.t-C .bar-fill { background: var(--c-bar); }
-.t-D .bar-fill { background: var(--d-bar); }
+.bar-row{display:flex;justify-content:space-between;font-size:10px;color:var(--txt-2)}
+.mc-bet{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:6px;padding:5px 8px;font-size:11px;color:var(--txt-2);margin-top:6px}
+.mc-probs{display:flex;gap:5px;flex-wrap:wrap;margin-top:6px}
+.pp{font-family:var(--font-m);font-size:10px;background:rgba(255,255,255,0.04);border-radius:4px;padding:2px 5px;color:var(--txt-2)}
+.pp.hi{color:var(--teal)}
 
-.bar-row { display: flex; justify-content: space-between; font-size: 10px; color: var(--txt-2); }
-.mc-bet {
-  background: rgba(255,255,255,0.03);
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  padding: 5px 8px;
-  font-size: 11px;
-  color: var(--txt-2);
-  margin-top: 6px;
-}
-.mc-probs {
-  display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px;
-}
-.pp {
-  font-family: var(--font-m);
-  font-size: 10px;
-  background: rgba(255,255,255,0.04);
-  border-radius: 4px;
-  padding: 2px 5px;
-  color: var(--txt-2);
-}
-.pp.hi { color: var(--teal); }
+/* COMMENTARY TOGGLE */
+.comm-btn{display:flex;align-items:center;gap:6px;margin-top:8px;padding:6px 0;font-size:11px;color:var(--txt-3);cursor:pointer;border:none;background:none;width:100%;text-align:left;border-top:1px solid var(--border)}
+.comm-btn:hover{color:var(--txt-2)}
+.comm-btn .arrow{transition:transform .2s;font-size:9px}
+.comm-btn.open .arrow{transform:rotate(180deg)}
+.commentary{display:none;margin-top:8px;font-size:12px;color:var(--txt-2);line-height:1.7}
+.commentary.show{display:block}
+.comm-section{margin-bottom:8px}
+.comm-section strong{color:var(--txt);font-weight:500;display:block;margin-bottom:2px;font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--txt-3)}
+.comm-sources{margin-top:10px;padding-top:8px;border-top:1px solid var(--border)}
+.src-row{display:flex;align-items:center;gap:8px;font-size:10px;color:var(--txt-3);padding:2px 0}
+.src-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+.src-dot.active{background:var(--green)}
+.src-dot.attempted{background:var(--orange)}
+.src-dot.planned{background:var(--txt-3)}
 
-/* ── SECTION TITLE ───────────────────────────────────────────── */
-.section-title {
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--txt-2);
-  margin: 28px 0 12px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.section-title::after {
-  content: '';
-  flex: 1;
-  height: 1px;
-  background: var(--border);
-}
+/* RESULTS TAB */
+.result-summary{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:16px}
+.res-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:14px;text-align:center}
+.res-val{font-size:28px;font-weight:700;font-family:var(--font-m)}
+.res-lbl{font-size:11px;color:var(--txt-2);margin-top:4px}
 
-/* ── TICKET CARD ─────────────────────────────────────────────── */
-.ticket-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-@media (max-width: 560px) { .ticket-grid { grid-template-columns: 1fr; } }
+.result-item{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:12px;margin-bottom:8px}
+.ri-top{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.ri-match{font-size:13px;font-weight:600}
+.ri-score{font-family:var(--font-m);font-size:16px;font-weight:700}
+.ri-details{font-size:11px;color:var(--txt-2);margin-top:5px;display:flex;gap:12px;flex-wrap:wrap}
+.outcome-badge{font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px}
+.outcome-badge.correct{background:rgba(34,197,94,0.15);color:var(--green)}
+.outcome-badge.wrong{background:rgba(239,68,68,0.15);color:var(--red)}
+.outcome-badge.pending{background:rgba(255,255,255,0.05);color:var(--txt-3)}
 
-.tc {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 14px;
-}
-.tc:first-child { border-color: rgba(245,166,35,0.3); }
-.tc-label { font-size: 13px; font-weight: 600; margin-bottom: 3px; }
-.tc-note { font-size: 11px; color: var(--txt-2); margin-bottom: 10px; }
-.tc-events { font-size: 11px; color: var(--txt-2); line-height: 1.9; }
-.ev-row { display: flex; align-items: baseline; gap: 5px; }
-.ev-id {
-  font-family: var(--font-m);
-  font-size: 10px;
-  background: rgba(255,255,255,0.05);
-  border-radius: 3px;
-  padding: 1px 4px;
-  flex-shrink: 0;
-}
-.tc-foot {
-  margin-top: 10px;
-  padding-top: 10px;
-  border-top: 1px solid var(--border);
-  display: flex;
-  justify-content: space-between;
-  font-size: 11px;
-}
-.tc-odds { font-family: var(--font-m); color: var(--gold); font-weight: 600; font-size: 13px; }
-.tc-prob { color: var(--txt-2); }
+/* SOURCES PANEL */
+.sources-panel{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:16px;margin-bottom:12px}
+.sp-title{font-size:13px;font-weight:600;margin-bottom:12px}
+.sp-row{display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:1px solid var(--border)}
+.sp-row:last-child{border-bottom:none}
+.sp-status{display:flex;align-items:center;gap:5px;font-size:11px;min-width:90px;flex-shrink:0;margin-top:2px}
+.sp-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+.sp-dot.active{background:var(--green)}
+.sp-dot.attempted{background:var(--orange)}
+.sp-dot.planned{background:var(--txt-3)}
+.sp-info{flex:1}
+.sp-name{font-size:12px;font-weight:500;color:var(--txt)}
+.sp-desc{font-size:11px;color:var(--txt-2);margin-top:2px}
 
-/* ── FOOTER ──────────────────────────────────────────────────── */
-footer {
-  margin-top: 48px;
-  border-top: 1px solid var(--border);
-  padding-top: 20px;
-  font-size: 11px;
-  color: var(--txt-3);
-  text-align: center;
-  line-height: 1.8;
-}
+/* SECTION */
+.section-title{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--txt-2);margin:24px 0 12px;display:flex;align-items:center;gap:10px}
+.section-title::after{content:'';flex:1;height:1px;background:var(--border)}
 
-/* ── LOADING / ERROR ─────────────────────────────────────────── */
-.loading {
-  display: flex; align-items: center; justify-content: center;
-  height: 200px; color: var(--txt-2); gap: 10px; font-size: 14px;
-}
-.spin {
-  width: 20px; height: 20px;
-  border: 2px solid var(--border);
-  border-top-color: var(--gold);
-  border-radius: 50%;
-  animation: spin 0.7s linear infinite;
-}
-@keyframes spin { to { transform: rotate(360deg); } }
-.err-msg {
-  background: rgba(239,68,68,0.08);
-  border: 1px solid rgba(239,68,68,0.2);
-  border-radius: var(--radius);
-  padding: 16px;
-  color: #fca5a5;
-  font-size: 13px;
-}
+/* TICKET */
+.ticket-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+@media(max-width:560px){.ticket-grid{grid-template-columns:1fr}}
+.tc{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:14px}
+.tc:first-child{border-color:rgba(245,166,35,.3)}
+.tc-label{font-size:13px;font-weight:600;margin-bottom:3px}
+.tc-note{font-size:11px;color:var(--txt-2);margin-bottom:10px}
+.tc-events{font-size:11px;color:var(--txt-2);line-height:1.9}
+.ev-id{font-family:var(--font-m);font-size:10px;background:rgba(255,255,255,0.05);border-radius:3px;padding:1px 4px}
+.tc-foot{margin-top:10px;padding-top:10px;border-top:1px solid var(--border);display:flex;justify-content:space-between;font-size:11px}
+.tc-odds{font-family:var(--font-m);color:var(--gold);font-weight:600;font-size:13px}
+.tc-prob{color:var(--txt-2)}
+
+/* LOADING/ERROR */
+.loading{display:flex;align-items:center;justify-content:center;height:200px;color:var(--txt-2);gap:10px;font-size:14px}
+.spin{width:20px;height:20px;border:2px solid var(--border);border-top-color:var(--gold);border-radius:50%;animation:spin .7s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.err-msg{background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.2);border-radius:var(--radius);padding:16px;color:#fca5a5;font-size:13px}
+
+footer{margin-top:48px;border-top:1px solid var(--border);padding-top:20px;font-size:11px;color:var(--txt-3);text-align:center;line-height:1.8}
 </style>
 </head>
 <body>
@@ -303,38 +183,75 @@ footer {
 
   <!-- HEADER -->
   <header>
-    <div>
-      <div class="logo-row">
-        <span class="trophy">🏆</span>
-        <div>
-          <div class="site-title">CM<span>2026</span> Predictor</div>
-          <div class="subtitle">Model Poisson · Bet Builder · Faza Grupelor</div>
-        </div>
+    <div class="logo-row">
+      <span style="font-size:28px">🏆</span>
+      <div>
+        <div class="site-title">CM<span>2026</span> Predictor</div>
+        <div class="subtitle">Model Poisson · Bet Builder · Faza Grupelor</div>
       </div>
     </div>
-    <div class="meta-pill live" id="updatePill">
-      <span class="dot"></span>Se încarcă...
-    </div>
+    <div class="meta-pill live" id="updatePill"><span class="dot"></span>Se încarcă...</div>
   </header>
 
-  <!-- STATS -->
-  <div class="stats" id="statsRow">
-    <div class="stat"><div class="stat-val" style="color:var(--gold)">—</div><div class="stat-lbl">Meciuri analizate</div></div>
-    <div class="stat"><div class="stat-val" style="color:var(--s-co)">—</div><div class="stat-lbl">Tier S (85%+)</div></div>
-    <div class="stat"><div class="stat-val" style="color:var(--a-co)">—</div><div class="stat-lbl">Tier A (72–84%)</div></div>
-    <div class="stat"><div class="stat-val" style="color:var(--teal)">—</div><div class="stat-lbl">Bilete generate</div></div>
+  <!-- TABS -->
+  <div class="tabs">
+    <div class="tab act" onclick="switchTab('predictii',this)">Predicții</div>
+    <div class="tab" onclick="switchTab('rezultate',this)">Rezultate</div>
+    <div class="tab" onclick="switchTab('bilete',this)">Bilete</div>
+    <div class="tab" onclick="switchTab('surse',this)">Surse Date</div>
   </div>
 
-  <!-- FILTERS -->
-  <div class="filters" id="filters"></div>
+  <!-- ════════════════════════════════════════════════════════ -->
+  <!-- TAB: PREDICTII -->
+  <!-- ════════════════════════════════════════════════════════ -->
+  <div id="tab-predictii">
+    <div class="stats" id="statsRow">
+      <div class="stat"><div class="stat-val" style="color:var(--gold)">—</div><div class="stat-lbl">Meciuri analizate</div></div>
+      <div class="stat"><div class="stat-val" style="color:var(--s-co)">—</div><div class="stat-lbl">Tier S (85%+)</div></div>
+      <div class="stat"><div class="stat-val" style="color:var(--a-co)">—</div><div class="stat-lbl">Tier A (72–84%)</div></div>
+      <div class="stat"><div class="stat-val" style="color:var(--teal)">—</div><div class="stat-lbl">Bilete generate</div></div>
+    </div>
+    <div class="filters" id="filters"></div>
+    <div class="section-title">Meciuri rankate</div>
+    <div id="matchArea"><div class="loading"><div class="spin"></div>Se calculează probabilitățile...</div></div>
+  </div>
 
-  <!-- MATCH LIST -->
-  <div class="section-title">Meciuri rankate</div>
-  <div id="matchArea"><div class="loading"><div class="spin"></div>Se calculează probabilitățile...</div></div>
+  <!-- ════════════════════════════════════════════════════════ -->
+  <!-- TAB: REZULTATE -->
+  <!-- ════════════════════════════════════════════════════════ -->
+  <div id="tab-rezultate" style="display:none">
+    <div class="result-summary" id="resultSummary">
+      <div class="res-card"><div class="res-val" style="color:var(--green)">—</div><div class="res-lbl">Predicții corecte</div></div>
+      <div class="res-card"><div class="res-val" style="color:var(--red)">—</div><div class="res-lbl">Predicții greșite</div></div>
+      <div class="res-card"><div class="res-val" style="color:var(--teal)">—</div><div class="res-lbl">Acuratețe %</div></div>
+    </div>
+    <div class="acc-bar" id="accBar" style="display:none">
+      <span class="acc-label">Acuratețe model</span>
+      <div class="acc-track"><div class="acc-fill" id="accFill" style="width:0%"></div></div>
+      <span class="acc-pct" id="accPct">0%</span>
+    </div>
+    <div class="section-title">Meciuri jucate</div>
+    <div id="resultArea"><p style="color:var(--txt-2);font-size:13px">Niciun meci nu a fost jucat încă sau scorurile nu sunt disponibile.</p></div>
+  </div>
 
-  <!-- TICKETS -->
-  <div class="section-title">Bilete recomandate</div>
-  <div class="ticket-grid" id="ticketArea"></div>
+  <!-- ════════════════════════════════════════════════════════ -->
+  <!-- TAB: BILETE -->
+  <!-- ════════════════════════════════════════════════════════ -->
+  <div id="tab-bilete" style="display:none">
+    <div class="section-title">Bilete recomandate — 5 permutări</div>
+    <div class="ticket-grid" id="ticketArea"></div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════════════ -->
+  <!-- TAB: SURSE -->
+  <!-- ════════════════════════════════════════════════════════ -->
+  <div id="tab-surse" style="display:none">
+    <div class="section-title">Status surse de date</div>
+    <div class="sources-panel">
+      <div class="sp-title">Transparența modelului — ce e activ și ce e planificat</div>
+      <div id="sourcesPanel"></div>
+    </div>
+  </div>
 
   <footer>
     Model: Distribuție Poisson bivariată · Date: FBref xG baseline + WorldCupAPI live<br>
@@ -343,183 +260,241 @@ footer {
 </div>
 
 <script>
-// ── CONFIG ──────────────────────────────────────────────────────────────────
 const DATA_URL = './backend/output/predictii_avansate.json';
-const RELOAD_MS = 5 * 60 * 1000; // Auto-reload la 5 minute
+const RELOAD_MS = 5 * 60 * 1000;
+let allMatches = [], allTickets = [], activeFilter = 'top30', activeTab = 'predictii';
 
-// ── STARE ───────────────────────────────────────────────────────────────────
-let allMatches = [];
-let activeFilter = 'top30';
-
-// ── CULORI TIER ─────────────────────────────────────────────────────────────
 const TC = {
-  S: { bg: 'var(--s-bg)', co: 'var(--s-co)', bar: 'var(--s-bar)' },
-  A: { bg: 'var(--a-bg)', co: 'var(--a-co)', bar: 'var(--a-bar)' },
-  B: { bg: 'var(--b-bg)', co: 'var(--b-co)', bar: 'var(--b-bar)' },
-  C: { bg: 'var(--c-bg)', co: 'var(--c-co)', bar: 'var(--c-bar)' },
-  D: { bg: 'var(--d-bg)', co: 'var(--d-co)', bar: 'var(--d-bar)' },
+  S:{bg:'var(--s-bg)',co:'var(--s-co)',bar:'var(--s-bar)'},
+  A:{bg:'var(--a-bg)',co:'var(--a-co)',bar:'var(--a-bar)'},
+  B:{bg:'var(--b-bg)',co:'var(--b-co)',bar:'var(--b-bar)'},
+  C:{bg:'var(--c-bg)',co:'var(--c-co)',bar:'var(--c-bar)'},
+  D:{bg:'var(--d-bg)',co:'var(--d-co)',bar:'var(--d-bar)'},
 };
 
-// ── FETCH DATE ───────────────────────────────────────────────────────────────
+const SOURCES_INFO = [
+  {name:'FBref xG Baseline',status:'active',desc:'xG for/against per echipă — hardcodat din cercetare pre-turneu. Recalibrat manual după fiecare rundă.'},
+  {name:'WorldCupAPI.com',status:'attempted',desc:'Scoruri live și status meciuri. Folosit dacă API-ul răspunde; fallback la "scheduled" altfel.'},
+  {name:'RotoWire Injury Table',status:'planned',desc:'Tabel accidentări 48 echipe. Planificat în Faza 2 — necesită parsing HTML + logică de modificare lambda.'},
+  {name:'Sofascore Lineup Confirm',status:'planned',desc:'Lineup-ul confirmat T-60min. Schimbă lambda dacă starul atacant e pe bancă.'},
+  {name:'Betfair Exchange',status:'planned',desc:'Probabilitate no-vig pură. Steam move = recalculare bilet. Necesită cont + API key.'},
+  {name:'Pinnacle Opening/Closing',status:'planned',desc:'Linia de referință pentru CLV. Permite detectarea informațiilor noi în piață.'},
+  {name:'AccuWeather WBGT',status:'planned',desc:'Stres termic per stadion. WBGT >32° → multiplicator 0.85 pe lambda total.'},
+  {name:'Transfermarkt Referee',status:'planned',desc:'Medie cartonașe/meci arbitru. Impact pe ritmul jocului și Over/Under.'},
+  {name:'Oddschecker Comparator',status:'planned',desc:'Cele mai bune cote din 30+ case. Pentru calculul CLV și valoare pariu.'},
+  {name:'Opta/Stats Perform',status:'planned',desc:'Date set piece, presing, tranziții. Furnizor primar al Sofascore și WhoScored.'},
+];
+
+// ── FETCH ────────────────────────────────────────────────────────────────────
 async function loadData() {
   try {
     const res = await fetch(DATA_URL + '?t=' + Date.now());
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    if (!res.ok) throw new Error('HTTP ' + res.status);
     const data = await res.json();
     allMatches = data.all_72 || data.top_30 || [];
+    allTickets = data.tickets || [];
 
     const meta = data.meta || {};
-    const ts   = meta.generated_at ? new Date(meta.generated_at) : new Date();
+    const ts = meta.generated_at ? new Date(meta.generated_at) : new Date();
     document.getElementById('updatePill').innerHTML =
-      `<span class="dot"></span>Update: ${ts.toLocaleTimeString('ro-RO', {hour:'2-digit',minute:'2-digit'})}`;
+      '<span class="dot"></span>Update: ' + ts.toLocaleTimeString('ro-RO',{hour:'2-digit',minute:'2-digit'});
 
-    // Stats
-    const sVals = document.querySelectorAll('.stat-val');
-    sVals[0].textContent = allMatches.length;
-    sVals[1].textContent = allMatches.filter(m => m.tier === 'S').length;
-    sVals[2].textContent = allMatches.filter(m => m.tier === 'A').length;
-    sVals[3].textContent = (data.tickets || []).length;
+    const sv = document.querySelectorAll('.stat-val');
+    sv[0].textContent = allMatches.length;
+    sv[1].textContent = allMatches.filter(m=>m.tier==='S').length;
+    sv[2].textContent = allMatches.filter(m=>m.tier==='A').length;
+    sv[3].textContent = allTickets.length;
 
     buildFilters();
     renderMatches();
-    renderTickets(data.tickets || []);
-
-  } catch (err) {
+    renderResults();
+    renderTickets();
+    renderSources();
+  } catch(err) {
     document.getElementById('matchArea').innerHTML =
-      `<div class="err-msg">⚠️ Nu s-au putut încărca datele.<br>
-       Verifică că <code>backend/output/predictii_avansate.json</code> există.<br>
-       Rulează <code>python backend/main.py</code> local sau declanșează GitHub Action.<br>
-       <small style="color:var(--txt-3)">${err.message}</small></div>`;
+      '<div class="err-msg">⚠️ Nu s-au putut încărca datele.<br>Verifică că <code>backend/output/predictii_avansate.json</code> există.<br><small>'+err.message+'</small></div>';
     document.getElementById('updatePill').textContent = '⚠️ Eroare date';
     document.getElementById('updatePill').classList.remove('live');
   }
 }
 
-// ── FILTRE ───────────────────────────────────────────────────────────────────
-function buildFilters() {
-  const f = [
-    ['top30', 'Top 30'],
-    ['all',   'Toate 72'],
-    ['S',     '🔥 Tier S'],
-    ['A',     '✅ Tier A'],
-    ['B',     '📊 Tier B'],
-    ['CD',    '📉 Tier C+D'],
-  ];
-  document.getElementById('filters').innerHTML = f.map(([v, l]) =>
-    `<button class="fb${v === activeFilter ? ' act' : ''}"
-             onclick="setFilter('${v}', this)">${l}</button>`
-  ).join('');
+// ── TAB SWITCH ───────────────────────────────────────────────────────────────
+function switchTab(id, btn) {
+  activeTab = id;
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('act'));
+  btn.classList.add('act');
+  ['predictii','rezultate','bilete','surse'].forEach(t => {
+    document.getElementById('tab-'+t).style.display = t===id ? '' : 'none';
+  });
 }
 
+// ── FILTRE ───────────────────────────────────────────────────────────────────
+function buildFilters() {
+  const fs = [['top30','Top 30'],['all','Toate 72'],['S','Tier S'],['A','Tier A'],['B','Tier B'],['CD','Tier C+D']];
+  document.getElementById('filters').innerHTML = fs.map(([v,l]) =>
+    '<button class="fb'+(v===activeFilter?' act':'')+'" onclick="setFilter(\''+v+'\',this)">'+l+'</button>'
+  ).join('');
+}
 function setFilter(v, btn) {
   activeFilter = v;
-  document.querySelectorAll('.fb').forEach(b => b.classList.remove('act'));
+  document.querySelectorAll('.fb').forEach(b=>b.classList.remove('act'));
   btn.classList.add('act');
   renderMatches();
 }
 
-// ── RANDARE MECIURI ───────────────────────────────────────────────────────────
+// ── MATCH RENDER ─────────────────────────────────────────────────────────────
 function renderMatches() {
   let data = allMatches;
-  if (activeFilter === 'top30')     data = allMatches.slice(0, 30);
-  else if (activeFilter === 'S')    data = allMatches.filter(m => m.tier === 'S');
-  else if (activeFilter === 'A')    data = allMatches.filter(m => m.tier === 'A');
-  else if (activeFilter === 'B')    data = allMatches.filter(m => m.tier === 'B');
-  else if (activeFilter === 'CD')   data = allMatches.filter(m => m.tier === 'C' || m.tier === 'D');
+  if (activeFilter==='top30') data=allMatches.slice(0,30);
+  else if (activeFilter==='S') data=allMatches.filter(m=>m.tier==='S');
+  else if (activeFilter==='A') data=allMatches.filter(m=>m.tier==='A');
+  else if (activeFilter==='B') data=allMatches.filter(m=>m.tier==='B');
+  else if (activeFilter==='CD') data=allMatches.filter(m=>m.tier==='C'||m.tier==='D');
 
-  const pct  = m => Math.min(100, Math.round(m.ranking_score * 10));
-  const fmt  = v => (v !== undefined && v !== null) ? (v * 100).toFixed(0) + '%' : '—';
-  const hi   = v => v > 0.65 ? ' hi' : '';
+  const fmt = v => (v!==undefined&&v!==null) ? (v*100).toFixed(0)+'%' : '—';
+  const hi = v => v>0.65?' hi':'';
 
-  const liveScore = m => {
-    if (m.status === 'scheduled' || !m.score?.home === null) return '';
-    if (m.score?.home !== null && m.score?.away !== null)
-      return `<span style="font-family:var(--font-m);font-size:12px;color:var(--gold);margin-left:6px">
-        ${m.score.home}–${m.score.away}
-      </span>`;
-    return '';
-  };
+  const html = '<div class="match-grid">'+data.map((m,i) => {
+    const rank = allMatches.indexOf(m)+1;
+    const pct = Math.min(100,Math.round(m.ranking_score*10));
+    const oc = m.prediction?.outcome;
+    const cardClass = 'mc t-'+m.tier+(oc==='correct'?' correct':oc==='wrong'?' wrong':m.status==='live'?' live-now':'');
 
-  const html = '<div class="match-grid">' + data.map((m, i) => {
-    const rank = allMatches.indexOf(m) + 1;
-    return `
-      <div class="mc t-${m.tier}" data-id="${m.id}">
-        <div class="mc-top">
-          <span class="mc-rank">#${rank}</span>
-          <span class="mc-name">${m.home} vs ${m.away}${liveScore(m)}</span>
-          <span class="tier-badge">T${m.tier}</span>
-        </div>
-        <div class="mc-meta">
-          <span>Gr.${m.group}</span>
-          <span>·</span>
-          <span>MD${m.matchday}</span>
-          <span>·</span>
-          <span>${m.date}</span>
-          <span>·</span>
-          <span>${m.venue}</span>
-        </div>
-        <div class="bar-wrap">
-          <div class="bar-fill" style="width:0%" data-target="${pct(m)}"></div>
-        </div>
-        <div class="bar-row">
-          <span>Scor golaveraj</span>
-          <span style="font-family:var(--font-m);font-weight:500">${m.ranking_score.toFixed(1)}/10</span>
-        </div>
-        <div class="mc-probs">
-          <span class="pp${hi(m.probs?.o25)}">O2.5: ${fmt(m.probs?.o25)}</span>
-          <span class="pp${hi(m.probs?.btts)}">BTTS: ${fmt(m.probs?.btts)}</span>
-          <span class="pp${hi(m.probs?.o05_r1)}">O0.5R1: ${fmt(m.probs?.o05_r1)}</span>
-          <span class="pp">λ: ${m.lambda?.home?.toFixed(1)}+${m.lambda?.away?.toFixed(1)}</span>
-        </div>
-        <div class="mc-bet">🎯 ${m.bet?.description || '—'}</div>
-      </div>`;
-  }).join('') + '</div>';
+    let scoreBadge = '';
+    if (m.score?.home!==null && m.score?.home!==undefined) {
+      const cls = oc==='correct'?' correct':oc==='wrong'?' wrong':m.status==='live'?' live-sc':'';
+      scoreBadge = '<span class="score-badge'+cls+'">'+m.score.home+'–'+m.score.away+'</span>';
+    }
+    const statusIcon = m.status==='live'?' 🔴':'';
+
+    const commId = 'comm_'+m.id.replace(/[^a-z0-9]/gi,'_');
+    const c = m.commentary || {};
+
+    return '<div class="'+cardClass+'" id="card_'+m.id+'">'+
+      '<div class="mc-top">'+
+        '<span class="mc-rank">#'+rank+'</span>'+
+        '<span class="mc-name">'+m.home_name+' vs '+m.away_name+statusIcon+scoreBadge+'</span>'+
+        '<span class="tier-badge">T'+m.tier+'</span>'+
+      '</div>'+
+      '<div class="mc-meta">Gr.'+m.group+' · MD'+m.matchday+' · '+m.date+' · '+m.venue+'</div>'+
+      '<div class="bar-wrap"><div class="bar-fill" data-target="'+pct+'"></div></div>'+
+      '<div class="bar-row"><span>Scor golaveraj</span><span style="font-family:var(--font-m);font-weight:500">'+m.ranking_score.toFixed(1)+'/10</span></div>'+
+      '<div class="mc-probs">'+
+        '<span class="pp'+hi(m.probs?.o25)+'">O2.5: '+fmt(m.probs?.o25)+'</span>'+
+        '<span class="pp'+hi(m.probs?.btts)+'">BTTS: '+fmt(m.probs?.btts)+'</span>'+
+        '<span class="pp'+hi(m.probs?.o05_r1)+'">O0.5R1: '+fmt(m.probs?.o05_r1)+'</span>'+
+        '<span class="pp">λ: '+(m.lambda?.home?.toFixed(1)||'?')+'+'+(m.lambda?.away?.toFixed(1)||'?')+'</span>'+
+      '</div>'+
+      '<div class="mc-bet">🎯 '+(m.bet?.description||'—')+'</div>'+
+      '<button class="comm-btn" onclick="toggleComm(\''+commId+'\',this)">'+
+        '<span>▶ Motivarea predicției</span>'+
+        '<span class="arrow">▾</span>'+
+      '</button>'+
+      '<div class="commentary" id="'+commId+'">'+
+        (c.favorit ? '<div class="comm-section"><strong>Favorit & forță</strong>'+c.favorit+'</div>' : '')+
+        (c.golaveraj ? '<div class="comm-section"><strong>Golaveraj așteptat</strong>'+c.golaveraj+'</div>' : '')+
+        (c.btts_cs ? '<div class="comm-section"><strong>BTTS & Clean Sheet</strong>'+c.btts_cs+'</div>' : '')+
+        (c.repriza_1 ? '<div class="comm-section"><strong>Repriza 1</strong>'+c.repriza_1+'</div>' : '')+
+        (c.modificatori ? '<div class="comm-section"><strong>Modificatori contextuali</strong>'+c.modificatori+'</div>' : '')+
+        (c.verdict ? '<div class="comm-section"><strong>Verdict</strong>'+c.verdict+'</div>' : '')+
+        (c.surse ? '<div class="comm-sources"><strong style="font-size:10px;text-transform:uppercase;letter-spacing:.04em;color:var(--txt-3)">Surse active pentru acest meci</strong>'+
+          c.surse.map(s=>'<div class="src-row"><span class="src-dot '+s.status+'"></span><span>'+s.name+' — '+s.detail+'</span></div>').join('')+
+        '</div>' : '')+
+      '</div>'+
+    '</div>';
+  }).join('')+'</div>';
 
   document.getElementById('matchArea').innerHTML = html;
-
-  // Animație bare
   requestAnimationFrame(() => {
     document.querySelectorAll('.bar-fill[data-target]').forEach(el => {
-      setTimeout(() => { el.style.width = el.dataset.target + '%'; }, 50);
+      setTimeout(()=>{ el.style.width=el.dataset.target+'%'; }, 50);
     });
   });
 }
 
-// ── RANDARE BILETE ────────────────────────────────────────────────────────────
-function renderTickets(tickets) {
-  if (!tickets.length) {
-    document.getElementById('ticketArea').innerHTML =
-      '<p style="color:var(--txt-2);font-size:13px">Niciun bilet generat încă.</p>';
-    return;
-  }
-  document.getElementById('ticketArea').innerHTML = tickets.map((t, i) => `
-    <div class="tc">
-      <div class="tc-label">${t.label}</div>
-      <div class="tc-note">${t.note}</div>
-      <div class="tc-events">
-        ${(t.events || []).map(e => `
-          <div class="ev-row">
-            <span class="ev-id">${e.id}</span>
-            <span>${e.match}</span>
-          </div>
-          <div style="font-size:10px;color:var(--txt-3);margin-left:34px;margin-bottom:4px">${e.bet} · ${e.prob_pct}%</div>
-        `).join('')}
-      </div>
-      <div class="tc-foot">
-        <div>
-          <div class="tc-odds">~${t.combined_odds}x</div>
-          <div class="tc-prob">prob. ${t.combined_prob_pct}%</div>
-        </div>
-        <div style="text-align:right;font-size:11px;color:var(--txt-3)">
-          Miză 2 RON<br>
-          Câștig est. ${(t.combined_odds * 2).toFixed(0)} RON
-        </div>
-      </div>
-    </div>
-  `).join('');
+function toggleComm(id, btn) {
+  const el = document.getElementById(id);
+  el.classList.toggle('show');
+  btn.classList.toggle('open');
+  btn.querySelector('span').textContent = el.classList.contains('show') ? '▼ Motivarea predicției' : '▶ Motivarea predicției';
 }
 
-// ── INIT ──────────────────────────────────────────────────────────────────────
+// ── RESULTS RENDER ───────────────────────────────────────────────────────────
+function renderResults() {
+  const played = allMatches.filter(m => m.status==='finished' && m.score?.home!==null);
+  const correct = played.filter(m => m.prediction?.outcome==='correct').length;
+  const wrong = played.filter(m => m.prediction?.outcome==='wrong').length;
+  const acc = played.length > 0 ? Math.round(correct/played.length*100) : 0;
+
+  const sv = document.querySelectorAll('#resultSummary .res-val');
+  if (sv[0]) { sv[0].textContent=correct; sv[1].textContent=wrong; sv[2].textContent=acc+'%'; }
+
+  if (played.length > 0) {
+    const ab = document.getElementById('accBar');
+    ab.style.display='flex';
+    document.getElementById('accFill').style.width=acc+'%';
+    document.getElementById('accPct').textContent=acc+'%';
+  }
+
+  if (!played.length) return;
+
+  document.getElementById('resultArea').innerHTML = played.map(m => {
+    const oc = m.prediction?.outcome;
+    const badge = oc==='correct'
+      ? '<span class="outcome-badge correct">✓ Predicție corectă</span>'
+      : oc==='wrong'
+      ? '<span class="outcome-badge wrong">✗ Predicție greșită</span>'
+      : '<span class="outcome-badge pending">Analizat</span>';
+    return '<div class="result-item">'+
+      '<div class="ri-top">'+
+        '<span class="ri-match">'+m.home_name+' vs '+m.away_name+'</span>'+
+        '<span class="ri-score" style="color:'+(oc==='correct'?'var(--green)':oc==='wrong'?'var(--red)':'var(--txt)')+'">'+m.score.home+' – '+m.score.away+'</span>'+
+      '</div>'+
+      '<div class="ri-details">'+
+        '<span>Gr.'+m.group+' · '+m.date+'</span>'+
+        '<span>Favorit prezis: <strong>'+m.prediction?.fav_name+'</strong></span>'+
+        '<span>O2.5 prob: '+Math.round((m.probs?.o25||0)*100)+'%</span>'+
+        badge+
+      '</div>'+
+    '</div>';
+  }).join('');
+}
+
+// ── TICKETS RENDER ───────────────────────────────────────────────────────────
+function renderTickets() {
+  if (!allTickets.length) {
+    document.getElementById('ticketArea').innerHTML='<p style="color:var(--txt-2);font-size:13px">Niciun bilet generat.</p>';
+    return;
+  }
+  document.getElementById('ticketArea').innerHTML = allTickets.map(t =>
+    '<div class="tc">'+
+    '<div class="tc-label">'+t.label+'</div>'+
+    '<div class="tc-note">'+t.note+'</div>'+
+    '<div class="tc-events">'+
+      (t.events||[]).map(e =>
+        '<div><span class="ev-id">'+e.id+'</span> '+e.match+'</div>'+
+        '<div style="font-size:10px;color:var(--txt-3);margin-left:34px;margin-bottom:4px">'+e.bet+' · '+e.prob_pct+'%</div>'
+      ).join('')+
+    '</div>'+
+    '<div class="tc-foot">'+
+      '<div><div class="tc-odds">~'+t.combined_odds+'x</div><div class="tc-prob">prob. '+t.combined_prob_pct+'%</div></div>'+
+      '<div style="text-align:right;font-size:11px;color:var(--txt-3)">Miză 2 RON<br>Est. '+(t.combined_odds*2).toFixed(0)+' RON</div>'+
+    '</div></div>'
+  ).join('');
+}
+
+// ── SOURCES RENDER ───────────────────────────────────────────────────────────
+function renderSources() {
+  const statusMap = {active:'activ',attempted:'încearcă',planned:'planificat'};
+  const colorMap = {active:'var(--green)',attempted:'var(--orange)',planned:'var(--txt-3)'};
+  document.getElementById('sourcesPanel').innerHTML = SOURCES_INFO.map(s =>
+    '<div class="sp-row">'+
+      '<div class="sp-status"><span class="sp-dot '+s.status+'"></span><span style="color:'+colorMap[s.status]+'">'+statusMap[s.status]+'</span></div>'+
+      '<div class="sp-info"><div class="sp-name">'+s.name+'</div><div class="sp-desc">'+s.desc+'</div></div>'+
+    '</div>'
+  ).join('');
+}
+
 loadData();
 setInterval(loadData, RELOAD_MS);
 </script>
