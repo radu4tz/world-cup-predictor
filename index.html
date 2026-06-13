@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CM 2026 — Predictor Pariuri</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ── TOKENS ─────────────────────────────────────────────────── */
+:root {
+  --bg:       #080e1c;
+  --surface:  #0f1829;
+  --card:     #141f33;
+  --border:   rgba(255,255,255,0.07);
+  --gold:     #f5a623;
+  --gold-dim: rgba(245,166,35,0.12);
+  --teal:     #2dd4bf;
+  --txt:      #e8edf5;
+  --txt-2:    #6b7a99;
+  --txt-3:    #3d4f6e;
+
+  --s-bg:  #3d2006; --s-co: #f5a623; --s-bar: #f5a623;
+  --a-bg:  #0d2e13; --a-co: #4ade80; --a-bar: #22c55e;
+  --b-bg:  #0c1e40; --b-co: #60a5fa; --b-bar: #3b82f6;
+  --c-bg:  #1a0d35; --c-co: #a78bfa; --c-bar: #7c3aed;
+  --d-bg:  #1a1f2b; --d-co: #94a3b8; --d-bar: #475569;
+
+  --radius: 10px;
+  --font-d: 'Space Grotesk', system-ui, sans-serif;
+  --font-m: 'JetBrains Mono', monospace;
+}
+
+/* ── RESET ───────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--txt);
+  font-family: var(--font-d);
+  font-size: 15px;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* ── LAYOUT ──────────────────────────────────────────────────── */
+.wrap { max-width: 900px; margin: 0 auto; padding: 0 16px 60px; }
+
+/* ── HEADER ──────────────────────────────────────────────────── */
+header {
+  border-bottom: 1px solid var(--border);
+  padding: 20px 0 16px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.logo-row { display: flex; align-items: center; gap: 10px; }
+.trophy { font-size: 28px; }
+.site-title {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+.site-title span { color: var(--gold); }
+.subtitle { font-size: 12px; color: var(--txt-2); margin-top: 2px; }
+.meta-pill {
+  font-family: var(--font-m);
+  font-size: 11px;
+  color: var(--txt-2);
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 5px 12px;
+  white-space: nowrap;
+  align-self: center;
+}
+.meta-pill.live { border-color: var(--teal); color: var(--teal); }
+.dot { display: inline-block; width: 6px; height: 6px;
+       border-radius: 50%; background: var(--teal);
+       margin-right: 5px; animation: pulse 1.5s infinite; }
+@keyframes pulse {
+  0%,100% { opacity: 1; } 50% { opacity: 0.3; }
+}
+
+/* ── STATS ROW ───────────────────────────────────────────────── */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin: 20px 0;
+}
+@media (max-width: 560px) { .stats { grid-template-columns: repeat(2, 1fr); } }
+.stat {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 12px;
+  text-align: center;
+}
+.stat-val {
+  font-size: 28px;
+  font-weight: 700;
+  font-family: var(--font-m);
+  line-height: 1;
+}
+.stat-lbl { font-size: 11px; color: var(--txt-2); margin-top: 4px; }
+
+/* ── FILTERS ─────────────────────────────────────────────────── */
+.filters {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.fb {
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 5px 14px;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: var(--font-d);
+  cursor: pointer;
+  background: var(--card);
+  color: var(--txt-2);
+  transition: all 0.15s;
+}
+.fb:hover { border-color: var(--gold); color: var(--txt); }
+.fb.act { background: var(--gold); color: #000; border-color: var(--gold); font-weight: 600; }
+
+/* ── MATCH CARD ──────────────────────────────────────────────── */
+.match-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+@media (max-width: 560px) { .match-grid { grid-template-columns: 1fr; } }
+
+.mc {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px;
+  border-left: 3px solid;
+  transition: transform 0.15s, border-color 0.15s;
+}
+.mc:hover { transform: translateY(-1px); }
+.mc.t-S { border-left-color: var(--s-bar); }
+.mc.t-A { border-left-color: var(--a-bar); }
+.mc.t-B { border-left-color: var(--b-bar); }
+.mc.t-C { border-left-color: var(--c-bar); }
+.mc.t-D { border-left-color: var(--d-bar); }
+
+.mc-top { display: flex; align-items: center; gap: 6px; margin-bottom: 6px; }
+.mc-rank { font-family: var(--font-m); font-size: 11px; color: var(--txt-3); min-width: 24px; }
+.mc-name { font-size: 13px; font-weight: 600; flex: 1; }
+.tier-badge {
+  font-size: 10px; font-weight: 600;
+  padding: 2px 7px; border-radius: 20px;
+}
+.t-S .tier-badge { background: var(--s-bg); color: var(--s-co); }
+.t-A .tier-badge { background: var(--a-bg); color: var(--a-co); }
+.t-B .tier-badge { background: var(--b-bg); color: var(--b-co); }
+.t-C .tier-badge { background: var(--c-bg); color: var(--c-co); }
+.t-D .tier-badge { background: var(--d-bg); color: var(--d-co); }
+
+.mc-meta {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 11px; color: var(--txt-2); margin-bottom: 7px;
+}
+.bar-wrap {
+  height: 3px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 3px;
+}
+.bar-fill {
+  height: 100%;
+  border-radius: 2px;
+  width: 0%;
+  transition: width 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.t-S .bar-fill { background: var(--s-bar); }
+.t-A .bar-fill { background: var(--a-bar); }
+.t-B .bar-fill { background: var(--b-bar); }
+.t-C .bar-fill { background: var(--c-bar); }
+.t-D .bar-fill { background: var(--d-bar); }
+
+.bar-row { display: flex; justify-content: space-between; font-size: 10px; color: var(--txt-2); }
+.mc-bet {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 5px 8px;
+  font-size: 11px;
+  color: var(--txt-2);
+  margin-top: 6px;
+}
+.mc-probs {
+  display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px;
+}
+.pp {
+  font-family: var(--font-m);
+  font-size: 10px;
+  background: rgba(255,255,255,0.04);
+  border-radius: 4px;
+  padding: 2px 5px;
+  color: var(--txt-2);
+}
+.pp.hi { color: var(--teal); }
+
+/* ── SECTION TITLE ───────────────────────────────────────────── */
+.section-title {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--txt-2);
+  margin: 28px 0 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.section-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* ── TICKET CARD ─────────────────────────────────────────────── */
+.ticket-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+@media (max-width: 560px) { .ticket-grid { grid-template-columns: 1fr; } }
+
+.tc {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px;
+}
+.tc:first-child { border-color: rgba(245,166,35,0.3); }
+.tc-label { font-size: 13px; font-weight: 600; margin-bottom: 3px; }
+.tc-note { font-size: 11px; color: var(--txt-2); margin-bottom: 10px; }
+.tc-events { font-size: 11px; color: var(--txt-2); line-height: 1.9; }
+.ev-row { display: flex; align-items: baseline; gap: 5px; }
+.ev-id {
+  font-family: var(--font-m);
+  font-size: 10px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 3px;
+  padding: 1px 4px;
+  flex-shrink: 0;
+}
+.tc-foot {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+}
+.tc-odds { font-family: var(--font-m); color: var(--gold); font-weight: 600; font-size: 13px; }
+.tc-prob { color: var(--txt-2); }
+
+/* ── FOOTER ──────────────────────────────────────────────────── */
+footer {
+  margin-top: 48px;
+  border-top: 1px solid var(--border);
+  padding-top: 20px;
+  font-size: 11px;
+  color: var(--txt-3);
+  text-align: center;
+  line-height: 1.8;
+}
+
+/* ── LOADING / ERROR ─────────────────────────────────────────── */
+.loading {
+  display: flex; align-items: center; justify-content: center;
+  height: 200px; color: var(--txt-2); gap: 10px; font-size: 14px;
+}
+.spin {
+  width: 20px; height: 20px;
+  border: 2px solid var(--border);
+  border-top-color: var(--gold);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.err-msg {
+  background: rgba(239,68,68,0.08);
+  border: 1px solid rgba(239,68,68,0.2);
+  border-radius: var(--radius);
+  padding: 16px;
+  color: #fca5a5;
+  font-size: 13px;
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- HEADER -->
+  <header>
+    <div>
+      <div class="logo-row">
+        <span class="trophy">🏆</span>
+        <div>
+          <div class="site-title">CM<span>2026</span> Predictor</div>
+          <div class="subtitle">Model Poisson · Bet Builder · Faza Grupelor</div>
+        </div>
+      </div>
+    </div>
+    <div class="meta-pill live" id="updatePill">
+      <span class="dot"></span>Se încarcă...
+    </div>
+  </header>
+
+  <!-- STATS -->
+  <div class="stats" id="statsRow">
+    <div class="stat"><div class="stat-val" style="color:var(--gold)">—</div><div class="stat-lbl">Meciuri analizate</div></div>
+    <div class="stat"><div class="stat-val" style="color:var(--s-co)">—</div><div class="stat-lbl">Tier S (85%+)</div></div>
+    <div class="stat"><div class="stat-val" style="color:var(--a-co)">—</div><div class="stat-lbl">Tier A (72–84%)</div></div>
+    <div class="stat"><div class="stat-val" style="color:var(--teal)">—</div><div class="stat-lbl">Bilete generate</div></div>
+  </div>
+
+  <!-- FILTERS -->
+  <div class="filters" id="filters"></div>
+
+  <!-- MATCH LIST -->
+  <div class="section-title">Meciuri rankate</div>
+  <div id="matchArea"><div class="loading"><div class="spin"></div>Se calculează probabilitățile...</div></div>
+
+  <!-- TICKETS -->
+  <div class="section-title">Bilete recomandate</div>
+  <div class="ticket-grid" id="ticketArea"></div>
+
+  <footer>
+    Model: Distribuție Poisson bivariată · Date: FBref xG baseline + WorldCupAPI live<br>
+    Update automat: 4× pe zi via GitHub Actions · Scop: analiză statistică educativă
+  </footer>
+</div>
+
+<script>
+// ── CONFIG ──────────────────────────────────────────────────────────────────
+const DATA_URL = './backend/output/predictii_avansate.json';
+const RELOAD_MS = 5 * 60 * 1000; // Auto-reload la 5 minute
+
+// ── STARE ───────────────────────────────────────────────────────────────────
+let allMatches = [];
+let activeFilter = 'top30';
+
+// ── CULORI TIER ─────────────────────────────────────────────────────────────
+const TC = {
+  S: { bg: 'var(--s-bg)', co: 'var(--s-co)', bar: 'var(--s-bar)' },
+  A: { bg: 'var(--a-bg)', co: 'var(--a-co)', bar: 'var(--a-bar)' },
+  B: { bg: 'var(--b-bg)', co: 'var(--b-co)', bar: 'var(--b-bar)' },
+  C: { bg: 'var(--c-bg)', co: 'var(--c-co)', bar: 'var(--c-bar)' },
+  D: { bg: 'var(--d-bg)', co: 'var(--d-co)', bar: 'var(--d-bar)' },
+};
+
+// ── FETCH DATE ───────────────────────────────────────────────────────────────
+async function loadData() {
+  try {
+    const res = await fetch(DATA_URL + '?t=' + Date.now());
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    allMatches = data.all_72 || data.top_30 || [];
+
+    const meta = data.meta || {};
+    const ts   = meta.generated_at ? new Date(meta.generated_at) : new Date();
+    document.getElementById('updatePill').innerHTML =
+      `<span class="dot"></span>Update: ${ts.toLocaleTimeString('ro-RO', {hour:'2-digit',minute:'2-digit'})}`;
+
+    // Stats
+    const sVals = document.querySelectorAll('.stat-val');
+    sVals[0].textContent = allMatches.length;
+    sVals[1].textContent = allMatches.filter(m => m.tier === 'S').length;
+    sVals[2].textContent = allMatches.filter(m => m.tier === 'A').length;
+    sVals[3].textContent = (data.tickets || []).length;
+
+    buildFilters();
+    renderMatches();
+    renderTickets(data.tickets || []);
+
+  } catch (err) {
+    document.getElementById('matchArea').innerHTML =
+      `<div class="err-msg">⚠️ Nu s-au putut încărca datele.<br>
+       Verifică că <code>backend/output/predictii_avansate.json</code> există.<br>
+       Rulează <code>python backend/main.py</code> local sau declanșează GitHub Action.<br>
+       <small style="color:var(--txt-3)">${err.message}</small></div>`;
+    document.getElementById('updatePill').textContent = '⚠️ Eroare date';
+    document.getElementById('updatePill').classList.remove('live');
+  }
+}
+
+// ── FILTRE ───────────────────────────────────────────────────────────────────
+function buildFilters() {
+  const f = [
+    ['top30', 'Top 30'],
+    ['all',   'Toate 72'],
+    ['S',     '🔥 Tier S'],
+    ['A',     '✅ Tier A'],
+    ['B',     '📊 Tier B'],
+    ['CD',    '📉 Tier C+D'],
+  ];
+  document.getElementById('filters').innerHTML = f.map(([v, l]) =>
+    `<button class="fb${v === activeFilter ? ' act' : ''}"
+             onclick="setFilter('${v}', this)">${l}</button>`
+  ).join('');
+}
+
+function setFilter(v, btn) {
+  activeFilter = v;
+  document.querySelectorAll('.fb').forEach(b => b.classList.remove('act'));
+  btn.classList.add('act');
+  renderMatches();
+}
+
+// ── RANDARE MECIURI ───────────────────────────────────────────────────────────
+function renderMatches() {
+  let data = allMatches;
+  if (activeFilter === 'top30')     data = allMatches.slice(0, 30);
+  else if (activeFilter === 'S')    data = allMatches.filter(m => m.tier === 'S');
+  else if (activeFilter === 'A')    data = allMatches.filter(m => m.tier === 'A');
+  else if (activeFilter === 'B')    data = allMatches.filter(m => m.tier === 'B');
+  else if (activeFilter === 'CD')   data = allMatches.filter(m => m.tier === 'C' || m.tier === 'D');
+
+  const pct  = m => Math.min(100, Math.round(m.ranking_score * 10));
+  const fmt  = v => (v !== undefined && v !== null) ? (v * 100).toFixed(0) + '%' : '—';
+  const hi   = v => v > 0.65 ? ' hi' : '';
+
+  const liveScore = m => {
+    if (m.status === 'scheduled' || !m.score?.home === null) return '';
+    if (m.score?.home !== null && m.score?.away !== null)
+      return `<span style="font-family:var(--font-m);font-size:12px;color:var(--gold);margin-left:6px">
+        ${m.score.home}–${m.score.away}
+      </span>`;
+    return '';
+  };
+
+  const html = '<div class="match-grid">' + data.map((m, i) => {
+    const rank = allMatches.indexOf(m) + 1;
+    return `
+      <div class="mc t-${m.tier}" data-id="${m.id}">
+        <div class="mc-top">
+          <span class="mc-rank">#${rank}</span>
+          <span class="mc-name">${m.home} vs ${m.away}${liveScore(m)}</span>
+          <span class="tier-badge">T${m.tier}</span>
+        </div>
+        <div class="mc-meta">
+          <span>Gr.${m.group}</span>
+          <span>·</span>
+          <span>MD${m.matchday}</span>
+          <span>·</span>
+          <span>${m.date}</span>
+          <span>·</span>
+          <span>${m.venue}</span>
+        </div>
+        <div class="bar-wrap">
+          <div class="bar-fill" style="width:0%" data-target="${pct(m)}"></div>
+        </div>
+        <div class="bar-row">
+          <span>Scor golaveraj</span>
+          <span style="font-family:var(--font-m);font-weight:500">${m.ranking_score.toFixed(1)}/10</span>
+        </div>
+        <div class="mc-probs">
+          <span class="pp${hi(m.probs?.o25)}">O2.5: ${fmt(m.probs?.o25)}</span>
+          <span class="pp${hi(m.probs?.btts)}">BTTS: ${fmt(m.probs?.btts)}</span>
+          <span class="pp${hi(m.probs?.o05_r1)}">O0.5R1: ${fmt(m.probs?.o05_r1)}</span>
+          <span class="pp">λ: ${m.lambda?.home?.toFixed(1)}+${m.lambda?.away?.toFixed(1)}</span>
+        </div>
+        <div class="mc-bet">🎯 ${m.bet?.description || '—'}</div>
+      </div>`;
+  }).join('') + '</div>';
+
+  document.getElementById('matchArea').innerHTML = html;
+
+  // Animație bare
+  requestAnimationFrame(() => {
+    document.querySelectorAll('.bar-fill[data-target]').forEach(el => {
+      setTimeout(() => { el.style.width = el.dataset.target + '%'; }, 50);
+    });
+  });
+}
+
+// ── RANDARE BILETE ────────────────────────────────────────────────────────────
+function renderTickets(tickets) {
+  if (!tickets.length) {
+    document.getElementById('ticketArea').innerHTML =
+      '<p style="color:var(--txt-2);font-size:13px">Niciun bilet generat încă.</p>';
+    return;
+  }
+  document.getElementById('ticketArea').innerHTML = tickets.map((t, i) => `
+    <div class="tc">
+      <div class="tc-label">${t.label}</div>
+      <div class="tc-note">${t.note}</div>
+      <div class="tc-events">
+        ${(t.events || []).map(e => `
+          <div class="ev-row">
+            <span class="ev-id">${e.id}</span>
+            <span>${e.match}</span>
+          </div>
+          <div style="font-size:10px;color:var(--txt-3);margin-left:34px;margin-bottom:4px">${e.bet} · ${e.prob_pct}%</div>
+        `).join('')}
+      </div>
+      <div class="tc-foot">
+        <div>
+          <div class="tc-odds">~${t.combined_odds}x</div>
+          <div class="tc-prob">prob. ${t.combined_prob_pct}%</div>
+        </div>
+        <div style="text-align:right;font-size:11px;color:var(--txt-3)">
+          Miză 2 RON<br>
+          Câștig est. ${(t.combined_odds * 2).toFixed(0)} RON
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+// ── INIT ──────────────────────────────────────────────────────────────────────
+loadData();
+setInterval(loadData, RELOAD_MS);
+</script>
+</body>
+</html>

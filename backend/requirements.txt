@@ -1,0 +1,6 @@
+# world-cup-predictor/backend/requirements.txt
+# Instalare: pip install -r requirements.txt
+
+requests==2.32.3      # HTTP calls către API-uri externe
+scipy==1.13.1         # Distribuție Poisson (scipy.stats.poisson)
+numpy==1.26.4         # Operații numerice rapide

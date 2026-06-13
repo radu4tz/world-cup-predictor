@@ -1,0 +1,60 @@
+name: 🏆 WC2026 Predictor — Auto Update
+
+# ─── DECLANȘATOARE ─────────────────────────────────────────────────────────
+on:
+  schedule:
+    # Rulează de 4 ori pe zi (00:00, 06:00, 12:00, 18:00 UTC)
+    # La 10 sec per rulare = ~40 sec/zi din 2.000 min gratis → 0.03% folosit
+    - cron: '0 0,6,12,18 * * *'
+  workflow_dispatch:   # Permite și trigger manual din GitHub → Actions → Run workflow
+
+# ─── PERMISIUNI ────────────────────────────────────────────────────────────
+permissions:
+  contents: write      # Necesar pentru a face commit înapoi cu predictii_avansate.json
+
+# ─── JOB ───────────────────────────────────────────────────────────────────
+jobs:
+  run-predictor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5   # Kill switch: dacă durează > 5 min, ceva e greșit
+
+    steps:
+
+      # 1. Descarcă codul din repository
+      - name: ⬇️ Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1   # Shallow clone — mai rapid
+
+      # 2. Instalează Python 3.11 cu cache pentru pip
+      - name: 🐍 Setup Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+          cache-dependency-path: 'world-cup-predictor/backend/requirements.txt'
+
+      # 3. Instalează librăriile
+      - name: 📦 Install dependencies
+        run: |
+          pip install -r world-cup-predictor/backend/requirements.txt
+
+      # 4. Rulează scriptul Python
+      #    Secretele sunt opționale — scriptul funcționează și fără ele
+      - name: ▶️ Run Predictor
+        env:
+          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}   # Opțional — free tier
+          OPENWEATHER_KEY:  ${{ secrets.OPENWEATHER_KEY }}    # Opțional — free tier
+        run: |
+          python world-cup-predictor/backend/main.py
+
+      # 5. Commit și push dacă fișierul s-a schimbat
+      - name: 💾 Commit & Push predictions
+        run: |
+          git config --global user.name  "WC2026-Bot 🤖"
+          git config --global user.email "bot@wc2026-predictor.io"
+          git add world-cup-predictor/backend/output/predictii_avansate.json
+          # Comite NUMAI dacă există modificări; nu eșuează dacă nu sunt
+          git diff --staged --quiet \
+            || git commit -m "🔄 Predictions updated — $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git push
