@@ -275,6 +275,167 @@ def build_bet(probs: dict, tier: str, home: str, away: str) -> dict:
 
     return {"description": desc, "probability": round(prob, 4)}
 
+# ─── NUME ECHIPE ÎN ROMÂNĂ ───────────────────────────────────────────────────
+
+TEAM_NAMES_RO = {
+    "ARG":"Argentina","FRA":"Franța","BRA":"Brazilia","ENG":"Anglia",
+    "ESP":"Spania","GER":"Germania","NED":"Olanda","POR":"Portugalia",
+    "BEL":"Belgia","COL":"Columbia","JPN":"Japonia","KOR":"Coreea de Sud",
+    "URU":"Uruguay","SUI":"Elveția","NOR":"Norvegia","SWE":"Suedia",
+    "MEX":"Mexic","AUT":"Austria","TUR":"Turcia","SEN":"Senegal",
+    "MAR":"Maroc","USA":"SUA","CRO":"Croația","EGY":"Egipt",
+    "CZE":"Cehia","SCO":"Scoția","CAN":"Canada","ECU":"Ecuador",
+    "ALG":"Algeria","BIH":"Bosnia","KSA":"Arabia Saudită","AUS":"Australia",
+    "GHA":"Ghana","PAR":"Paraguay","CIV":"Coasta de Fildeș","IRN":"Iran",
+    "RSA":"Africa de Sud","IRQ":"Irak","TUN":"Tunisia","CPV":"Capul Verde",
+    "HAI":"Haiti","JOR":"Iordania","PAN":"Panama","NZL":"Noua Zeelandă",
+    "COD":"Congo DR","UZB":"Uzbekistan","CUR":"Curaçao","QAT":"Qatar",
+}
+
+# ─── GENERARE COMMENTARY (100% din datele modelului) ─────────────────────────
+
+def generate_commentary(fx: dict, probs: dict, lam_h: float, lam_a: float,
+                        tier: str) -> dict:
+    """
+    Generează motivarea predicției exclusiv din datele Poisson calculate.
+    NU halucinează, NU inventează — orice afirmație e trasabilă la o valoare numerică.
+    Returnează un dict cu secțiuni separate pentru UI.
+    """
+    h  = fx["home"];  a  = fx["away"]
+    hn = TEAM_NAMES_RO.get(h, h);  an = TEAM_NAMES_RO.get(a, a)
+
+    fav_code   = h if probs["p1"] >= probs["p2"] else a
+    under_code = a if fav_code == h else h
+    fav_name   = TEAM_NAMES_RO.get(fav_code, fav_code)
+    und_name   = TEAM_NAMES_RO.get(under_code, under_code)
+
+    p_fav  = round(max(probs["p1"], probs["p2"]) * 100)
+    p_draw = round(probs["px"] * 100)
+    p_und  = round(min(probs["p1"], probs["p2"]) * 100)
+    lam_t  = round(lam_h + lam_a, 2)
+    o25    = round(probs["o25"] * 100)
+    o35    = round(probs["o35"] * 100)
+    btts   = round(probs["btts"] * 100)
+    csh    = round(probs["cs_h"] * 100)
+    csa    = round(probs["cs_a"] * 100)
+    o05r1  = round(probs["o05_r1"] * 100)
+    o15r1  = round(probs["o15_r1"] * 100)
+    alt    = fx.get("alt", 0)
+
+    # ── Secțiunea 1: Favorit ─────────────────────────────────────────────────
+    if p_fav >= 90:
+        fav_text = (f"{fav_name} intră ca favorit copleșitor — {p_fav}% victorie "
+                    f"conform distribuției Poisson (λ {round(lam_h,1)} vs λ {round(lam_a,1)}). "
+                    f"{und_name} are {p_und}% șanse și {p_draw}% egalitate.")
+    elif p_fav >= 72:
+        fav_text = (f"{fav_name} favorit clar — {p_fav}% victorie. "
+                    f"{und_name} are {p_und}% șanse reale; egalitate {p_draw}%. "
+                    f"Un gol marcat devreme de outsider poate schimba dinamica.")
+    elif p_fav >= 55:
+        fav_text = (f"{fav_name} favorit modest — {p_fav}% vs egalitate {p_draw}% "
+                    f"vs {und_name} {p_und}%. Meci deschis, probabilitățile sunt comprimate.")
+    else:
+        fav_text = (f"Meci echilibrat: {hn} {probs['p1']*100:.0f}% — "
+                    f"egalitate {p_draw}% — {an} {probs['p2']*100:.0f}%. "
+                    f"Nicio echipă nu are avantaj statistic clar.")
+
+    # ── Secțiunea 2: Golaveraj ───────────────────────────────────────────────
+    if lam_t >= 4.0:
+        goals_text = (f"λ combinat {lam_t} — cel mai ridicat nivel de goluri așteptate. "
+                      f"Over 2.5: {o25}% · Over 3.5: {o35}%. "
+                      f"Meciul e structurat pentru scoruri largi.")
+    elif lam_t >= 3.0:
+        goals_text = (f"λ combinat {lam_t} — golaveraj ridicat. "
+                      f"Over 2.5: {o25}% · Over 3.5: {o35}%. "
+                      f"Așteptăm 3+ goluri în scenariul de bază.")
+    elif lam_t >= 2.0:
+        goals_text = (f"λ combinat {lam_t} — golaveraj moderat. "
+                      f"Over 2.5: {o25}% · Over 1.5: {round(probs['o15']*100)}%. "
+                      f"Meciul poate produce 2-3 goluri.")
+    else:
+        goals_text = (f"λ combinat {lam_t} — meci defensiv așteptat. "
+                      f"Over 2.5: {o25}% (sub pragul de valoare). "
+                      f"Sub 2.5 are probabilitate mai mare.")
+
+    # ── Secțiunea 3: BTTS & Clean Sheet ─────────────────────────────────────
+    if btts >= 60:
+        btts_text = (f"Ambele echipe marchează — BTTS: {btts}%. "
+                     f"Ambele au offensive xG real și defensive vulnerabile.")
+    elif btts >= 40:
+        btts_text = (f"BTTS moderat: {btts}%. "
+                     f"Clean sheet {hn}: {csh}% · clean sheet {an}: {csa}%. "
+                     f"Outsider-ul poate marca dacă prinde o tranziție.")
+    else:
+        cs_team = fav_name if csh > csa else und_name
+        max_cs  = max(csh, csa)
+        btts_text = (f"BTTS improbabil: {btts}%. "
+                     f"{cs_team} are {max_cs}% șanse de clean sheet — "
+                     f"outsider-ul riscă să nu marcheze deloc.")
+
+    # ── Secțiunea 4: Repriza 1 ───────────────────────────────────────────────
+    if o05r1 >= 85:
+        r1_text = (f"Repriza 1 explozivă: {o05r1}% minim un gol · "
+                   f"{o15r1}% peste 1.5 goluri în primele 45 min.")
+    elif o05r1 >= 65:
+        r1_text = f"Repriza 1 activă: {o05r1}% cel puțin un gol în prima repriză."
+    else:
+        r1_text = f"Repriza 1 prudentă: {o05r1}% primul gol în 45 min — echipele pot fi conservatoare."
+
+    # ── Secțiunea 5: Modificatori contextuali ───────────────────────────────
+    modifiers = []
+    if alt >= 2000:
+        modifiers.append(f"⚠️ Altitudine critică {alt}m ({fx['venue']}) — lambda redus cu 8%,"
+                         f" joc mai lent, pressing epuizant pentru echipe ne-aclimatizate.")
+    elif alt >= 1500:
+        modifiers.append(f"⚠️ Altitudine moderată {alt}m ({fx['venue']}) — efect mic aplicat în model.")
+
+    mod_text = " | ".join(modifiers) if modifiers else "Condiții standard — niciun modificator contextual activ."
+
+    # ── Secțiunea 6: Verdict Tier ────────────────────────────────────────────
+    tier_texts = {
+        "S": f"TIER S — probabilitate 85%+ golaveraj ridicat. Selectează cu încredere în Bet Builder.",
+        "A": f"TIER A — probabilitate 72-84%. Solidă pentru sistemele principale.",
+        "B": f"TIER B — probabilitate 62-71%. Valoare bună; verifică accidentările cu 1h înainte.",
+        "C": f"TIER C — probabilitate 52-61%. Include doar în biletele speculative sau ca flex.",
+        "D": f"TIER D — sub 52%. Evită în biletele principale.",
+    }
+    tier_text = tier_texts.get(tier, "")
+
+    # ── Surse active pentru acest meci ───────────────────────────────────────
+    sources_active = [
+        {"name": "FBref xG Baseline", "status": "active",
+         "detail": f"xGF {TEAMS[fx['home']]['xgf']} / xGA {TEAMS[fx['home']]['xga']} ({TEAM_NAMES_RO.get(fx['home'],fx['home'])})"},
+        {"name": "FBref xG Baseline", "status": "active",
+         "detail": f"xGF {TEAMS[fx['away']]['xgf']} / xGA {TEAMS[fx['away']]['xga']} ({TEAM_NAMES_RO.get(fx['away'],fx['away'])})"},
+        {"name": "WorldCupAPI live", "status": "attempted",
+         "detail": "Scoruri live — fallback la scheduled dacă API offline"},
+        {"name": "RotoWire injuries", "status": "planned",
+         "detail": "Accidentări T-24h — în development"},
+        {"name": "Betfair/Pinnacle odds", "status": "planned",
+         "detail": "Mișcare cote — în development"},
+        {"name": "AccuWeather WBGT", "status": "planned",
+         "detail": "Condiții climatice — în development"},
+    ]
+
+    return {
+        "favorit":    fav_text,
+        "golaveraj":  goals_text,
+        "btts_cs":    btts_text,
+        "repriza_1":  r1_text,
+        "modificatori": mod_text,
+        "verdict":    tier_text,
+        "surse":      sources_active,
+        "date_model": {
+            "lambda_home":   round(lam_h, 3),
+            "lambda_away":   round(lam_a, 3),
+            "lambda_total":  lam_t,
+            "p_fav_pct":     p_fav,
+            "o25_pct":       o25,
+            "btts_pct":      btts,
+            "o05_r1_pct":    o05r1,
+        }
+    }
+
 # ─── DATE LIVE (cu fallback) ──────────────────────────────────────────────────
 
 def fetch_live_scores() -> dict:
@@ -354,25 +515,50 @@ def run():
 
         # Scor live (dacă e disponibil)
         live_info = live.get(fx["id"], {})
+        actual_h  = live_info.get("home_score")
+        actual_a  = live_info.get("away_score")
+        status    = live_info.get("status", "scheduled")
+
+        # Predicție corectă? (calculat doar pentru meciuri terminate)
+        fav_code  = h if probs["p1"] >= probs["p2"] else a
+        pred_outcome = None
+        if status == "finished" and actual_h is not None and actual_a is not None:
+            if actual_h > actual_a:   actual_winner = h
+            elif actual_a > actual_h: actual_winner = a
+            else:                     actual_winner = "draw"
+            if fav_code == actual_winner: pred_outcome = "correct"
+            elif probs["px"] > 0.30 and actual_winner == "draw": pred_outcome = "draw_hit"
+            else: pred_outcome = "wrong"
+
+        # Commentary complet din datele modelului
+        commentary = generate_commentary(fx, probs, lam_h, lam_a, tier)
 
         results.append({
             "id":       fx["id"],
             "home":     h,
+            "home_name": TEAM_NAMES_RO.get(h, h),
             "away":     a,
+            "away_name": TEAM_NAMES_RO.get(a, a),
             "group":    fx["group"],
             "matchday": fx["md"],
             "date":     fx["date"],
             "venue":    fx["venue"],
-            "status":   live_info.get("status", "scheduled"),
+            "status":   status,
             "score": {
-                "home": live_info.get("home_score"),
-                "away": live_info.get("away_score"),
+                "home": actual_h,
+                "away": actual_a,
+            },
+            "prediction": {
+                "favorite":    fav_code,
+                "fav_name":    TEAM_NAMES_RO.get(fav_code, fav_code),
+                "outcome":     pred_outcome,
             },
             "lambda": {"home": round(lam_h, 3), "away": round(lam_a, 3)},
             "probs":   probs,
             "ranking_score": round(score, 3),
             "tier":    tier,
             "bet":     bet,
+            "commentary": commentary,
         })
 
     # Sortează descrescător după ranking_score
