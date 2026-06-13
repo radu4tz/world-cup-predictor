@@ -1,0 +1,3824 @@
+{
+  "meta": {
+    "generated_at": "2026-06-13T11:59:39.407120+00:00",
+    "tournament": "FIFA World Cup 2026",
+    "total_matches": 72,
+    "live_available": false,
+    "model_version": "1.0-poisson"
+  },
+  "top_30": [
+    {
+      "id": "E1",
+      "home": "GER",
+      "away": "CUR",
+      "group": "E",
+      "matchday": 1,
+      "date": "2026-06-14",
+      "venue": "Houston",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 4.405,
+        "away": 0.572
+      },
+      "probs": {
+        "p1": 0.9108,
+        "px": 0.0388,
+        "p2": 0.0144,
+        "o15": 0.9228,
+        "o25": 0.8374,
+        "o35": 0.6957,
+        "btts": 0.4144,
+        "cs_h": 0.5443,
+        "cs_a": 0.0122,
+        "o05_r1": 0.8935,
+        "o15_r1": 0.655
+      },
+      "ranking_score": 7.489,
+      "tier": "B",
+      "bet": {
+        "description": "Over 2.5 + GER câștigă",
+        "probability": 0.7627
+      }
+    },
+    {
+      "id": "K1",
+      "home": "POR",
+      "away": "COD",
+      "group": "K",
+      "matchday": 1,
+      "date": "2026-06-17",
+      "venue": "Kansas City",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 3.713,
+        "away": 0.686
+      },
+      "probs": {
+        "p1": 0.8833,
+        "px": 0.0702,
+        "p2": 0.0325,
+        "o15": 0.9197,
+        "o25": 0.8008,
+        "o35": 0.6265,
+        "btts": 0.4774,
+        "cs_h": 0.4965,
+        "cs_a": 0.0244,
+        "o05_r1": 0.8619,
+        "o15_r1": 0.5885
+      },
+      "ranking_score": 7.366,
+      "tier": "B",
+      "bet": {
+        "description": "Over 2.5 + POR câștigă",
+        "probability": 0.7073
+      }
+    },
+    {
+      "id": "C5",
+      "home": "BRA",
+      "away": "HAI",
+      "group": "C",
+      "matchday": 3,
+      "date": "2026-06-24",
+      "venue": "Miami",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 4.309,
+        "away": 0.484
+      },
+      "probs": {
+        "p1": 0.9189,
+        "px": 0.037,
+        "p2": 0.0121,
+        "o15": 0.9199,
+        "o25": 0.8248,
+        "o35": 0.6727,
+        "btts": 0.3663,
+        "cs_h": 0.5965,
+        "cs_a": 0.0134,
+        "o05_r1": 0.8843,
+        "o15_r1": 0.6348
+      },
+      "ranking_score": 7.314,
+      "tier": "B",
+      "bet": {
+        "description": "Over 2.5 + BRA câștigă",
+        "probability": 0.7579
+      }
+    },
+    {
+      "id": "H1",
+      "home": "ESP",
+      "away": "CPV",
+      "group": "H",
+      "matchday": 1,
+      "date": "2026-06-15",
+      "venue": "Kansas City",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 3.883,
+        "away": 0.535
+      },
+      "probs": {
+        "p1": 0.9086,
+        "px": 0.0536,
+        "p2": 0.0198,
+        "o15": 0.9166,
+        "o25": 0.799,
+        "o35": 0.6257,
+        "btts": 0.3985,
+        "cs_h": 0.5748,
+        "cs_a": 0.0206,
+        "o05_r1": 0.8631,
+        "o15_r1": 0.5909
+      },
+      "ranking_score": 7.22,
+      "tier": "B",
+      "bet": {
+        "description": "Over 2.5 + ESP câștigă",
+        "probability": 0.726
+      }
+    },
+    {
+      "id": "I2",
+      "home": "IRQ",
+      "away": "NOR",
+      "group": "I",
+      "matchday": 1,
+      "date": "2026-06-16",
+      "venue": "Boston",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 0.622,
+        "away": 3.614
+      },
+      "probs": {
+        "p1": 0.0305,
+        "px": 0.0706,
+        "p2": 0.887,
+        "o15": 0.9123,
+        "o25": 0.7825,
+        "o35": 0.5993,
+        "btts": 0.4453,
+        "cs_h": 0.027,
+        "cs_a": 0.5303,
+        "o05_r1": 0.8514,
+        "o15_r1": 0.568
+      },
+      "ranking_score": 7.196,
+      "tier": "B",
+      "bet": {
+        "description": "Over 2.5 + NOR câștigă",
+        "probability": 0.6941
+      }
+    },
+    {
+      "id": "I3",
+      "home": "FRA",
+      "away": "IRQ",
+      "group": "I",
+      "matchday": 2,
+      "date": "2026-06-22",
+      "venue": "Atlanta",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 3.909,
+        "away": 0.507
+      },
+      "probs": {
+        "p1": 0.9124,
+        "px": 0.0509,
+        "p2": 0.0179,
+        "o15": 0.9158,
+        "o25": 0.798,
+        "o35": 0.6246,
+        "btts": 0.3823,
+        "cs_h": 0.5909,
+        "cs_a": 0.0201,
+        "o05_r1": 0.8629,
+        "o15_r1": 0.5905
+      },
+      "ranking_score": 7.183,
+      "tier": "B",
+      "bet": {
+        "description": "Over 2.5 + FRA câștigă",
+        "probability": 0.7281
+      }
+    },
+    {
+      "id": "J5",
+      "home": "ARG",
+      "away": "JOR",
+      "group": "J",
+      "matchday": 3,
+      "date": "2026-06-27",
+      "venue": "Dallas",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 4.268,
+        "away": 0.403
+      },
+      "probs": {
+        "p1": 0.9261,
+        "px": 0.0339,
+        "p2": 0.0096,
+        "o15": 0.9164,
+        "o25": 0.8143,
+        "o35": 0.6552,
+        "btts": 0.317,
+        "cs_h": 0.6479,
+        "cs_a": 0.014,
+        "o05_r1": 0.8778,
+        "o15_r1": 0.6208
+      },
+      "ranking_score": 7.148,
+      "tier": "B",
+      "bet": {
+        "description": "Over 2.5 + ARG câștigă",
+        "probability": 0.7541
+      }
+    },
+    {
+      "id": "K3",
+      "home": "POR",
+      "away": "UZB",
+      "group": "K",
+      "matchday": 2,
+      "date": "2026-06-23",
+      "venue": "Kansas City",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 3.658,
+        "away": 0.561
+      },
+      "probs": {
+        "p1": 0.8974,
+        "px": 0.0644,
+        "p2": 0.0254,
+        "o15": 0.9104,
+        "o25": 0.7795,
+        "o35": 0.5953,
+        "btts": 0.413,
+        "cs_h": 0.5631,
+        "cs_a": 0.0258,
+        "o05_r1": 0.8502,
+        "o15_r1": 0.5659
+      },
+      "ranking_score": 7.124,
+      "tier": "B",
+      "bet": {
+        "description": "Over 2.5 + POR câștigă",
+        "probability": 0.6995
+      }
+    },
+    {
+      "id": "K4",
+      "home": "COD",
+      "away": "COL",
+      "group": "K",
+      "matchday": 2,
+      "date": "2026-06-23",
+      "venue": "Los Angeles",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 0.858,
+        "away": 3.1
+      },
+      "probs": {
+        "p1": 0.0706,
+        "px": 0.1155,
+        "p2": 0.8092,
+        "o15": 0.9006,
+        "o25": 0.751,
+        "o35": 0.5536,
+        "btts": 0.5472,
+        "cs_h": 0.045,
+        "cs_a": 0.4222,
+        "o05_r1": 0.8315,
+        "o15_r1": 0.5315
+      },
+      "ranking_score": 7.103,
+      "tier": "B",
+      "bet": {
+        "description": "BTTS + COL câștigă + Over 1.5 R1",
+        "probability": 0.2353
+      }
+    },
+    {
+      "id": "L5",
+      "home": "ENG",
+      "away": "PAN",
+      "group": "L",
+      "matchday": 3,
+      "date": "2026-06-27",
+      "venue": "San Francisco",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 3.708,
+        "away": 0.524
+      },
+      "probs": {
+        "p1": 0.9042,
+        "px": 0.0598,
+        "p2": 0.0221,
+        "o15": 0.9102,
+        "o25": 0.7802,
+        "o35": 0.5967,
+        "btts": 0.3924,
+        "cs_h": 0.5837,
+        "cs_a": 0.0245,
+        "o05_r1": 0.8511,
+        "o15_r1": 0.5676
+      },
+      "ranking_score": 7.092,
+      "tier": "B",
+      "bet": {
+        "description": "Over 2.5 + ENG câștigă",
+        "probability": 0.7055
+      }
+    },
+    {
+      "id": "H3",
+      "home": "ESP",
+      "away": "KSA",
+      "group": "H",
+      "matchday": 2,
+      "date": "2026-06-21",
+      "venue": "Kansas City",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 3.425,
+        "away": 0.628
+      },
+      "probs": {
+        "p1": 0.8753,
+        "px": 0.0803,
+        "p2": 0.0357,
+        "o15": 0.9036,
+        "o25": 0.7609,
+        "o35": 0.5682,
+        "btts": 0.4471,
+        "cs_h": 0.529,
+        "cs_a": 0.0325,
+        "o05_r1": 0.8386,
+        "o15_r1": 0.5443
+      },
+      "ranking_score": 7.059,
+      "tier": "B",
+      "bet": {
+        "description": "Over 2.5 + ESP câștigă",
+        "probability": 0.666
+      }
+    },
+    {
+      "id": "E3",
+      "home": "GER",
+      "away": "CIV",
+      "group": "E",
+      "matchday": 2,
+      "date": "2026-06-20",
+      "venue": "Houston",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 2.802,
+        "away": 1.055
+      },
+      "probs": {
+        "p1": 0.7342,
+        "px": 0.1481,
+        "p2": 0.1153,
+        "o15": 0.8949,
+        "o25": 0.7376,
+        "o35": 0.5355,
+        "btts": 0.6105,
+        "cs_h": 0.3475,
+        "cs_a": 0.0607,
+        "o05_r1": 0.8237,
+        "o15_r1": 0.5177
+      },
+      "ranking_score": 7.009,
+      "tier": "B",
+      "bet": {
+        "description": "BTTS + GER câștigă + Over 1.5 R1",
+        "probability": 0.232
+      }
+    },
+    {
+      "id": "F5",
+      "home": "NED",
+      "away": "TUN",
+      "group": "F",
+      "matchday": 3,
+      "date": "2026-06-27",
+      "venue": "Los Angeles",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 3.243,
+        "away": 0.674
+      },
+      "probs": {
+        "p1": 0.8546,
+        "px": 0.0938,
+        "p2": 0.0454,
+        "o15": 0.896,
+        "o25": 0.7433,
+        "o35": 0.544,
+        "btts": 0.4683,
+        "cs_h": 0.5064,
+        "cs_a": 0.039,
+        "o05_r1": 0.8284,
+        "o15_r1": 0.526
+      },
+      "ranking_score": 6.972,
+      "tier": "B",
+      "bet": {
+        "description": "Over 2.5 + NED câștigă",
+        "probability": 0.6352
+      }
+    },
+    {
+      "id": "J2",
+      "home": "AUT",
+      "away": "JOR",
+      "group": "J",
+      "matchday": 1,
+      "date": "2026-06-16",
+      "venue": "Miami",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 3.288,
+        "away": 0.595
+      },
+      "probs": {
+        "p1": 0.871,
+        "px": 0.0854,
+        "p2": 0.0368,
+        "o15": 0.8927,
+        "o25": 0.7375,
+        "o35": 0.5366,
+        "btts": 0.4285,
+        "cs_h": 0.548,
+        "cs_a": 0.0373,
+        "o05_r1": 0.8258,
+        "o15_r1": 0.5213
+      },
+      "ranking_score": 6.88,
+      "tier": "B",
+      "bet": {
+        "description": "Over 2.5 + AUT câștigă",
+        "probability": 0.6424
+      }
+    },
+    {
+      "id": "G5",
+      "home": "BEL",
+      "away": "NZL",
+      "group": "G",
+      "matchday": 3,
+      "date": "2026-06-27",
+      "venue": "Philadelphia",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 3.173,
+        "away": 0.659
+      },
+      "probs": {
+        "p1": 0.8513,
+        "px": 0.0969,
+        "p2": 0.0464,
+        "o15": 0.8899,
+        "o25": 0.7308,
+        "o35": 0.5276,
+        "btts": 0.4598,
+        "cs_h": 0.5146,
+        "cs_a": 0.0419,
+        "o05_r1": 0.8217,
+        "o15_r1": 0.5143
+      },
+      "ranking_score": 6.878,
+      "tier": "B",
+      "bet": {
+        "description": "Over 2.5 + BEL câștigă",
+        "probability": 0.6221
+      }
+    },
+    {
+      "id": "B3",
+      "home": "CAN",
+      "away": "QAT",
+      "group": "B",
+      "matchday": 2,
+      "date": "2026-06-19",
+      "venue": "Vancouver",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 3.061,
+        "away": 0.709
+      },
+      "probs": {
+        "p1": 0.8321,
+        "px": 0.1078,
+        "p2": 0.0558,
+        "o15": 0.8857,
+        "o25": 0.722,
+        "o35": 0.5161,
+        "btts": 0.482,
+        "cs_h": 0.4899,
+        "cs_a": 0.0468,
+        "o05_r1": 0.8167,
+        "o15_r1": 0.5057
+      },
+      "ranking_score": 6.844,
+      "tier": "B",
+      "bet": {
+        "description": "Over 2.5 + CAN câștigă",
+        "probability": 0.6008
+      }
+    },
+    {
+      "id": "L3",
+      "home": "ENG",
+      "away": "GHA",
+      "group": "L",
+      "matchday": 2,
+      "date": "2026-06-23",
+      "venue": "San Francisco",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 2.828,
+        "away": 0.887
+      },
+      "probs": {
+        "p1": 0.7715,
+        "px": 0.1363,
+        "p2": 0.0896,
+        "o15": 0.8826,
+        "o25": 0.7145,
+        "o35": 0.5064,
+        "btts": 0.5518,
+        "cs_h": 0.4109,
+        "cs_a": 0.0591,
+        "o05_r1": 0.8121,
+        "o15_r1": 0.4979
+      },
+      "ranking_score": 6.836,
+      "tier": "B",
+      "bet": {
+        "description": "BTTS + ENG câștigă + Over 1.5 R1",
+        "probability": 0.212
+      }
+    },
+    {
+      "id": "J1",
+      "home": "ARG",
+      "away": "ALG",
+      "group": "J",
+      "matchday": 1,
+      "date": "2026-06-16",
+      "venue": "Dallas",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 2.897,
+        "away": 0.82
+      },
+      "probs": {
+        "p1": 0.7934,
+        "px": 0.1269,
+        "p2": 0.0767,
+        "o15": 0.8823,
+        "o25": 0.7144,
+        "o35": 0.5064,
+        "btts": 0.527,
+        "cs_h": 0.4391,
+        "cs_a": 0.0552,
+        "o05_r1": 0.8123,
+        "o15_r1": 0.4983
+      },
+      "ranking_score": 6.826,
+      "tier": "B",
+      "bet": {
+        "description": "BTTS + ARG câștigă + Over 1.5 R1",
+        "probability": 0.2084
+      }
+    },
+    {
+      "id": "K2",
+      "home": "UZB",
+      "away": "COL",
+      "group": "K",
+      "matchday": 1,
+      "date": "2026-06-17",
+      "venue": "Los Angeles",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 0.702,
+        "away": 3.054
+      },
+      "probs": {
+        "p1": 0.0553,
+        "px": 0.1077,
+        "p2": 0.8327,
+        "o15": 0.8845,
+        "o25": 0.7196,
+        "o35": 0.5131,
+        "btts": 0.4783,
+        "cs_h": 0.0472,
+        "cs_a": 0.4936,
+        "o05_r1": 0.8155,
+        "o15_r1": 0.5036
+      },
+      "ranking_score": 6.823,
+      "tier": "B",
+      "bet": {
+        "description": "Over 2.5 + COL câștigă",
+        "probability": 0.5992
+      }
+    },
+    {
+      "id": "F4",
+      "home": "JPN",
+      "away": "TUN",
+      "group": "F",
+      "matchday": 2,
+      "date": "2026-06-23",
+      "venue": "Dallas",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 2.836,
+        "away": 0.734
+      },
+      "probs": {
+        "p1": 0.8029,
+        "px": 0.1253,
+        "p2": 0.0691,
+        "o15": 0.8686,
+        "o25": 0.6892,
+        "o35": 0.4757,
+        "btts": 0.488,
+        "cs_h": 0.4788,
+        "cs_a": 0.0587,
+        "o05_r1": 0.7994,
+        "o15_r1": 0.4771
+      },
+      "ranking_score": 6.621,
+      "tier": "B",
+      "bet": {
+        "description": "BTTS + JPN câștigă + Over 1.5 R1",
+        "probability": 0.1869
+      }
+    },
+    {
+      "id": "B2",
+      "home": "QAT",
+      "away": "SUI",
+      "group": "B",
+      "matchday": 1,
+      "date": "2026-06-13",
+      "venue": "San Francisco",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 0.515,
+        "away": 3.17
+      },
+      "probs": {
+        "p1": 0.0333,
+        "px": 0.0861,
+        "p2": 0.8752,
+        "o15": 0.8771,
+        "o25": 0.7067,
+        "o35": 0.4974,
+        "btts": 0.3834,
+        "cs_h": 0.042,
+        "cs_a": 0.5943,
+        "o05_r1": 0.8095,
+        "o15_r1": 0.4937
+      },
+      "ranking_score": 6.616,
+      "tier": "B",
+      "bet": {
+        "description": "Over 2.5 + SUI câștigă",
+        "probability": 0.6185
+      }
+    },
+    {
+      "id": "J3",
+      "home": "ARG",
+      "away": "AUT",
+      "group": "J",
+      "matchday": 2,
+      "date": "2026-06-22",
+      "venue": "Dallas",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 2.369,
+        "away": 1.237
+      },
+      "probs": {
+        "p1": 0.6244,
+        "px": 0.188,
+        "p2": 0.1868,
+        "o15": 0.8741,
+        "o25": 0.6975,
+        "o35": 0.4852,
+        "btts": 0.6427,
+        "cs_h": 0.29,
+        "cs_a": 0.0936,
+        "o05_r1": 0.8026,
+        "o15_r1": 0.4823
+      },
+      "ranking_score": 6.606,
+      "tier": "B",
+      "bet": {
+        "description": "BTTS + ARG câștigă + Over 1.5 R1",
+        "probability": 0.1935
+      }
+    },
+    {
+      "id": "L1",
+      "home": "ENG",
+      "away": "CRO",
+      "group": "L",
+      "matchday": 1,
+      "date": "2026-06-17",
+      "venue": "San Francisco",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 2.397,
+        "away": 1.141
+      },
+      "probs": {
+        "p1": 0.6505,
+        "px": 0.1826,
+        "p2": 0.166,
+        "o15": 0.8673,
+        "o25": 0.6854,
+        "o35": 0.4708,
+        "btts": 0.6181,
+        "cs_h": 0.3191,
+        "cs_a": 0.091,
+        "o05_r1": 0.7966,
+        "o15_r1": 0.4726
+      },
+      "ranking_score": 6.551,
+      "tier": "B",
+      "bet": {
+        "description": "BTTS + ENG câștigă + Over 1.5 R1",
+        "probability": 0.19
+      }
+    },
+    {
+      "id": "C3",
+      "home": "BRA",
+      "away": "SCO",
+      "group": "C",
+      "matchday": 2,
+      "date": "2026-06-20",
+      "venue": "Philadelphia",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 2.289,
+        "away": 1.281
+      },
+      "probs": {
+        "p1": 0.5996,
+        "px": 0.195,
+        "p2": 0.2047,
+        "o15": 0.8707,
+        "o25": 0.6913,
+        "o35": 0.4778,
+        "btts": 0.6486,
+        "cs_h": 0.2775,
+        "cs_a": 0.1014,
+        "o05_r1": 0.7994,
+        "o15_r1": 0.4772
+      },
+      "ranking_score": 6.524,
+      "tier": "B",
+      "bet": {
+        "description": "BTTS + BRA câștigă + Over 1.5 R1",
+        "probability": 0.1856
+      }
+    },
+    {
+      "id": "F3",
+      "home": "NED",
+      "away": "SWE",
+      "group": "F",
+      "matchday": 2,
+      "date": "2026-06-22",
+      "venue": "Los Angeles",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 2.205,
+        "away": 1.4
+      },
+      "probs": {
+        "p1": 0.5572,
+        "px": 0.203,
+        "p2": 0.2393,
+        "o15": 0.8743,
+        "o25": 0.6976,
+        "o35": 0.4854,
+        "btts": 0.67,
+        "cs_h": 0.2464,
+        "cs_a": 0.1103,
+        "o05_r1": 0.8025,
+        "o15_r1": 0.4822
+      },
+      "ranking_score": 6.495,
+      "tier": "B",
+      "bet": {
+        "description": "BTTS + NED câștigă + Over 1.5 R1",
+        "probability": 0.18
+      }
+    },
+    {
+      "id": "I6",
+      "home": "SEN",
+      "away": "IRQ",
+      "group": "I",
+      "matchday": 3,
+      "date": "2026-06-26",
+      "venue": "Boston",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 2.797,
+        "away": 0.663
+      },
+      "probs": {
+        "p1": 0.8124,
+        "px": 0.123,
+        "p2": 0.0622,
+        "o15": 0.8574,
+        "o25": 0.6692,
+        "o35": 0.4522,
+        "btts": 0.4538,
+        "cs_h": 0.5142,
+        "cs_a": 0.061,
+        "o05_r1": 0.7892,
+        "o15_r1": 0.461
+      },
+      "ranking_score": 6.455,
+      "tier": "B",
+      "bet": {
+        "description": "Over 2.5 + SEN câștigă",
+        "probability": 0.5437
+      }
+    },
+    {
+      "id": "E6",
+      "home": "CIV",
+      "away": "CUR",
+      "group": "E",
+      "matchday": 3,
+      "date": "2026-06-25",
+      "venue": "Philadelphia",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 2.531,
+        "away": 0.872
+      },
+      "probs": {
+        "p1": 0.7322,
+        "px": 0.1587,
+        "p2": 0.1079,
+        "o15": 0.8523,
+        "o25": 0.6597,
+        "o35": 0.4412,
+        "btts": 0.535,
+        "cs_h": 0.4174,
+        "cs_a": 0.0796,
+        "o05_r1": 0.7838,
+        "o15_r1": 0.4527
+      },
+      "ranking_score": 6.418,
+      "tier": "B",
+      "bet": {
+        "description": "BTTS + CIV câștigă + Over 1.5 R1",
+        "probability": 0.1773
+      }
+    },
+    {
+      "id": "K5",
+      "home": "POR",
+      "away": "COL",
+      "group": "K",
+      "matchday": 3,
+      "date": "2026-06-27",
+      "venue": "New York",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 2.125,
+        "away": 1.419
+      },
+      "probs": {
+        "p1": 0.5368,
+        "px": 0.2085,
+        "p2": 0.2543,
+        "o15": 0.8683,
+        "o25": 0.6867,
+        "o35": 0.4724,
+        "btts": 0.6672,
+        "cs_h": 0.2419,
+        "cs_a": 0.1195,
+        "o05_r1": 0.797,
+        "o15_r1": 0.4733
+      },
+      "ranking_score": 6.377,
+      "tier": "B",
+      "bet": {
+        "description": "BTTS + POR câștigă + Over 1.5 R1",
+        "probability": 0.1695
+      }
+    },
+    {
+      "id": "H4",
+      "home": "CPV",
+      "away": "URU",
+      "group": "H",
+      "matchday": 2,
+      "date": "2026-06-21",
+      "venue": "Atlanta",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 0.81,
+        "away": 2.561
+      },
+      "probs": {
+        "p1": 0.096,
+        "px": 0.1523,
+        "p2": 0.7504,
+        "o15": 0.8485,
+        "o25": 0.6534,
+        "o35": 0.434,
+        "btts": 0.5115,
+        "cs_h": 0.0772,
+        "cs_a": 0.4443,
+        "o05_r1": 0.7807,
+        "o15_r1": 0.4479
+      },
+      "ranking_score": 6.372,
+      "tier": "B",
+      "bet": {
+        "description": "BTTS + URU câștigă + Over 1.5 R1",
+        "probability": 0.1719
+      }
+    },
+    {
+      "id": "I5",
+      "home": "FRA",
+      "away": "NOR",
+      "group": "I",
+      "matchday": 3,
+      "date": "2026-06-26",
+      "venue": "Atlanta",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 2.059,
+        "away": 1.551
+      },
+      "probs": {
+        "p1": 0.4953,
+        "px": 0.2124,
+        "p2": 0.2919,
+        "o15": 0.875,
+        "o25": 0.6988,
+        "o35": 0.4867,
+        "btts": 0.6872,
+        "cs_h": 0.2119,
+        "cs_a": 0.1275,
+        "o05_r1": 0.803,
+        "o15_r1": 0.483
+      },
+      "ranking_score": 6.372,
+      "tier": "B",
+      "bet": {
+        "description": "BTTS + FRA câștigă + Over 1.5 R1",
+        "probability": 0.1644
+      }
+    }
+  ],
+  "all_72": [
+    {
+      "id": "E1",
+      "home": "GER",
+      "away": "CUR",
+      "group": "E",
+      "matchday": 1,
+      "date": "2026-06-14",
+      "venue": "Houston",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 4.405,
+        "away": 0.572
+      },
+      "probs": {
+        "p1": 0.9108,
+        "px": 0.0388,
+        "p2": 0.0144,
+        "o15": 0.9228,
+        "o25": 0.8374,
+        "o35": 0.6957,
+        "btts": 0.4144,
+        "cs_h": 0.5443,
+        "cs_a": 0.0122,
+        "o05_r1": 0.8935,
+        "o15_r1": 0.655
+      },
+      "ranking_score": 7.489,
+      "tier": "B",
+      "bet": {
+        "description": "Over 2.5 + GER câștigă",
+        "probability": 0.7627
+      }
+    },
+    {
+      "id": "K1",
+      "home": "POR",
+      "away": "COD",
+      "group": "K",
+      "matchday": 1,
+      "date": "2026-06-17",
+      "venue": "Kansas City",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 3.713,
+        "away": 0.686
+      },
+      "probs": {
+        "p1": 0.8833,
+        "px": 0.0702,
+        "p2": 0.0325,
+        "o15": 0.9197,
+        "o25": 0.8008,
+        "o35": 0.6265,
+        "btts": 0.4774,
+        "cs_h": 0.4965,
+        "cs_a": 0.0244,
+        "o05_r1": 0.8619,
+        "o15_r1": 0.5885
+      },
+      "ranking_score": 7.366,
+      "tier": "B",
+      "bet": {
+        "description": "Over 2.5 + POR câștigă",
+        "probability": 0.7073
+      }
+    },
+    {
+      "id": "C5",
+      "home": "BRA",
+      "away": "HAI",
+      "group": "C",
+      "matchday": 3,
+      "date": "2026-06-24",
+      "venue": "Miami",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 4.309,
+        "away": 0.484
+      },
+      "probs": {
+        "p1": 0.9189,
+        "px": 0.037,
+        "p2": 0.0121,
+        "o15": 0.9199,
+        "o25": 0.8248,
+        "o35": 0.6727,
+        "btts": 0.3663,
+        "cs_h": 0.5965,
+        "cs_a": 0.0134,
+        "o05_r1": 0.8843,
+        "o15_r1": 0.6348
+      },
+      "ranking_score": 7.314,
+      "tier": "B",
+      "bet": {
+        "description": "Over 2.5 + BRA câștigă",
+        "probability": 0.7579
+      }
+    },
+    {
+      "id": "H1",
+      "home": "ESP",
+      "away": "CPV",
+      "group": "H",
+      "matchday": 1,
+      "date": "2026-06-15",
+      "venue": "Kansas City",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 3.883,
+        "away": 0.535
+      },
+      "probs": {
+        "p1": 0.9086,
+        "px": 0.0536,
+        "p2": 0.0198,
+        "o15": 0.9166,
+        "o25": 0.799,
+        "o35": 0.6257,
+        "btts": 0.3985,
+        "cs_h": 0.5748,
+        "cs_a": 0.0206,
+        "o05_r1": 0.8631,
+        "o15_r1": 0.5909
+      },
+      "ranking_score": 7.22,
+      "tier": "B",
+      "bet": {
+        "description": "Over 2.5 + ESP câștigă",
+        "probability": 0.726
+      }
+    },
+    {
+      "id": "I2",
+      "home": "IRQ",
+      "away": "NOR",
+      "group": "I",
+      "matchday": 1,
+      "date": "2026-06-16",
+      "venue": "Boston",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 0.622,
+        "away": 3.614
+      },
+      "probs": {
+        "p1": 0.0305,
+        "px": 0.0706,
+        "p2": 0.887,
+        "o15": 0.9123,
+        "o25": 0.7825,
+        "o35": 0.5993,
+        "btts": 0.4453,
+        "cs_h": 0.027,
+        "cs_a": 0.5303,
+        "o05_r1": 0.8514,
+        "o15_r1": 0.568
+      },
+      "ranking_score": 7.196,
+      "tier": "B",
+      "bet": {
+        "description": "Over 2.5 + NOR câștigă",
+        "probability": 0.6941
+      }
+    },
+    {
+      "id": "I3",
+      "home": "FRA",
+      "away": "IRQ",
+      "group": "I",
+      "matchday": 2,
+      "date": "2026-06-22",
+      "venue": "Atlanta",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 3.909,
+        "away": 0.507
+      },
+      "probs": {
+        "p1": 0.9124,
+        "px": 0.0509,
+        "p2": 0.0179,
+        "o15": 0.9158,
+        "o25": 0.798,
+        "o35": 0.6246,
+        "btts": 0.3823,
+        "cs_h": 0.5909,
+        "cs_a": 0.0201,
+        "o05_r1": 0.8629,
+        "o15_r1": 0.5905
+      },
+      "ranking_score": 7.183,
+      "tier": "B",
+      "bet": {
+        "description": "Over 2.5 + FRA câștigă",
+        "probability": 0.7281
+      }
+    },
+    {
+      "id": "J5",
+      "home": "ARG",
+      "away": "JOR",
+      "group": "J",
+      "matchday": 3,
+      "date": "2026-06-27",
+      "venue": "Dallas",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 4.268,
+        "away": 0.403
+      },
+      "probs": {
+        "p1": 0.9261,
+        "px": 0.0339,
+        "p2": 0.0096,
+        "o15": 0.9164,
+        "o25": 0.8143,
+        "o35": 0.6552,
+        "btts": 0.317,
+        "cs_h": 0.6479,
+        "cs_a": 0.014,
+        "o05_r1": 0.8778,
+        "o15_r1": 0.6208
+      },
+      "ranking_score": 7.148,
+      "tier": "B",
+      "bet": {
+        "description": "Over 2.5 + ARG câștigă",
+        "probability": 0.7541
+      }
+    },
+    {
+      "id": "K3",
+      "home": "POR",
+      "away": "UZB",
+      "group": "K",
+      "matchday": 2,
+      "date": "2026-06-23",
+      "venue": "Kansas City",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 3.658,
+        "away": 0.561
+      },
+      "probs": {
+        "p1": 0.8974,
+        "px": 0.0644,
+        "p2": 0.0254,
+        "o15": 0.9104,
+        "o25": 0.7795,
+        "o35": 0.5953,
+        "btts": 0.413,
+        "cs_h": 0.5631,
+        "cs_a": 0.0258,
+        "o05_r1": 0.8502,
+        "o15_r1": 0.5659
+      },
+      "ranking_score": 7.124,
+      "tier": "B",
+      "bet": {
+        "description": "Over 2.5 + POR câștigă",
+        "probability": 0.6995
+      }
+    },
+    {
+      "id": "K4",
+      "home": "COD",
+      "away": "COL",
+      "group": "K",
+      "matchday": 2,
+      "date": "2026-06-23",
+      "venue": "Los Angeles",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 0.858,
+        "away": 3.1
+      },
+      "probs": {
+        "p1": 0.0706,
+        "px": 0.1155,
+        "p2": 0.8092,
+        "o15": 0.9006,
+        "o25": 0.751,
+        "o35": 0.5536,
+        "btts": 0.5472,
+        "cs_h": 0.045,
+        "cs_a": 0.4222,
+        "o05_r1": 0.8315,
+        "o15_r1": 0.5315
+      },
+      "ranking_score": 7.103,
+      "tier": "B",
+      "bet": {
+        "description": "BTTS + COL câștigă + Over 1.5 R1",
+        "probability": 0.2353
+      }
+    },
+    {
+      "id": "L5",
+      "home": "ENG",
+      "away": "PAN",
+      "group": "L",
+      "matchday": 3,
+      "date": "2026-06-27",
+      "venue": "San Francisco",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 3.708,
+        "away": 0.524
+      },
+      "probs": {
+        "p1": 0.9042,
+        "px": 0.0598,
+        "p2": 0.0221,
+        "o15": 0.9102,
+        "o25": 0.7802,
+        "o35": 0.5967,
+        "btts": 0.3924,
+        "cs_h": 0.5837,
+        "cs_a": 0.0245,
+        "o05_r1": 0.8511,
+        "o15_r1": 0.5676
+      },
+      "ranking_score": 7.092,
+      "tier": "B",
+      "bet": {
+        "description": "Over 2.5 + ENG câștigă",
+        "probability": 0.7055
+      }
+    },
+    {
+      "id": "H3",
+      "home": "ESP",
+      "away": "KSA",
+      "group": "H",
+      "matchday": 2,
+      "date": "2026-06-21",
+      "venue": "Kansas City",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 3.425,
+        "away": 0.628
+      },
+      "probs": {
+        "p1": 0.8753,
+        "px": 0.0803,
+        "p2": 0.0357,
+        "o15": 0.9036,
+        "o25": 0.7609,
+        "o35": 0.5682,
+        "btts": 0.4471,
+        "cs_h": 0.529,
+        "cs_a": 0.0325,
+        "o05_r1": 0.8386,
+        "o15_r1": 0.5443
+      },
+      "ranking_score": 7.059,
+      "tier": "B",
+      "bet": {
+        "description": "Over 2.5 + ESP câștigă",
+        "probability": 0.666
+      }
+    },
+    {
+      "id": "E3",
+      "home": "GER",
+      "away": "CIV",
+      "group": "E",
+      "matchday": 2,
+      "date": "2026-06-20",
+      "venue": "Houston",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 2.802,
+        "away": 1.055
+      },
+      "probs": {
+        "p1": 0.7342,
+        "px": 0.1481,
+        "p2": 0.1153,
+        "o15": 0.8949,
+        "o25": 0.7376,
+        "o35": 0.5355,
+        "btts": 0.6105,
+        "cs_h": 0.3475,
+        "cs_a": 0.0607,
+        "o05_r1": 0.8237,
+        "o15_r1": 0.5177
+      },
+      "ranking_score": 7.009,
+      "tier": "B",
+      "bet": {
+        "description": "BTTS + GER câștigă + Over 1.5 R1",
+        "probability": 0.232
+      }
+    },
+    {
+      "id": "F5",
+      "home": "NED",
+      "away": "TUN",
+      "group": "F",
+      "matchday": 3,
+      "date": "2026-06-27",
+      "venue": "Los Angeles",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 3.243,
+        "away": 0.674
+      },
+      "probs": {
+        "p1": 0.8546,
+        "px": 0.0938,
+        "p2": 0.0454,
+        "o15": 0.896,
+        "o25": 0.7433,
+        "o35": 0.544,
+        "btts": 0.4683,
+        "cs_h": 0.5064,
+        "cs_a": 0.039,
+        "o05_r1": 0.8284,
+        "o15_r1": 0.526
+      },
+      "ranking_score": 6.972,
+      "tier": "B",
+      "bet": {
+        "description": "Over 2.5 + NED câștigă",
+        "probability": 0.6352
+      }
+    },
+    {
+      "id": "J2",
+      "home": "AUT",
+      "away": "JOR",
+      "group": "J",
+      "matchday": 1,
+      "date": "2026-06-16",
+      "venue": "Miami",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 3.288,
+        "away": 0.595
+      },
+      "probs": {
+        "p1": 0.871,
+        "px": 0.0854,
+        "p2": 0.0368,
+        "o15": 0.8927,
+        "o25": 0.7375,
+        "o35": 0.5366,
+        "btts": 0.4285,
+        "cs_h": 0.548,
+        "cs_a": 0.0373,
+        "o05_r1": 0.8258,
+        "o15_r1": 0.5213
+      },
+      "ranking_score": 6.88,
+      "tier": "B",
+      "bet": {
+        "description": "Over 2.5 + AUT câștigă",
+        "probability": 0.6424
+      }
+    },
+    {
+      "id": "G5",
+      "home": "BEL",
+      "away": "NZL",
+      "group": "G",
+      "matchday": 3,
+      "date": "2026-06-27",
+      "venue": "Philadelphia",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 3.173,
+        "away": 0.659
+      },
+      "probs": {
+        "p1": 0.8513,
+        "px": 0.0969,
+        "p2": 0.0464,
+        "o15": 0.8899,
+        "o25": 0.7308,
+        "o35": 0.5276,
+        "btts": 0.4598,
+        "cs_h": 0.5146,
+        "cs_a": 0.0419,
+        "o05_r1": 0.8217,
+        "o15_r1": 0.5143
+      },
+      "ranking_score": 6.878,
+      "tier": "B",
+      "bet": {
+        "description": "Over 2.5 + BEL câștigă",
+        "probability": 0.6221
+      }
+    },
+    {
+      "id": "B3",
+      "home": "CAN",
+      "away": "QAT",
+      "group": "B",
+      "matchday": 2,
+      "date": "2026-06-19",
+      "venue": "Vancouver",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 3.061,
+        "away": 0.709
+      },
+      "probs": {
+        "p1": 0.8321,
+        "px": 0.1078,
+        "p2": 0.0558,
+        "o15": 0.8857,
+        "o25": 0.722,
+        "o35": 0.5161,
+        "btts": 0.482,
+        "cs_h": 0.4899,
+        "cs_a": 0.0468,
+        "o05_r1": 0.8167,
+        "o15_r1": 0.5057
+      },
+      "ranking_score": 6.844,
+      "tier": "B",
+      "bet": {
+        "description": "Over 2.5 + CAN câștigă",
+        "probability": 0.6008
+      }
+    },
+    {
+      "id": "L3",
+      "home": "ENG",
+      "away": "GHA",
+      "group": "L",
+      "matchday": 2,
+      "date": "2026-06-23",
+      "venue": "San Francisco",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 2.828,
+        "away": 0.887
+      },
+      "probs": {
+        "p1": 0.7715,
+        "px": 0.1363,
+        "p2": 0.0896,
+        "o15": 0.8826,
+        "o25": 0.7145,
+        "o35": 0.5064,
+        "btts": 0.5518,
+        "cs_h": 0.4109,
+        "cs_a": 0.0591,
+        "o05_r1": 0.8121,
+        "o15_r1": 0.4979
+      },
+      "ranking_score": 6.836,
+      "tier": "B",
+      "bet": {
+        "description": "BTTS + ENG câștigă + Over 1.5 R1",
+        "probability": 0.212
+      }
+    },
+    {
+      "id": "J1",
+      "home": "ARG",
+      "away": "ALG",
+      "group": "J",
+      "matchday": 1,
+      "date": "2026-06-16",
+      "venue": "Dallas",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 2.897,
+        "away": 0.82
+      },
+      "probs": {
+        "p1": 0.7934,
+        "px": 0.1269,
+        "p2": 0.0767,
+        "o15": 0.8823,
+        "o25": 0.7144,
+        "o35": 0.5064,
+        "btts": 0.527,
+        "cs_h": 0.4391,
+        "cs_a": 0.0552,
+        "o05_r1": 0.8123,
+        "o15_r1": 0.4983
+      },
+      "ranking_score": 6.826,
+      "tier": "B",
+      "bet": {
+        "description": "BTTS + ARG câștigă + Over 1.5 R1",
+        "probability": 0.2084
+      }
+    },
+    {
+      "id": "K2",
+      "home": "UZB",
+      "away": "COL",
+      "group": "K",
+      "matchday": 1,
+      "date": "2026-06-17",
+      "venue": "Los Angeles",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 0.702,
+        "away": 3.054
+      },
+      "probs": {
+        "p1": 0.0553,
+        "px": 0.1077,
+        "p2": 0.8327,
+        "o15": 0.8845,
+        "o25": 0.7196,
+        "o35": 0.5131,
+        "btts": 0.4783,
+        "cs_h": 0.0472,
+        "cs_a": 0.4936,
+        "o05_r1": 0.8155,
+        "o15_r1": 0.5036
+      },
+      "ranking_score": 6.823,
+      "tier": "B",
+      "bet": {
+        "description": "Over 2.5 + COL câștigă",
+        "probability": 0.5992
+      }
+    },
+    {
+      "id": "F4",
+      "home": "JPN",
+      "away": "TUN",
+      "group": "F",
+      "matchday": 2,
+      "date": "2026-06-23",
+      "venue": "Dallas",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 2.836,
+        "away": 0.734
+      },
+      "probs": {
+        "p1": 0.8029,
+        "px": 0.1253,
+        "p2": 0.0691,
+        "o15": 0.8686,
+        "o25": 0.6892,
+        "o35": 0.4757,
+        "btts": 0.488,
+        "cs_h": 0.4788,
+        "cs_a": 0.0587,
+        "o05_r1": 0.7994,
+        "o15_r1": 0.4771
+      },
+      "ranking_score": 6.621,
+      "tier": "B",
+      "bet": {
+        "description": "BTTS + JPN câștigă + Over 1.5 R1",
+        "probability": 0.1869
+      }
+    },
+    {
+      "id": "B2",
+      "home": "QAT",
+      "away": "SUI",
+      "group": "B",
+      "matchday": 1,
+      "date": "2026-06-13",
+      "venue": "San Francisco",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 0.515,
+        "away": 3.17
+      },
+      "probs": {
+        "p1": 0.0333,
+        "px": 0.0861,
+        "p2": 0.8752,
+        "o15": 0.8771,
+        "o25": 0.7067,
+        "o35": 0.4974,
+        "btts": 0.3834,
+        "cs_h": 0.042,
+        "cs_a": 0.5943,
+        "o05_r1": 0.8095,
+        "o15_r1": 0.4937
+      },
+      "ranking_score": 6.616,
+      "tier": "B",
+      "bet": {
+        "description": "Over 2.5 + SUI câștigă",
+        "probability": 0.6185
+      }
+    },
+    {
+      "id": "J3",
+      "home": "ARG",
+      "away": "AUT",
+      "group": "J",
+      "matchday": 2,
+      "date": "2026-06-22",
+      "venue": "Dallas",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 2.369,
+        "away": 1.237
+      },
+      "probs": {
+        "p1": 0.6244,
+        "px": 0.188,
+        "p2": 0.1868,
+        "o15": 0.8741,
+        "o25": 0.6975,
+        "o35": 0.4852,
+        "btts": 0.6427,
+        "cs_h": 0.29,
+        "cs_a": 0.0936,
+        "o05_r1": 0.8026,
+        "o15_r1": 0.4823
+      },
+      "ranking_score": 6.606,
+      "tier": "B",
+      "bet": {
+        "description": "BTTS + ARG câștigă + Over 1.5 R1",
+        "probability": 0.1935
+      }
+    },
+    {
+      "id": "L1",
+      "home": "ENG",
+      "away": "CRO",
+      "group": "L",
+      "matchday": 1,
+      "date": "2026-06-17",
+      "venue": "San Francisco",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 2.397,
+        "away": 1.141
+      },
+      "probs": {
+        "p1": 0.6505,
+        "px": 0.1826,
+        "p2": 0.166,
+        "o15": 0.8673,
+        "o25": 0.6854,
+        "o35": 0.4708,
+        "btts": 0.6181,
+        "cs_h": 0.3191,
+        "cs_a": 0.091,
+        "o05_r1": 0.7966,
+        "o15_r1": 0.4726
+      },
+      "ranking_score": 6.551,
+      "tier": "B",
+      "bet": {
+        "description": "BTTS + ENG câștigă + Over 1.5 R1",
+        "probability": 0.19
+      }
+    },
+    {
+      "id": "C3",
+      "home": "BRA",
+      "away": "SCO",
+      "group": "C",
+      "matchday": 2,
+      "date": "2026-06-20",
+      "venue": "Philadelphia",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 2.289,
+        "away": 1.281
+      },
+      "probs": {
+        "p1": 0.5996,
+        "px": 0.195,
+        "p2": 0.2047,
+        "o15": 0.8707,
+        "o25": 0.6913,
+        "o35": 0.4778,
+        "btts": 0.6486,
+        "cs_h": 0.2775,
+        "cs_a": 0.1014,
+        "o05_r1": 0.7994,
+        "o15_r1": 0.4772
+      },
+      "ranking_score": 6.524,
+      "tier": "B",
+      "bet": {
+        "description": "BTTS + BRA câștigă + Over 1.5 R1",
+        "probability": 0.1856
+      }
+    },
+    {
+      "id": "F3",
+      "home": "NED",
+      "away": "SWE",
+      "group": "F",
+      "matchday": 2,
+      "date": "2026-06-22",
+      "venue": "Los Angeles",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 2.205,
+        "away": 1.4
+      },
+      "probs": {
+        "p1": 0.5572,
+        "px": 0.203,
+        "p2": 0.2393,
+        "o15": 0.8743,
+        "o25": 0.6976,
+        "o35": 0.4854,
+        "btts": 0.67,
+        "cs_h": 0.2464,
+        "cs_a": 0.1103,
+        "o05_r1": 0.8025,
+        "o15_r1": 0.4822
+      },
+      "ranking_score": 6.495,
+      "tier": "B",
+      "bet": {
+        "description": "BTTS + NED câștigă + Over 1.5 R1",
+        "probability": 0.18
+      }
+    },
+    {
+      "id": "I6",
+      "home": "SEN",
+      "away": "IRQ",
+      "group": "I",
+      "matchday": 3,
+      "date": "2026-06-26",
+      "venue": "Boston",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 2.797,
+        "away": 0.663
+      },
+      "probs": {
+        "p1": 0.8124,
+        "px": 0.123,
+        "p2": 0.0622,
+        "o15": 0.8574,
+        "o25": 0.6692,
+        "o35": 0.4522,
+        "btts": 0.4538,
+        "cs_h": 0.5142,
+        "cs_a": 0.061,
+        "o05_r1": 0.7892,
+        "o15_r1": 0.461
+      },
+      "ranking_score": 6.455,
+      "tier": "B",
+      "bet": {
+        "description": "Over 2.5 + SEN câștigă",
+        "probability": 0.5437
+      }
+    },
+    {
+      "id": "E6",
+      "home": "CIV",
+      "away": "CUR",
+      "group": "E",
+      "matchday": 3,
+      "date": "2026-06-25",
+      "venue": "Philadelphia",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 2.531,
+        "away": 0.872
+      },
+      "probs": {
+        "p1": 0.7322,
+        "px": 0.1587,
+        "p2": 0.1079,
+        "o15": 0.8523,
+        "o25": 0.6597,
+        "o35": 0.4412,
+        "btts": 0.535,
+        "cs_h": 0.4174,
+        "cs_a": 0.0796,
+        "o05_r1": 0.7838,
+        "o15_r1": 0.4527
+      },
+      "ranking_score": 6.418,
+      "tier": "B",
+      "bet": {
+        "description": "BTTS + CIV câștigă + Over 1.5 R1",
+        "probability": 0.1773
+      }
+    },
+    {
+      "id": "K5",
+      "home": "POR",
+      "away": "COL",
+      "group": "K",
+      "matchday": 3,
+      "date": "2026-06-27",
+      "venue": "New York",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 2.125,
+        "away": 1.419
+      },
+      "probs": {
+        "p1": 0.5368,
+        "px": 0.2085,
+        "p2": 0.2543,
+        "o15": 0.8683,
+        "o25": 0.6867,
+        "o35": 0.4724,
+        "btts": 0.6672,
+        "cs_h": 0.2419,
+        "cs_a": 0.1195,
+        "o05_r1": 0.797,
+        "o15_r1": 0.4733
+      },
+      "ranking_score": 6.377,
+      "tier": "B",
+      "bet": {
+        "description": "BTTS + POR câștigă + Over 1.5 R1",
+        "probability": 0.1695
+      }
+    },
+    {
+      "id": "H4",
+      "home": "CPV",
+      "away": "URU",
+      "group": "H",
+      "matchday": 2,
+      "date": "2026-06-21",
+      "venue": "Atlanta",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 0.81,
+        "away": 2.561
+      },
+      "probs": {
+        "p1": 0.096,
+        "px": 0.1523,
+        "p2": 0.7504,
+        "o15": 0.8485,
+        "o25": 0.6534,
+        "o35": 0.434,
+        "btts": 0.5115,
+        "cs_h": 0.0772,
+        "cs_a": 0.4443,
+        "o05_r1": 0.7807,
+        "o15_r1": 0.4479
+      },
+      "ranking_score": 6.372,
+      "tier": "B",
+      "bet": {
+        "description": "BTTS + URU câștigă + Over 1.5 R1",
+        "probability": 0.1719
+      }
+    },
+    {
+      "id": "I5",
+      "home": "FRA",
+      "away": "NOR",
+      "group": "I",
+      "matchday": 3,
+      "date": "2026-06-26",
+      "venue": "Atlanta",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 2.059,
+        "away": 1.551
+      },
+      "probs": {
+        "p1": 0.4953,
+        "px": 0.2124,
+        "p2": 0.2919,
+        "o15": 0.875,
+        "o25": 0.6988,
+        "o35": 0.4867,
+        "btts": 0.6872,
+        "cs_h": 0.2119,
+        "cs_a": 0.1275,
+        "o05_r1": 0.803,
+        "o15_r1": 0.483
+      },
+      "ranking_score": 6.372,
+      "tier": "B",
+      "bet": {
+        "description": "BTTS + FRA câștigă + Over 1.5 R1",
+        "probability": 0.1644
+      }
+    },
+    {
+      "id": "F1",
+      "home": "NED",
+      "away": "JPN",
+      "group": "F",
+      "matchday": 1,
+      "date": "2026-06-14",
+      "venue": "Los Angeles",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 2.022,
+        "away": 1.625
+      },
+      "probs": {
+        "p1": 0.4724,
+        "px": 0.2138,
+        "p2": 0.3135,
+        "o15": 0.8786,
+        "o25": 0.7053,
+        "o35": 0.4945,
+        "btts": 0.6966,
+        "cs_h": 0.1968,
+        "cs_a": 0.1323,
+        "o05_r1": 0.8063,
+        "o15_r1": 0.4883
+      },
+      "ranking_score": 6.363,
+      "tier": "B",
+      "bet": {
+        "description": "BTTS + NED câștigă + Over 1.5 R1",
+        "probability": 0.1607
+      }
+    },
+    {
+      "id": "J6",
+      "home": "ALG",
+      "away": "AUT",
+      "group": "J",
+      "matchday": 3,
+      "date": "2026-06-27",
+      "venue": "Miami",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 1.21,
+        "away": 2.233
+      },
+      "probs": {
+        "p1": 0.1976,
+        "px": 0.1975,
+        "p2": 0.6044,
+        "o15": 0.8574,
+        "o25": 0.6679,
+        "o35": 0.4504,
+        "btts": 0.6262,
+        "cs_h": 0.1073,
+        "cs_a": 0.298,
+        "o05_r1": 0.7876,
+        "o15_r1": 0.4585
+      },
+      "ranking_score": 6.363,
+      "tier": "B",
+      "bet": {
+        "description": "BTTS + AUT câștigă + Over 1.5 R1",
+        "probability": 0.1735
+      }
+    },
+    {
+      "id": "H5",
+      "home": "ESP",
+      "away": "URU",
+      "group": "H",
+      "matchday": 3,
+      "date": "2026-06-26",
+      "venue": "Miami",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 2.35,
+        "away": 1.025
+      },
+      "probs": {
+        "p1": 0.668,
+        "px": 0.1817,
+        "p2": 0.1495,
+        "o15": 0.8495,
+        "o25": 0.6546,
+        "o35": 0.4353,
+        "btts": 0.5794,
+        "cs_h": 0.3587,
+        "cs_a": 0.0954,
+        "o05_r1": 0.781,
+        "o15_r1": 0.4484
+      },
+      "ranking_score": 6.343,
+      "tier": "B",
+      "bet": {
+        "description": "BTTS + ESP câștigă + Over 1.5 R1",
+        "probability": 0.1735
+      }
+    },
+    {
+      "id": "C4",
+      "home": "HAI",
+      "away": "MAR",
+      "group": "C",
+      "matchday": 2,
+      "date": "2026-06-19",
+      "venue": "New York",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 0.454,
+        "away": 3.023
+      },
+      "probs": {
+        "p1": 0.0318,
+        "px": 0.0903,
+        "p2": 0.8739,
+        "o15": 0.8576,
+        "o25": 0.6708,
+        "o35": 0.4543,
+        "btts": 0.3456,
+        "cs_h": 0.0487,
+        "cs_a": 0.6327,
+        "o05_r1": 0.7908,
+        "o15_r1": 0.4635
+      },
+      "ranking_score": 6.332,
+      "tier": "B",
+      "bet": {
+        "description": "Over 2.5 + MAR câștigă",
+        "probability": 0.5862
+      }
+    },
+    {
+      "id": "I1",
+      "home": "FRA",
+      "away": "SEN",
+      "group": "I",
+      "matchday": 1,
+      "date": "2026-06-16",
+      "venue": "Atlanta",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 2.193,
+        "away": 1.201
+      },
+      "probs": {
+        "p1": 0.5986,
+        "px": 0.2004,
+        "p2": 0.2006,
+        "o15": 0.852,
+        "o25": 0.6585,
+        "o35": 0.4398,
+        "btts": 0.6207,
+        "cs_h": 0.3009,
+        "cs_a": 0.1116,
+        "o05_r1": 0.7828,
+        "o15_r1": 0.4512
+      },
+      "ranking_score": 6.286,
+      "tier": "B",
+      "bet": {
+        "description": "BTTS + FRA câștigă + Over 1.5 R1",
+        "probability": 0.1676
+      }
+    },
+    {
+      "id": "D3",
+      "home": "USA",
+      "away": "AUS",
+      "group": "D",
+      "matchday": 2,
+      "date": "2026-06-20",
+      "venue": "Los Angeles",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 2.348,
+        "away": 0.98
+      },
+      "probs": {
+        "p1": 0.6776,
+        "px": 0.18,
+        "p2": 0.1417,
+        "o15": 0.844,
+        "o25": 0.6454,
+        "o35": 0.425,
+        "btts": 0.5645,
+        "cs_h": 0.375,
+        "cs_a": 0.0956,
+        "o05_r1": 0.7763,
+        "o15_r1": 0.4413
+      },
+      "ranking_score": 6.284,
+      "tier": "B",
+      "bet": {
+        "description": "BTTS + USA câștigă + Over 1.5 R1",
+        "probability": 0.1688
+      }
+    },
+    {
+      "id": "I4",
+      "home": "SEN",
+      "away": "NOR",
+      "group": "I",
+      "matchday": 2,
+      "date": "2026-06-22",
+      "venue": "Miami",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 1.474,
+        "away": 2.027
+      },
+      "probs": {
+        "p1": 0.2803,
+        "px": 0.2147,
+        "p2": 0.5047,
+        "o15": 0.8639,
+        "o25": 0.679,
+        "o35": 0.4632,
+        "btts": 0.6691,
+        "cs_h": 0.1317,
+        "cs_a": 0.229,
+        "o05_r1": 0.7931,
+        "o15_r1": 0.4671
+      },
+      "ranking_score": 6.255,
+      "tier": "B",
+      "bet": {
+        "description": "BTTS + NOR câștigă + Over 1.5 R1",
+        "probability": 0.1577
+      }
+    },
+    {
+      "id": "C2",
+      "home": "HAI",
+      "away": "SCO",
+      "group": "C",
+      "matchday": 1,
+      "date": "2026-06-14",
+      "venue": "Boston",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 0.553,
+        "away": 2.757
+      },
+      "probs": {
+        "p1": 0.0508,
+        "px": 0.1174,
+        "p2": 0.8297,
+        "o15": 0.8405,
+        "o25": 0.6405,
+        "o35": 0.4198,
+        "btts": 0.397,
+        "cs_h": 0.0635,
+        "cs_a": 0.5738,
+        "o05_r1": 0.7746,
+        "o15_r1": 0.4387
+      },
+      "ranking_score": 6.205,
+      "tier": "B",
+      "bet": {
+        "description": "Over 2.5 + SCO câștigă",
+        "probability": 0.5314
+      }
+    },
+    {
+      "id": "F2",
+      "home": "SWE",
+      "away": "TUN",
+      "group": "F",
+      "matchday": 1,
+      "date": "2026-06-14",
+      "venue": "Seattle",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 2.444,
+        "away": 0.8
+      },
+      "probs": {
+        "p1": 0.7345,
+        "px": 0.1617,
+        "p2": 0.1028,
+        "o15": 0.8334,
+        "o25": 0.6281,
+        "o35": 0.4062,
+        "btts": 0.5022,
+        "cs_h": 0.449,
+        "cs_a": 0.0868,
+        "o05_r1": 0.7677,
+        "o15_r1": 0.4286
+      },
+      "ranking_score": 6.181,
+      "tier": "B",
+      "bet": {
+        "description": "BTTS + SWE câștigă + Over 1.5 R1",
+        "probability": 0.1581
+      }
+    },
+    {
+      "id": "G1",
+      "home": "BEL",
+      "away": "EGY",
+      "group": "G",
+      "matchday": 1,
+      "date": "2026-06-15",
+      "venue": "Philadelphia",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 2.165,
+        "away": 1.135
+      },
+      "probs": {
+        "p1": 0.6079,
+        "px": 0.201,
+        "p2": 0.1907,
+        "o15": 0.8409,
+        "o25": 0.6401,
+        "o35": 0.4192,
+        "btts": 0.6004,
+        "cs_h": 0.3213,
+        "cs_a": 0.1148,
+        "o05_r1": 0.7735,
+        "o15_r1": 0.4371
+      },
+      "ranking_score": 6.168,
+      "tier": "B",
+      "bet": {
+        "description": "BTTS + BEL câștigă + Over 1.5 R1",
+        "probability": 0.1595
+      }
+    },
+    {
+      "id": "B1",
+      "home": "CAN",
+      "away": "BIH",
+      "group": "B",
+      "matchday": 1,
+      "date": "2026-06-13",
+      "venue": "Toronto",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 2.022,
+        "away": 1.384
+      },
+      "probs": {
+        "p1": 0.5226,
+        "px": 0.2151,
+        "p2": 0.262,
+        "o15": 0.8536,
+        "o25": 0.6611,
+        "o35": 0.4427,
+        "btts": 0.65,
+        "cs_h": 0.2504,
+        "cs_a": 0.1324,
+        "o05_r1": 0.784,
+        "o15_r1": 0.4531
+      },
+      "ranking_score": 6.167,
+      "tier": "B",
+      "bet": {
+        "description": "BTTS + CAN câștigă + Over 1.5 R1",
+        "probability": 0.1539
+      }
+    },
+    {
+      "id": "D1",
+      "home": "USA",
+      "away": "PAR",
+      "group": "D",
+      "matchday": 1,
+      "date": "2026-06-13",
+      "venue": "Los Angeles",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 2.29,
+        "away": 0.95
+      },
+      "probs": {
+        "p1": 0.6741,
+        "px": 0.1836,
+        "p2": 0.1417,
+        "o15": 0.8333,
+        "o25": 0.6277,
+        "o35": 0.4057,
+        "btts": 0.5508,
+        "cs_h": 0.3865,
+        "cs_a": 0.1013,
+        "o05_r1": 0.7673,
+        "o15_r1": 0.428
+      },
+      "ranking_score": 6.151,
+      "tier": "B",
+      "bet": {
+        "description": "BTTS + USA câștigă + Over 1.5 R1",
+        "probability": 0.1589
+      }
+    },
+    {
+      "id": "L4",
+      "home": "CRO",
+      "away": "PAN",
+      "group": "L",
+      "matchday": 2,
+      "date": "2026-06-23",
+      "venue": "Seattle",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 2.483,
+        "away": 0.738
+      },
+      "probs": {
+        "p1": 0.7546,
+        "px": 0.1542,
+        "p2": 0.0902,
+        "o15": 0.8304,
+        "o25": 0.6234,
+        "o35": 0.4011,
+        "btts": 0.4776,
+        "cs_h": 0.4777,
+        "cs_a": 0.0835,
+        "o05_r1": 0.7653,
+        "o15_r1": 0.4251
+      },
+      "ranking_score": 6.144,
+      "tier": "B",
+      "bet": {
+        "description": "Over 2.5 + CRO câștigă",
+        "probability": 0.4704
+      }
+    },
+    {
+      "id": "B5",
+      "home": "CAN",
+      "away": "SUI",
+      "group": "B",
+      "matchday": 3,
+      "date": "2026-06-24",
+      "venue": "Vancouver",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 1.395,
+        "away": 1.991
+      },
+      "probs": {
+        "p1": 0.269,
+        "px": 0.2172,
+        "p2": 0.5136,
+        "o15": 0.8513,
+        "o25": 0.6573,
+        "o35": 0.4383,
+        "btts": 0.6493,
+        "cs_h": 0.1366,
+        "cs_a": 0.2477,
+        "o05_r1": 0.7821,
+        "o15_r1": 0.4501
+      },
+      "ranking_score": 6.121,
+      "tier": "B",
+      "bet": {
+        "description": "BTTS + SUI câștigă + Over 1.5 R1",
+        "probability": 0.1501
+      }
+    },
+    {
+      "id": "F6",
+      "home": "JPN",
+      "away": "SWE",
+      "group": "F",
+      "matchday": 3,
+      "date": "2026-06-27",
+      "venue": "Seattle",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 1.928,
+        "away": 1.524
+      },
+      "probs": {
+        "p1": 0.4726,
+        "px": 0.2201,
+        "p2": 0.307,
+        "o15": 0.8587,
+        "o25": 0.6699,
+        "o35": 0.4527,
+        "btts": 0.6682,
+        "cs_h": 0.2178,
+        "cs_a": 0.1455,
+        "o05_r1": 0.7884,
+        "o15_r1": 0.4598
+      },
+      "ranking_score": 6.116,
+      "tier": "B",
+      "bet": {
+        "description": "BTTS + JPN câștigă + Over 1.5 R1",
+        "probability": 0.1452
+      }
+    },
+    {
+      "id": "H2",
+      "home": "KSA",
+      "away": "URU",
+      "group": "H",
+      "matchday": 1,
+      "date": "2026-06-15",
+      "venue": "Miami",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 0.95,
+        "away": 2.259
+      },
+      "probs": {
+        "p1": 0.1446,
+        "px": 0.1863,
+        "p2": 0.6685,
+        "o15": 0.8294,
+        "o25": 0.6215,
+        "o35": 0.399,
+        "btts": 0.5489,
+        "cs_h": 0.1044,
+        "cs_a": 0.3865,
+        "o05_r1": 0.7641,
+        "o15_r1": 0.4233
+      },
+      "ranking_score": 6.101,
+      "tier": "B",
+      "bet": {
+        "description": "BTTS + URU câștigă + Over 1.5 R1",
+        "probability": 0.1553
+      }
+    },
+    {
+      "id": "G3",
+      "home": "BEL",
+      "away": "IRN",
+      "group": "G",
+      "matchday": 2,
+      "date": "2026-06-21",
+      "venue": "Philadelphia",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 2.347,
+        "away": 0.805
+      },
+      "probs": {
+        "p1": 0.7173,
+        "px": 0.1708,
+        "p2": 0.1111,
+        "o15": 0.8217,
+        "o25": 0.6093,
+        "o35": 0.386,
+        "btts": 0.4998,
+        "cs_h": 0.4466,
+        "cs_a": 0.0957,
+        "o05_r1": 0.7579,
+        "o15_r1": 0.4145
+      },
+      "ranking_score": 6.037,
+      "tier": "B",
+      "bet": {
+        "description": "BTTS + BEL câștigă + Over 1.5 R1",
+        "probability": 0.1486
+      }
+    },
+    {
+      "id": "C1",
+      "home": "BRA",
+      "away": "MAR",
+      "group": "C",
+      "matchday": 1,
+      "date": "2026-06-13",
+      "venue": "New York",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 1.878,
+        "away": 1.405
+      },
+      "probs": {
+        "p1": 0.4866,
+        "px": 0.2245,
+        "p2": 0.2887,
+        "o15": 0.8391,
+        "o25": 0.6368,
+        "o35": 0.4156,
+        "btts": 0.639,
+        "cs_h": 0.2454,
+        "cs_a": 0.153,
+        "o05_r1": 0.7717,
+        "o15_r1": 0.4345
+      },
+      "ranking_score": 5.918,
+      "tier": "C",
+      "bet": {
+        "description": "Over 1.5 + BRA câștigă",
+        "probability": 0.4083
+      }
+    },
+    {
+      "id": "D2",
+      "home": "AUS",
+      "away": "TUR",
+      "group": "D",
+      "matchday": 1,
+      "date": "2026-06-13",
+      "venue": "Vancouver",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 1.03,
+        "away": 2.087
+      },
+      "probs": {
+        "p1": 0.1786,
+        "px": 0.2047,
+        "p2": 0.6164,
+        "o15": 0.8173,
+        "o25": 0.6021,
+        "o35": 0.3786,
+        "btts": 0.5629,
+        "cs_h": 0.1241,
+        "cs_a": 0.357,
+        "o05_r1": 0.754,
+        "o15_r1": 0.409
+      },
+      "ranking_score": 5.904,
+      "tier": "C",
+      "bet": {
+        "description": "Over 1.5 + TUR câștigă",
+        "probability": 0.5038
+      }
+    },
+    {
+      "id": "B4",
+      "home": "BIH",
+      "away": "SUI",
+      "group": "B",
+      "matchday": 2,
+      "date": "2026-06-19",
+      "venue": "Seattle",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 1.005,
+        "away": 2.094
+      },
+      "probs": {
+        "p1": 0.1727,
+        "px": 0.2033,
+        "p2": 0.6237,
+        "o15": 0.8148,
+        "o25": 0.5982,
+        "o35": 0.3746,
+        "btts": 0.5556,
+        "cs_h": 0.1232,
+        "cs_a": 0.366,
+        "o05_r1": 0.752,
+        "o15_r1": 0.4063
+      },
+      "ranking_score": 5.885,
+      "tier": "C",
+      "bet": {
+        "description": "Over 1.5 + SUI câștigă",
+        "probability": 0.5082
+      }
+    },
+    {
+      "id": "D5",
+      "home": "USA",
+      "away": "TUR",
+      "group": "D",
+      "matchday": 3,
+      "date": "2026-06-25",
+      "venue": "Seattle",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 1.797,
+        "away": 1.52
+      },
+      "probs": {
+        "p1": 0.4442,
+        "px": 0.2274,
+        "p2": 0.3282,
+        "o15": 0.8433,
+        "o25": 0.6438,
+        "o35": 0.4233,
+        "btts": 0.6516,
+        "cs_h": 0.2187,
+        "cs_a": 0.1658,
+        "o05_r1": 0.7752,
+        "o15_r1": 0.4397
+      },
+      "ranking_score": 5.863,
+      "tier": "C",
+      "bet": {
+        "description": "Over 1.5 + USA câștigă",
+        "probability": 0.3746
+      }
+    },
+    {
+      "id": "L6",
+      "home": "GHA",
+      "away": "CRO",
+      "group": "L",
+      "matchday": 3,
+      "date": "2026-06-27",
+      "venue": "New York",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 1.247,
+        "away": 1.894
+      },
+      "probs": {
+        "p1": 0.2509,
+        "px": 0.2241,
+        "p2": 0.5249,
+        "o15": 0.8208,
+        "o25": 0.6076,
+        "o35": 0.3842,
+        "btts": 0.6054,
+        "cs_h": 0.1505,
+        "cs_a": 0.2872,
+        "o05_r1": 0.7567,
+        "o15_r1": 0.4129
+      },
+      "ranking_score": 5.794,
+      "tier": "C",
+      "bet": {
+        "description": "Over 1.5 + CRO câștigă",
+        "probability": 0.4308
+      }
+    },
+    {
+      "id": "D4",
+      "home": "PAR",
+      "away": "TUR",
+      "group": "D",
+      "matchday": 2,
+      "date": "2026-06-20",
+      "venue": "Dallas",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 0.998,
+        "away": 2.035
+      },
+      "probs": {
+        "p1": 0.1781,
+        "px": 0.2084,
+        "p2": 0.6132,
+        "o15": 0.8055,
+        "o25": 0.584,
+        "o35": 0.36,
+        "btts": 0.5488,
+        "cs_h": 0.1306,
+        "cs_a": 0.3684,
+        "o05_r1": 0.7446,
+        "o15_r1": 0.3961
+      },
+      "ranking_score": 5.77,
+      "tier": "C",
+      "bet": {
+        "description": "Over 1.5 + TUR câștigă",
+        "probability": 0.4939
+      }
+    },
+    {
+      "id": "B6",
+      "home": "BIH",
+      "away": "QAT",
+      "group": "B",
+      "matchday": 3,
+      "date": "2026-06-24",
+      "venue": "Toronto",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 2.205,
+        "away": 0.746
+      },
+      "probs": {
+        "p1": 0.7066,
+        "px": 0.1809,
+        "p2": 0.1121,
+        "o15": 0.7929,
+        "o25": 0.5652,
+        "o35": 0.3413,
+        "btts": 0.4675,
+        "cs_h": 0.474,
+        "cs_a": 0.1103,
+        "o05_r1": 0.735,
+        "o15_r1": 0.383
+      },
+      "ranking_score": 5.706,
+      "tier": "C",
+      "bet": {
+        "description": "Over 1.5 + BIH câștigă",
+        "probability": 0.5603
+      }
+    },
+    {
+      "id": "J4",
+      "home": "ALG",
+      "away": "JOR",
+      "group": "J",
+      "matchday": 2,
+      "date": "2026-06-22",
+      "venue": "Atlanta",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 2.18,
+        "away": 0.727
+      },
+      "probs": {
+        "p1": 0.7066,
+        "px": 0.1823,
+        "p2": 0.1107,
+        "o15": 0.7862,
+        "o25": 0.5553,
+        "o35": 0.3316,
+        "btts": 0.4582,
+        "cs_h": 0.4829,
+        "cs_a": 0.113,
+        "o05_r1": 0.7297,
+        "o15_r1": 0.3761
+      },
+      "ranking_score": 5.633,
+      "tier": "C",
+      "bet": {
+        "description": "Over 1.5 + ALG câștigă",
+        "probability": 0.5555
+      }
+    },
+    {
+      "id": "A4",
+      "home": "RSA",
+      "away": "CZE",
+      "group": "A",
+      "matchday": 2,
+      "date": "2026-06-18",
+      "venue": "Atlanta",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 0.966,
+        "away": 1.965
+      },
+      "probs": {
+        "p1": 0.1795,
+        "px": 0.2141,
+        "p2": 0.6062,
+        "o15": 0.79,
+        "o25": 0.5609,
+        "o35": 0.337,
+        "btts": 0.5324,
+        "cs_h": 0.1402,
+        "cs_a": 0.3806,
+        "o05_r1": 0.7325,
+        "o15_r1": 0.3798
+      },
+      "ranking_score": 5.594,
+      "tier": "C",
+      "bet": {
+        "description": "Over 1.5 + CZE câștigă",
+        "probability": 0.4789
+      }
+    },
+    {
+      "id": "E4",
+      "home": "CUR",
+      "away": "ECU",
+      "group": "E",
+      "matchday": 2,
+      "date": "2026-06-19",
+      "venue": "Dallas",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 0.554,
+        "away": 2.28
+      },
+      "probs": {
+        "p1": 0.0739,
+        "px": 0.16,
+        "p2": 0.7655,
+        "o15": 0.774,
+        "o25": 0.5379,
+        "o35": 0.3149,
+        "btts": 0.3814,
+        "cs_h": 0.1023,
+        "cs_a": 0.5746,
+        "o05_r1": 0.7206,
+        "o15_r1": 0.3643
+      },
+      "ranking_score": 5.492,
+      "tier": "C",
+      "bet": {
+        "description": "Over 1.5 + ECU câștigă",
+        "probability": 0.5925
+      }
+    },
+    {
+      "id": "G4",
+      "home": "EGY",
+      "away": "NZL",
+      "group": "G",
+      "matchday": 2,
+      "date": "2026-06-22",
+      "venue": "Boston",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 2.018,
+        "away": 0.799
+      },
+      "probs": {
+        "p1": 0.6579,
+        "px": 0.2028,
+        "p2": 0.139,
+        "o15": 0.7715,
+        "o25": 0.5343,
+        "o35": 0.3116,
+        "btts": 0.477,
+        "cs_h": 0.4495,
+        "cs_a": 0.133,
+        "o05_r1": 0.7185,
+        "o15_r1": 0.3617
+      },
+      "ranking_score": 5.453,
+      "tier": "C",
+      "bet": {
+        "description": "Over 1.5 + EGY câștigă",
+        "probability": 0.5076
+      }
+    },
+    {
+      "id": "A1",
+      "home": "MEX",
+      "away": "RSA",
+      "group": "A",
+      "matchday": 1,
+      "date": "2026-06-11",
+      "venue": "Mexico City",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 1.991,
+        "away": 0.821
+      },
+      "probs": {
+        "p1": 0.6472,
+        "px": 0.2065,
+        "p2": 0.1461,
+        "o15": 0.7707,
+        "o25": 0.5331,
+        "o35": 0.3104,
+        "btts": 0.4833,
+        "cs_h": 0.44,
+        "cs_a": 0.1366,
+        "o05_r1": 0.7178,
+        "o15_r1": 0.3608
+      },
+      "ranking_score": 5.436,
+      "tier": "C",
+      "bet": {
+        "description": "Over 1.5 + MEX câștigă",
+        "probability": 0.4988
+      }
+    },
+    {
+      "id": "L2",
+      "home": "GHA",
+      "away": "PAN",
+      "group": "L",
+      "matchday": 1,
+      "date": "2026-06-17",
+      "venue": "New York",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 1.93,
+        "away": 0.87
+      },
+      "probs": {
+        "p1": 0.6221,
+        "px": 0.2147,
+        "p2": 0.163,
+        "o15": 0.7687,
+        "o25": 0.5303,
+        "o35": 0.3078,
+        "btts": 0.4966,
+        "cs_h": 0.4188,
+        "cs_a": 0.1452,
+        "o05_r1": 0.7163,
+        "o15_r1": 0.3589
+      },
+      "ranking_score": 5.391,
+      "tier": "C",
+      "bet": {
+        "description": "Over 1.5 + GHA câștigă",
+        "probability": 0.4782
+      }
+    },
+    {
+      "id": "E5",
+      "home": "GER",
+      "away": "ECU",
+      "group": "E",
+      "matchday": 3,
+      "date": "2026-06-25",
+      "venue": "Houston",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 1.778,
+        "away": 0.95
+      },
+      "probs": {
+        "p1": 0.5684,
+        "px": 0.2321,
+        "p2": 0.1994,
+        "o15": 0.7562,
+        "o25": 0.513,
+        "o35": 0.2919,
+        "btts": 0.5095,
+        "cs_h": 0.3867,
+        "cs_a": 0.169,
+        "o05_r1": 0.707,
+        "o15_r1": 0.3473
+      },
+      "ranking_score": 5.196,
+      "tier": "C",
+      "bet": {
+        "description": "Over 1.5 + GER câștigă",
+        "probability": 0.4298
+      }
+    },
+    {
+      "id": "C6",
+      "home": "SCO",
+      "away": "MAR",
+      "group": "C",
+      "matchday": 3,
+      "date": "2026-06-24",
+      "venue": "Boston",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 1.201,
+        "away": 1.605
+      },
+      "probs": {
+        "p1": 0.2857,
+        "px": 0.2467,
+        "p2": 0.4676,
+        "o15": 0.77,
+        "o25": 0.5321,
+        "o35": 0.3095,
+        "btts": 0.5588,
+        "cs_h": 0.2008,
+        "cs_a": 0.3008,
+        "o05_r1": 0.7172,
+        "o15_r1": 0.36
+      },
+      "ranking_score": 5.14,
+      "tier": "C",
+      "bet": {
+        "description": "Over 1.5 + MAR câștigă",
+        "probability": 0.3601
+      }
+    },
+    {
+      "id": "A5",
+      "home": "MEX",
+      "away": "CZE",
+      "group": "A",
+      "matchday": 3,
+      "date": "2026-06-24",
+      "venue": "Mexico City",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 1.552,
+        "away": 1.302
+      },
+      "probs": {
+        "p1": 0.4322,
+        "px": 0.2478,
+        "p2": 0.3199,
+        "o15": 0.778,
+        "o25": 0.5434,
+        "o35": 0.3201,
+        "btts": 0.5738,
+        "cs_h": 0.272,
+        "cs_a": 0.2117,
+        "o05_r1": 0.7232,
+        "o15_r1": 0.3677
+      },
+      "ranking_score": 5.133,
+      "tier": "C",
+      "bet": {
+        "description": "Over 1.5 + MEX câștigă",
+        "probability": 0.3363
+      }
+    },
+    {
+      "id": "A6",
+      "home": "RSA",
+      "away": "KOR",
+      "group": "A",
+      "matchday": 3,
+      "date": "2026-06-24",
+      "venue": "Guadalajara",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 0.807,
+        "away": 1.847
+      },
+      "probs": {
+        "p1": 0.1585,
+        "px": 0.2215,
+        "p2": 0.6199,
+        "o15": 0.7427,
+        "o25": 0.4949,
+        "o35": 0.2757,
+        "btts": 0.4664,
+        "cs_h": 0.1577,
+        "cs_a": 0.4461,
+        "o05_r1": 0.6971,
+        "o15_r1": 0.3353
+      },
+      "ranking_score": 5.131,
+      "tier": "C",
+      "bet": {
+        "description": "Over 1.5 + KOR câștigă",
+        "probability": 0.4604
+      }
+    },
+    {
+      "id": "H6",
+      "home": "CPV",
+      "away": "KSA",
+      "group": "H",
+      "matchday": 3,
+      "date": "2026-06-26",
+      "venue": "Kansas City",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 1.181,
+        "away": 1.57
+      },
+      "probs": {
+        "p1": 0.2866,
+        "px": 0.2499,
+        "p2": 0.4634,
+        "o15": 0.7603,
+        "o25": 0.5186,
+        "o35": 0.297,
+        "btts": 0.5487,
+        "cs_h": 0.2081,
+        "cs_a": 0.3071,
+        "o05_r1": 0.71,
+        "o15_r1": 0.351
+      },
+      "ranking_score": 5.036,
+      "tier": "C",
+      "bet": {
+        "description": "Over 1.5 + KSA câștigă",
+        "probability": 0.3523
+      }
+    },
+    {
+      "id": "K6",
+      "home": "COD",
+      "away": "UZB",
+      "group": "K",
+      "matchday": 3,
+      "date": "2026-06-27",
+      "venue": "San Francisco",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 1.477,
+        "away": 1.226
+      },
+      "probs": {
+        "p1": 0.4296,
+        "px": 0.2557,
+        "p2": 0.3147,
+        "o15": 0.7519,
+        "o25": 0.5071,
+        "o35": 0.2866,
+        "btts": 0.5452,
+        "cs_h": 0.2933,
+        "cs_a": 0.2284,
+        "o05_r1": 0.7037,
+        "o15_r1": 0.3433
+      },
+      "ranking_score": 4.873,
+      "tier": "D",
+      "bet": {
+        "description": "Over 1.5 + COD câștigă",
+        "probability": 0.323
+      }
+    },
+    {
+      "id": "A2",
+      "home": "KOR",
+      "away": "CZE",
+      "group": "A",
+      "matchday": 1,
+      "date": "2026-06-12",
+      "venue": "Guadalajara",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 1.44,
+        "away": 1.28
+      },
+      "probs": {
+        "p1": 0.4086,
+        "px": 0.2561,
+        "p2": 0.3353,
+        "o15": 0.755,
+        "o25": 0.5113,
+        "o35": 0.2904,
+        "btts": 0.551,
+        "cs_h": 0.2779,
+        "cs_a": 0.2369,
+        "o05_r1": 0.706,
+        "o15_r1": 0.3461
+      },
+      "ranking_score": 4.847,
+      "tier": "D",
+      "bet": {
+        "description": "Over 1.5 + KOR câștigă",
+        "probability": 0.3085
+      }
+    },
+    {
+      "id": "A3",
+      "home": "MEX",
+      "away": "KOR",
+      "group": "A",
+      "matchday": 2,
+      "date": "2026-06-18",
+      "venue": "Guadalajara",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 1.41,
+        "away": 1.33
+      },
+      "probs": {
+        "p1": 0.3904,
+        "px": 0.2557,
+        "p2": 0.3538,
+        "o15": 0.7586,
+        "o25": 0.5162,
+        "o35": 0.2948,
+        "btts": 0.556,
+        "cs_h": 0.2644,
+        "cs_a": 0.2441,
+        "o05_r1": 0.7086,
+        "o15_r1": 0.3493
+      },
+      "ranking_score": 4.831,
+      "tier": "D",
+      "bet": {
+        "description": "Over 1.5 + MEX câștigă",
+        "probability": 0.2962
+      }
+    },
+    {
+      "id": "G6",
+      "home": "EGY",
+      "away": "IRN",
+      "group": "G",
+      "matchday": 3,
+      "date": "2026-06-27",
+      "venue": "Seattle",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 1.492,
+        "away": 0.977
+      },
+      "probs": {
+        "p1": 0.4915,
+        "px": 0.261,
+        "p2": 0.2475,
+        "o15": 0.7063,
+        "o25": 0.4482,
+        "o35": 0.2358,
+        "btts": 0.4833,
+        "cs_h": 0.3764,
+        "cs_a": 0.2249,
+        "o05_r1": 0.6708,
+        "o15_r1": 0.305
+      },
+      "ranking_score": 4.597,
+      "tier": "D",
+      "bet": {
+        "description": "Over 1.5 + EGY câștigă",
+        "probability": 0.3471
+      }
+    },
+    {
+      "id": "D6",
+      "home": "PAR",
+      "away": "AUS",
+      "group": "D",
+      "matchday": 3,
+      "date": "2026-06-25",
+      "venue": "Kansas City",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 1.304,
+        "away": 1.312
+      },
+      "probs": {
+        "p1": 0.3667,
+        "px": 0.2629,
+        "p2": 0.3704,
+        "o15": 0.7358,
+        "o25": 0.4857,
+        "o35": 0.2676,
+        "btts": 0.5324,
+        "cs_h": 0.2692,
+        "cs_a": 0.2714,
+        "o05_r1": 0.6919,
+        "o15_r1": 0.3292
+      },
+      "ranking_score": 4.56,
+      "tier": "D",
+      "bet": {
+        "description": "Over 1.5 + AUS câștigă",
+        "probability": 0.2725
+      }
+    },
+    {
+      "id": "E2",
+      "home": "CIV",
+      "away": "ECU",
+      "group": "E",
+      "matchday": 1,
+      "date": "2026-06-14",
+      "venue": "Philadelphia",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 1.021,
+        "away": 1.45
+      },
+      "probs": {
+        "p1": 0.266,
+        "px": 0.2643,
+        "p2": 0.4697,
+        "o15": 0.7068,
+        "o25": 0.4488,
+        "o35": 0.2363,
+        "btts": 0.4898,
+        "cs_h": 0.2346,
+        "cs_a": 0.3601,
+        "o05_r1": 0.6711,
+        "o15_r1": 0.3054
+      },
+      "ranking_score": 4.556,
+      "tier": "D",
+      "bet": {
+        "description": "Over 1.5 + ECU câștigă",
+        "probability": 0.332
+      }
+    },
+    {
+      "id": "G2",
+      "home": "IRN",
+      "away": "NZL",
+      "group": "G",
+      "matchday": 1,
+      "date": "2026-06-16",
+      "venue": "Seattle",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "lambda": {
+        "home": 1.432,
+        "away": 0.866
+      },
+      "probs": {
+        "p1": 0.503,
+        "px": 0.2694,
+        "p2": 0.2276,
+        "o15": 0.6687,
+        "o25": 0.4035,
+        "o35": 0.2003,
+        "btts": 0.4411,
+        "cs_h": 0.4204,
+        "cs_a": 0.2389,
+        "o05_r1": 0.6445,
+        "o15_r1": 0.2768
+      },
+      "ranking_score": 4.298,
+      "tier": "D",
+      "bet": {
+        "description": "Over 1.5 + IRN câștigă",
+        "probability": 0.3364
+      }
+    }
+  ],
+  "tickets": [
+    {
+      "label": "Bilet A — Maxim Sigur",
+      "note": "Tier S × 7. Cotă ~15–50x",
+      "events": [],
+      "combined_odds": 1,
+      "combined_prob_pct": 100
+    },
+    {
+      "label": "Bilet B — S+A Balansate",
+      "note": "5 Tier S + 2 Tier A. Cotă ~20–70x",
+      "events": [],
+      "combined_odds": 1,
+      "combined_prob_pct": 100
+    },
+    {
+      "label": "Bilet C — S+A Temporal",
+      "note": "4S + 4A pe date diferite. ~30–90x",
+      "events": [],
+      "combined_odds": 1,
+      "combined_prob_pct": 100
+    },
+    {
+      "label": "Bilet D — Speculativ",
+      "note": "Include selecții BTTS. ~80–300x",
+      "events": [],
+      "combined_odds": 1,
+      "combined_prob_pct": 100
+    },
+    {
+      "label": "Bilet E — Contra-Hedge",
+      "note": "Complet diferit de A. ~25–80x",
+      "events": [],
+      "combined_odds": 1,
+      "combined_prob_pct": 100
+    }
+  ]
+}
