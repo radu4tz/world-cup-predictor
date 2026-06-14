@@ -7,496 +7,401 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root {
+:root{
   --bg:#080e1c;--surface:#0f1829;--card:#141f33;--border:rgba(255,255,255,0.07);
-  --gold:#f5a623;--teal:#2dd4bf;--txt:#e8edf5;--txt-2:#6b7a99;--txt-3:#3d4f6e;
+  --gold:#f5a623;--teal:#2dd4bf;--txt:#e8edf5;--txt2:#6b7a99;--txt3:#3d4f6e;
   --green:#22c55e;--red:#ef4444;--orange:#f97316;
   --s-bg:#3d2006;--s-co:#f5a623;--s-bar:#f5a623;
   --a-bg:#0d2e13;--a-co:#4ade80;--a-bar:#22c55e;
   --b-bg:#0c1e40;--b-co:#60a5fa;--b-bar:#3b82f6;
   --c-bg:#1a0d35;--c-co:#a78bfa;--c-bar:#7c3aed;
   --d-bg:#1a1f2b;--d-co:#94a3b8;--d-bar:#475569;
-  --radius:10px;--font-d:'Space Grotesk',system-ui,sans-serif;
-  --font-m:'JetBrains Mono',monospace;
+  --r:10px;--fd:'Space Grotesk',system-ui,sans-serif;--fm:'JetBrains Mono',monospace;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--bg);color:var(--txt);font-family:var(--font-d);font-size:15px;line-height:1.6;min-height:100vh}
+body{background:var(--bg);color:var(--txt);font-family:var(--fd);font-size:15px;line-height:1.6;min-height:100vh}
 .wrap{max-width:960px;margin:0 auto;padding:0 16px 60px}
 
 /* HEADER */
-header{border-bottom:1px solid var(--border);padding:20px 0 16px;display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap}
-.logo-row{display:flex;align-items:center;gap:10px}
-.site-title{font-size:20px;font-weight:700}
-.site-title span{color:var(--gold)}
-.subtitle{font-size:12px;color:var(--txt-2);margin-top:2px}
-.meta-pill{font-family:var(--font-m);font-size:11px;color:var(--txt-2);background:var(--card);border:1px solid var(--border);border-radius:20px;padding:5px 12px;white-space:nowrap;align-self:center}
-.meta-pill.live{border-color:var(--teal);color:var(--teal)}
+header{border-bottom:1px solid var(--border);padding:18px 0 14px;display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:10px}
+.site-title{font-size:20px;font-weight:700}.site-title span{color:var(--gold)}
+.subtitle{font-size:12px;color:var(--txt2);margin-top:2px}
+.pill{font-family:var(--fm);font-size:11px;background:var(--card);border:1px solid var(--border);border-radius:20px;padding:5px 12px;align-self:center;color:var(--txt2)}
+.pill.live{border-color:var(--teal);color:var(--teal)}
 .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--teal);margin-right:5px;animation:pulse 1.5s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
 
 /* TABS */
-.tabs{display:flex;gap:0;border-bottom:1px solid var(--border);margin:20px 0 0}
-.tab{padding:10px 20px;font-size:13px;font-weight:500;cursor:pointer;color:var(--txt-2);border-bottom:2px solid transparent;transition:all .15s}
-.tab:hover{color:var(--txt)}
-.tab.act{color:var(--gold);border-bottom-color:var(--gold)}
+.tabs{display:flex;border-bottom:1px solid var(--border);margin:18px 0 0}
+.tab{padding:10px 20px;font-size:13px;font-weight:500;cursor:pointer;color:var(--txt2);border-bottom:2px solid transparent;transition:all .15s}
+.tab:hover{color:var(--txt)}.tab.act{color:var(--gold);border-bottom-color:var(--gold)}
+
+/* LEGEND */
+.legend{display:flex;gap:6px;flex-wrap:wrap;padding:10px 0 4px}
+.lg{font-size:11px;color:var(--txt2);background:var(--card);border:1px solid var(--border);border-radius:6px;padding:3px 8px;cursor:default;position:relative}
+.lg:hover .lg-tip{display:block}
+.lg strong{color:var(--teal);font-family:var(--fm)}
+.lg-tip{display:none;position:absolute;bottom:calc(100% + 6px);left:50%;transform:translateX(-50%);background:#1e2d4a;border:1px solid var(--border);border-radius:8px;padding:8px 10px;font-size:11px;color:var(--txt);white-space:nowrap;z-index:99;min-width:200px;box-shadow:0 4px 20px rgba(0,0,0,.4)}
+.lg-tip::after{content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);border:5px solid transparent;border-top-color:#1e2d4a}
 
 /* STATS */
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:16px 0}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:14px 0}
 @media(max-width:560px){.stats{grid-template-columns:repeat(2,1fr)}}
-.stat{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:14px 12px;text-align:center}
-.stat-val{font-size:26px;font-weight:700;font-family:var(--font-m);line-height:1}
-.stat-lbl{font-size:11px;color:var(--txt-2);margin-top:4px}
+.stat{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:14px 12px;text-align:center}
+.stat-val{font-size:26px;font-weight:700;font-family:var(--fm);line-height:1}
+.stat-lbl{font-size:11px;color:var(--txt2);margin-top:4px}
 
 /* ACCURACY BAR */
-.acc-bar{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:14px 16px;margin-bottom:16px;display:flex;align-items:center;gap:16px}
-.acc-label{font-size:12px;color:var(--txt-2);white-space:nowrap}
-.acc-track{flex:1;height:8px;background:rgba(255,255,255,0.06);border-radius:4px;overflow:hidden}
+.acc-wrap{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:12px 16px;margin-bottom:12px;display:none;align-items:center;gap:14px}
+.acc-lbl{font-size:12px;color:var(--txt2);white-space:nowrap}
+.acc-track{flex:1;height:8px;background:rgba(255,255,255,.06);border-radius:4px;overflow:hidden}
 .acc-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--green),var(--teal));transition:width .8s ease}
-.acc-pct{font-family:var(--font-m);font-size:14px;font-weight:600;color:var(--teal);white-space:nowrap}
+.acc-pct{font-family:var(--fm);font-size:14px;font-weight:600;color:var(--teal)}
 
 /* FILTERS */
-.filters{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px}
-.fb{border:1px solid var(--border);border-radius:20px;padding:5px 14px;font-size:12px;font-weight:500;cursor:pointer;background:var(--card);color:var(--txt-2);font-family:var(--font-d);transition:all .15s}
+.filters{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
+.fb{border:1px solid var(--border);border-radius:20px;padding:5px 14px;font-size:12px;font-weight:500;cursor:pointer;background:var(--card);color:var(--txt2);font-family:var(--fd);transition:all .15s}
 .fb:hover{border-color:var(--gold);color:var(--txt)}
 .fb.act{background:var(--gold);color:#000;border-color:var(--gold);font-weight:600}
 
 /* MATCH GRID */
-.match-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
-@media(max-width:560px){.match-grid{grid-template-columns:1fr}}
-
-.mc{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:12px;border-left:3px solid;transition:transform .15s}
+.mgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+@media(max-width:560px){.mgrid{grid-template-columns:1fr}}
+.mc{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:12px;border-left:3px solid;transition:transform .15s}
 .mc:hover{transform:translateY(-1px)}
-.mc.t-S{border-left-color:var(--s-bar)}
-.mc.t-A{border-left-color:var(--a-bar)}
-.mc.t-B{border-left-color:var(--b-bar)}
-.mc.t-C{border-left-color:var(--c-bar)}
-.mc.t-D{border-left-color:var(--d-bar)}
-.mc.correct{border-color:var(--green);border-width:1px 1px 1px 3px}
-.mc.wrong{border-color:var(--red);border-width:1px 1px 1px 3px}
-.mc.live-now{border-color:var(--orange);border-width:1px 1px 1px 3px;animation:livePulse 2s infinite}
-@keyframes livePulse{0%,100%{border-color:var(--orange)}50%{border-color:#7c3000}}
+.mc.tS{border-left-color:var(--s-bar)}.mc.tA{border-left-color:var(--a-bar)}
+.mc.tB{border-left-color:var(--b-bar)}.mc.tC{border-left-color:var(--c-bar)}.mc.tD{border-left-color:var(--d-bar)}
+.mc.ok{border-color:var(--green);border-width:1px 1px 1px 3px}
+.mc.ko{border-color:var(--red);border-width:1px 1px 1px 3px}
+.mc.lv{border-color:var(--orange);border-width:1px 1px 1px 3px;animation:lp 2s infinite}
+@keyframes lp{0%,100%{border-color:var(--orange)}50%{border-color:#7c3000}}
 
 .mc-top{display:flex;align-items:center;gap:6px;margin-bottom:6px}
-.mc-rank{font-family:var(--font-m);font-size:11px;color:var(--txt-3);min-width:24px}
-.mc-name{font-size:13px;font-weight:600;flex:1}
-.tier-badge{font-size:10px;font-weight:600;padding:2px 7px;border-radius:20px}
-.t-S .tier-badge{background:var(--s-bg);color:var(--s-co)}
-.t-A .tier-badge{background:var(--a-bg);color:var(--a-co)}
-.t-B .tier-badge{background:var(--b-bg);color:var(--b-co)}
-.t-C .tier-badge{background:var(--c-bg);color:var(--c-co)}
-.t-D .tier-badge{background:var(--d-bg);color:var(--d-co)}
+.rk{font-family:var(--fm);font-size:11px;color:var(--txt3);min-width:24px}
+.mn{font-size:13px;font-weight:600;flex:1}
+.tbadge{font-size:10px;font-weight:600;padding:2px 7px;border-radius:20px}
+.tS .tbadge{background:var(--s-bg);color:var(--s-co)}.tA .tbadge{background:var(--a-bg);color:var(--a-co)}
+.tB .tbadge{background:var(--b-bg);color:var(--b-co)}.tC .tbadge{background:var(--c-bg);color:var(--c-co)}.tD .tbadge{background:var(--d-bg);color:var(--d-co)}
+.sbadge{font-family:var(--fm);font-size:12px;font-weight:700;padding:2px 7px;border-radius:6px;background:rgba(255,255,255,.06);margin-left:4px}
+.sbadge.ok{background:rgba(34,197,94,.15);color:var(--green)}.sbadge.ko{background:rgba(239,68,68,.15);color:var(--red)}.sbadge.lv{background:rgba(249,115,22,.15);color:var(--orange)}
 
-.mc-meta{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--txt-2);margin-bottom:7px;flex-wrap:wrap}
-.score-badge{font-family:var(--font-m);font-size:13px;font-weight:700;padding:2px 8px;border-radius:6px;background:rgba(255,255,255,0.06);margin-left:4px}
-.score-badge.correct{background:rgba(34,197,94,0.15);color:var(--green)}
-.score-badge.wrong{background:rgba(239,68,68,0.15);color:var(--red)}
-.score-badge.live-sc{background:rgba(249,115,22,0.15);color:var(--orange)}
-
-.bar-wrap{height:3px;background:rgba(255,255,255,0.06);border-radius:2px;overflow:hidden;margin-bottom:3px}
-.bar-fill{height:100%;border-radius:2px;width:0%;transition:width .8s cubic-bezier(.25,1,.5,1)}
-.t-S .bar-fill{background:var(--s-bar)}.t-A .bar-fill{background:var(--a-bar)}
-.t-B .bar-fill{background:var(--b-bar)}.t-C .bar-fill{background:var(--c-bar)}
-.t-D .bar-fill{background:var(--d-bar)}
-.mc.correct .bar-fill{background:var(--green)}
-.mc.wrong .bar-fill{background:var(--red)}
-
-.bar-row{display:flex;justify-content:space-between;font-size:10px;color:var(--txt-2)}
-.mc-bet{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:6px;padding:5px 8px;font-size:11px;color:var(--txt-2);margin-top:6px}
-.mc-probs{display:flex;gap:5px;flex-wrap:wrap;margin-top:6px}
-.pp{font-family:var(--font-m);font-size:10px;background:rgba(255,255,255,0.04);border-radius:4px;padding:2px 5px;color:var(--txt-2)}
+.mc-meta{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--txt2);margin-bottom:7px;flex-wrap:wrap}
+.bw{height:3px;background:rgba(255,255,255,.06);border-radius:2px;overflow:hidden;margin-bottom:3px}
+.bf{height:100%;border-radius:2px;width:0%;transition:width .8s cubic-bezier(.25,1,.5,1)}
+.tS .bf{background:var(--s-bar)}.tA .bf{background:var(--a-bar)}.tB .bf{background:var(--b-bar)}.tC .bf{background:var(--c-bar)}.tD .bf{background:var(--d-bar)}
+.mc.ok .bf{background:var(--green)}.mc.ko .bf{background:var(--red)}
+.brow{display:flex;justify-content:space-between;font-size:10px;color:var(--txt2)}
+.mc-bet{background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:6px;padding:5px 8px;font-size:11px;color:var(--txt2);margin-top:6px}
+.probs{display:flex;gap:5px;flex-wrap:wrap;margin-top:6px}
+.pp{font-family:var(--fm);font-size:10px;background:rgba(255,255,255,.04);border-radius:4px;padding:2px 5px;color:var(--txt2)}
 .pp.hi{color:var(--teal)}
 
-/* COMMENTARY TOGGLE */
-.comm-btn{display:flex;align-items:center;gap:6px;margin-top:8px;padding:6px 0;font-size:11px;color:var(--txt-3);cursor:pointer;border:none;background:none;width:100%;text-align:left;border-top:1px solid var(--border)}
-.comm-btn:hover{color:var(--txt-2)}
-.comm-btn .arrow{transition:transform .2s;font-size:9px}
-.comm-btn.open .arrow{transform:rotate(180deg)}
-.commentary{display:none;margin-top:8px;font-size:12px;color:var(--txt-2);line-height:1.7}
-.commentary.show{display:block}
-.comm-section{margin-bottom:8px}
-.comm-section strong{color:var(--txt);font-weight:500;display:block;margin-bottom:2px;font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--txt-3)}
-.comm-sources{margin-top:10px;padding-top:8px;border-top:1px solid var(--border)}
-.src-row{display:flex;align-items:center;gap:8px;font-size:10px;color:var(--txt-3);padding:2px 0}
-.src-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
-.src-dot.active{background:var(--green)}
-.src-dot.attempted{background:var(--orange)}
-.src-dot.planned{background:var(--txt-3)}
+/* COMMENTARY */
+.cbtn{display:flex;align-items:center;justify-content:space-between;margin-top:8px;padding:6px 0;font-size:11px;color:var(--txt3);cursor:pointer;border:none;background:none;width:100%;text-align:left;border-top:1px solid var(--border)}
+.cbtn:hover{color:var(--txt2)}.cbtn .arr{transition:transform .2s;font-size:9px}
+.cbtn.op .arr{transform:rotate(180deg)}
+.comm{display:none;margin-top:8px;font-size:12px;color:var(--txt2);line-height:1.7}
+.comm.show{display:block}
+.cs{margin-bottom:8px}
+.cs strong{color:var(--txt3);font-weight:500;display:block;font-size:10px;text-transform:uppercase;letter-spacing:.05em;margin-bottom:2px}
 
-/* RESULTS TAB */
-.result-summary{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:16px}
-.res-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:14px;text-align:center}
-.res-val{font-size:28px;font-weight:700;font-family:var(--font-m)}
-.res-lbl{font-size:11px;color:var(--txt-2);margin-top:4px}
-
-.result-item{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:12px;margin-bottom:8px}
+/* RESULTS */
+.rsum{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:14px 0}
+.rc{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:14px;text-align:center}
+.rv{font-size:28px;font-weight:700;font-family:var(--fm)}.rl{font-size:11px;color:var(--txt2);margin-top:4px}
+.ri{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:12px;margin-bottom:8px}
 .ri-top{display:flex;align-items:center;justify-content:space-between;gap:8px}
-.ri-match{font-size:13px;font-weight:600}
-.ri-score{font-family:var(--font-m);font-size:16px;font-weight:700}
-.ri-details{font-size:11px;color:var(--txt-2);margin-top:5px;display:flex;gap:12px;flex-wrap:wrap}
-.outcome-badge{font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px}
-.outcome-badge.correct{background:rgba(34,197,94,0.15);color:var(--green)}
-.outcome-badge.wrong{background:rgba(239,68,68,0.15);color:var(--red)}
-.outcome-badge.pending{background:rgba(255,255,255,0.05);color:var(--txt-3)}
+.ri-m{font-size:13px;font-weight:600}.ri-s{font-family:var(--fm);font-size:16px;font-weight:700}
+.ri-d{font-size:11px;color:var(--txt2);margin-top:5px;display:flex;gap:12px;flex-wrap:wrap}
+.ob{font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px}
+.ob.ok{background:rgba(34,197,94,.15);color:var(--green)}.ob.ko{background:rgba(239,68,68,.15);color:var(--red)}.ob.nd{background:rgba(255,255,255,.05);color:var(--txt3)}
 
-/* SOURCES PANEL */
-.sources-panel{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:16px;margin-bottom:12px}
-.sp-title{font-size:13px;font-weight:600;margin-bottom:12px}
-.sp-row{display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:1px solid var(--border)}
-.sp-row:last-child{border-bottom:none}
-.sp-status{display:flex;align-items:center;gap:5px;font-size:11px;min-width:90px;flex-shrink:0;margin-top:2px}
-.sp-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
-.sp-dot.active{background:var(--green)}
-.sp-dot.attempted{background:var(--orange)}
-.sp-dot.planned{background:var(--txt-3)}
-.sp-info{flex:1}
-.sp-name{font-size:12px;font-weight:500;color:var(--txt)}
-.sp-desc{font-size:11px;color:var(--txt-2);margin-top:2px}
-
-/* SECTION */
-.section-title{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--txt-2);margin:24px 0 12px;display:flex;align-items:center;gap:10px}
-.section-title::after{content:'';flex:1;height:1px;background:var(--border)}
-
-/* TICKET */
-.ticket-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-@media(max-width:560px){.ticket-grid{grid-template-columns:1fr}}
-.tc{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:14px}
+/* TICKETS */
+.tgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+@media(max-width:560px){.tgrid{grid-template-columns:1fr}}
+.tc{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:14px}
 .tc:first-child{border-color:rgba(245,166,35,.3)}
-.tc-label{font-size:13px;font-weight:600;margin-bottom:3px}
-.tc-note{font-size:11px;color:var(--txt-2);margin-bottom:10px}
-.tc-events{font-size:11px;color:var(--txt-2);line-height:1.9}
-.ev-id{font-family:var(--font-m);font-size:10px;background:rgba(255,255,255,0.05);border-radius:3px;padding:1px 4px}
-.tc-foot{margin-top:10px;padding-top:10px;border-top:1px solid var(--border);display:flex;justify-content:space-between;font-size:11px}
-.tc-odds{font-family:var(--font-m);color:var(--gold);font-weight:600;font-size:13px}
-.tc-prob{color:var(--txt-2)}
+.tc-lbl{font-size:13px;font-weight:600;margin-bottom:3px}.tc-note{font-size:11px;color:var(--txt2);margin-bottom:10px}
+.tc-evs{font-size:11px;color:var(--txt2);line-height:1.9}
+.eid{font-family:var(--fm);font-size:10px;background:rgba(255,255,255,.05);border-radius:3px;padding:1px 4px}
+.tc-ft{margin-top:10px;padding-top:10px;border-top:1px solid var(--border);display:flex;justify-content:space-between;font-size:11px}
+.tc-odds{font-family:var(--fm);color:var(--gold);font-weight:600;font-size:13px}
 
-/* LOADING/ERROR */
-.loading{display:flex;align-items:center;justify-content:center;height:200px;color:var(--txt-2);gap:10px;font-size:14px}
+/* SECTION TITLE */
+.stit{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--txt2);margin:22px 0 12px;display:flex;align-items:center;gap:10px}
+.stit::after{content:'';flex:1;height:1px;background:var(--border)}
+
+/* LOADING / ERROR */
+.loading{display:flex;align-items:center;justify-content:center;height:200px;color:var(--txt2);gap:10px;font-size:14px}
 .spin{width:20px;height:20px;border:2px solid var(--border);border-top-color:var(--gold);border-radius:50%;animation:spin .7s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
-.err-msg{background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.2);border-radius:var(--radius);padding:16px;color:#fca5a5;font-size:13px}
-
-footer{margin-top:48px;border-top:1px solid var(--border);padding-top:20px;font-size:11px;color:var(--txt-3);text-align:center;line-height:1.8}
+.err{background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.2);border-radius:var(--r);padding:16px;color:#fca5a5;font-size:13px}
+footer{margin-top:48px;border-top:1px solid var(--border);padding-top:18px;font-size:11px;color:var(--txt3);text-align:center;line-height:1.8}
 </style>
 </head>
 <body>
 <div class="wrap">
 
-  <!-- HEADER -->
-  <header>
-    <div class="logo-row">
-      <span style="font-size:28px">🏆</span>
-      <div>
-        <div class="site-title">CM<span>2026</span> Predictor</div>
-        <div class="subtitle">Model Poisson · Bet Builder · Faza Grupelor</div>
-      </div>
-    </div>
-    <div class="meta-pill live" id="updatePill"><span class="dot"></span>Se încarcă...</div>
-  </header>
-
-  <!-- TABS -->
-  <div class="tabs">
-    <div class="tab act" onclick="switchTab('predictii',this)">Predicții</div>
-    <div class="tab" onclick="switchTab('rezultate',this)">Rezultate</div>
-    <div class="tab" onclick="switchTab('bilete',this)">Bilete</div>
-    <div class="tab" onclick="switchTab('surse',this)">Surse Date</div>
-  </div>
-
-  <!-- ════════════════════════════════════════════════════════ -->
-  <!-- TAB: PREDICTII -->
-  <!-- ════════════════════════════════════════════════════════ -->
-  <div id="tab-predictii">
-    <div class="stats" id="statsRow">
-      <div class="stat"><div class="stat-val" style="color:var(--gold)">—</div><div class="stat-lbl">Meciuri analizate</div></div>
-      <div class="stat"><div class="stat-val" style="color:var(--s-co)">—</div><div class="stat-lbl">Tier S (85%+)</div></div>
-      <div class="stat"><div class="stat-val" style="color:var(--a-co)">—</div><div class="stat-lbl">Tier A (72–84%)</div></div>
-      <div class="stat"><div class="stat-val" style="color:var(--teal)">—</div><div class="stat-lbl">Bilete generate</div></div>
-    </div>
-    <div class="filters" id="filters"></div>
-    <div class="section-title">Meciuri rankate</div>
-    <div id="matchArea"><div class="loading"><div class="spin"></div>Se calculează probabilitățile...</div></div>
-  </div>
-
-  <!-- ════════════════════════════════════════════════════════ -->
-  <!-- TAB: REZULTATE -->
-  <!-- ════════════════════════════════════════════════════════ -->
-  <div id="tab-rezultate" style="display:none">
-    <div class="result-summary" id="resultSummary">
-      <div class="res-card"><div class="res-val" style="color:var(--green)">—</div><div class="res-lbl">Predicții corecte</div></div>
-      <div class="res-card"><div class="res-val" style="color:var(--red)">—</div><div class="res-lbl">Predicții greșite</div></div>
-      <div class="res-card"><div class="res-val" style="color:var(--teal)">—</div><div class="res-lbl">Acuratețe %</div></div>
-    </div>
-    <div class="acc-bar" id="accBar" style="display:none">
-      <span class="acc-label">Acuratețe model</span>
-      <div class="acc-track"><div class="acc-fill" id="accFill" style="width:0%"></div></div>
-      <span class="acc-pct" id="accPct">0%</span>
-    </div>
-    <div class="section-title">Meciuri jucate</div>
-    <div id="resultArea"><p style="color:var(--txt-2);font-size:13px">Niciun meci nu a fost jucat încă sau scorurile nu sunt disponibile.</p></div>
-  </div>
-
-  <!-- ════════════════════════════════════════════════════════ -->
-  <!-- TAB: BILETE -->
-  <!-- ════════════════════════════════════════════════════════ -->
-  <div id="tab-bilete" style="display:none">
-    <div class="section-title">Bilete recomandate — 5 permutări</div>
-    <div class="ticket-grid" id="ticketArea"></div>
-  </div>
-
-  <!-- ════════════════════════════════════════════════════════ -->
-  <!-- TAB: SURSE -->
-  <!-- ════════════════════════════════════════════════════════ -->
-  <div id="tab-surse" style="display:none">
-    <div class="section-title">Status surse de date</div>
-    <div class="sources-panel">
-      <div class="sp-title">Transparența modelului — ce e activ și ce e planificat</div>
-      <div id="sourcesPanel"></div>
+<header>
+  <div class="logo">
+    <span style="font-size:26px">🏆</span>
+    <div>
+      <div class="site-title">CM<span>2026</span> Predictor</div>
+      <div class="subtitle">Model Poisson · Bet Builder · Faza Grupelor</div>
     </div>
   </div>
+  <div class="pill live" id="pill"><span class="dot"></span>Se încarcă...</div>
+</header>
 
-  <footer>
-    Model: Distribuție Poisson bivariată · Date: FBref xG baseline + WorldCupAPI live<br>
-    Update automat: 4× pe zi via GitHub Actions · Scop: analiză statistică educativă
-  </footer>
+<!-- LEGENDĂ ABREVIERI -->
+<div class="legend">
+  <div class="lg"><strong>λ</strong> Lambda
+    <div class="lg-tip">λ (Lambda) = goluri așteptate per echipă, calculat din xG.<br>Ex: λ 4.4+0.6 → echipa gazdă marchează ~4.4, oaspetele ~0.6 goluri în medie.</div>
+  </div>
+  <div class="lg"><strong>O2.5</strong> Over 2.5
+    <div class="lg-tip">Probabilitatea că meciul se termină cu PESTE 2.5 goluri totale (adică minim 3 goluri).</div>
+  </div>
+  <div class="lg"><strong>BTTS</strong> Both Teams Score
+    <div class="lg-tip">Probabilitatea că AMBELE echipe marchează cel puțin un gol în meci.</div>
+  </div>
+  <div class="lg"><strong>O0.5R1</strong> Over 0.5 Repriza 1
+    <div class="lg-tip">Probabilitatea că se marchează cel puțin un gol în PRIMA REPRIZĂ (0–45 min).</div>
+  </div>
+  <div class="lg"><strong>T B/A/S</strong> Tier
+    <div class="lg-tip">Tier = clasa de risc a selecției.<br>S (🔥 &gt;85%) → A (✅ 75-85%) → B (📊 65-75%) → C (📉 55-65%) → D (&lt;55%)</div>
+  </div>
+  <div class="lg"><strong>PSF</strong> Pauză/Final
+    <div class="lg-tip">Predicție combinată: scorul la pauză + rezultatul final.<br>Ex: PSF 2/2 = favorit câștigă ambele reprize.</div>
+  </div>
+</div>
+
+<!-- TABS -->
+<div class="tabs">
+  <div class="tab act" onclick="sw('predictii',this)">Predicții</div>
+  <div class="tab" onclick="sw('rezultate',this)">Rezultate</div>
+  <div class="tab" onclick="sw('bilete',this)">Bilete</div>
+</div>
+
+<!-- TAB: PREDICTII -->
+<div id="tab-predictii">
+  <div class="stats" id="stats">
+    <div class="stat"><div class="stat-val" style="color:var(--gold)" id="s0">—</div><div class="stat-lbl">Meciuri analizate</div></div>
+    <div class="stat"><div class="stat-val" style="color:var(--teal)" id="s1">—</div><div class="stat-lbl">O2.5 &gt; 70%</div></div>
+    <div class="stat"><div class="stat-val" style="color:var(--a-co)" id="s2">—</div><div class="stat-lbl">BTTS &gt; 50%</div></div>
+    <div class="stat"><div class="stat-val" style="color:var(--gold)" id="s3">—</div><div class="stat-lbl">Bilete generate</div></div>
+  </div>
+  <div class="filters" id="filt"></div>
+  <div class="stit">Meciuri rankate</div>
+  <div id="matchArea"><div class="loading"><div class="spin"></div>Se calculează probabilitățile...</div></div>
+</div>
+
+<!-- TAB: REZULTATE -->
+<div id="tab-rezultate" style="display:none">
+  <div class="rsum">
+    <div class="rc"><div class="rv" style="color:var(--green)" id="r0">—</div><div class="rl">Predicții corecte</div></div>
+    <div class="rc"><div class="rv" style="color:var(--red)" id="r1">—</div><div class="rl">Predicții greșite</div></div>
+    <div class="rc"><div class="rv" style="color:var(--teal)" id="r2">—</div><div class="rl">Acuratețe %</div></div>
+  </div>
+  <div class="acc-wrap" id="accW"><span class="acc-lbl">Acuratețe model</span><div class="acc-track"><div class="acc-fill" id="accF"></div></div><span class="acc-pct" id="accP">0%</span></div>
+  <div class="stit">Meciuri jucate</div>
+  <div id="resArea"><p style="color:var(--txt2);font-size:13px">Niciun meci nu a fost jucat încă sau scorurile nu sunt disponibile via API.</p></div>
+</div>
+
+<!-- TAB: BILETE -->
+<div id="tab-bilete" style="display:none">
+  <div class="stit">Bilete recomandate — 5 permutări</div>
+  <div class="tgrid" id="tickArea"></div>
+</div>
+
+<footer>
+  Model: Distribuție Poisson bivariată · Date: FBref xG baseline + WorldCupAPI live<br>
+  Update automat: 4× pe zi via GitHub Actions · Scop: analiză statistică educativă
+</footer>
 </div>
 
 <script>
 const DATA_URL = './backend/output/predictii_avansate.json';
-const RELOAD_MS = 5 * 60 * 1000;
-let allMatches = [], allTickets = [], activeFilter = 'top30', activeTab = 'predictii';
+let ALL = [], TICKETS = [], ACT_F = 'top30';
 
-const TC = {
-  S:{bg:'var(--s-bg)',co:'var(--s-co)',bar:'var(--s-bar)'},
-  A:{bg:'var(--a-bg)',co:'var(--a-co)',bar:'var(--a-bar)'},
-  B:{bg:'var(--b-bg)',co:'var(--b-co)',bar:'var(--b-bar)'},
-  C:{bg:'var(--c-bg)',co:'var(--c-co)',bar:'var(--c-bar)'},
-  D:{bg:'var(--d-bg)',co:'var(--d-co)',bar:'var(--d-bar)'},
+// ── NAMES FALLBACK ────────────────────────────────────────────────────────────
+const NAMES = {
+  ARG:"Argentina",FRA:"Franța",BRA:"Brazilia",ENG:"Anglia",ESP:"Spania",
+  GER:"Germania",NED:"Olanda",POR:"Portugalia",BEL:"Belgia",COL:"Columbia",
+  JPN:"Japonia",KOR:"Coreea de Sud",URU:"Uruguay",SUI:"Elveția",NOR:"Norvegia",
+  SWE:"Suedia",MEX:"Mexic",AUT:"Austria",TUR:"Turcia",SEN:"Senegal",
+  MAR:"Maroc",USA:"SUA",CRO:"Croația",EGY:"Egipt",CZE:"Cehia",SCO:"Scoția",
+  CAN:"Canada",ECU:"Ecuador",ALG:"Algeria",BIH:"Bosnia",KSA:"Arabia Saudită",
+  AUS:"Australia",GHA:"Ghana",PAR:"Paraguay",CIV:"Coasta de Fildeș",IRN:"Iran",
+  RSA:"Africa de Sud",IRQ:"Irak",TUN:"Tunisia",CPV:"Capul Verde",HAI:"Haiti",
+  JOR:"Iordania",PAN:"Panama",NZL:"Noua Zeelandă",COD:"Congo DR",
+  UZB:"Uzbekistan",CUR:"Curaçao",QAT:"Qatar"
 };
+function name(m, side) {
+  return m[side+'_name'] || NAMES[m[side]] || m[side] || '?';
+}
 
-const SOURCES_INFO = [
-  {name:'FBref xG Baseline',status:'active',desc:'xG for/against per echipă — hardcodat din cercetare pre-turneu. Recalibrat manual după fiecare rundă.'},
-  {name:'WorldCupAPI.com',status:'attempted',desc:'Scoruri live și status meciuri. Folosit dacă API-ul răspunde; fallback la "scheduled" altfel.'},
-  {name:'RotoWire Injury Table',status:'planned',desc:'Tabel accidentări 48 echipe. Planificat în Faza 2 — necesită parsing HTML + logică de modificare lambda.'},
-  {name:'Sofascore Lineup Confirm',status:'planned',desc:'Lineup-ul confirmat T-60min. Schimbă lambda dacă starul atacant e pe bancă.'},
-  {name:'Betfair Exchange',status:'planned',desc:'Probabilitate no-vig pură. Steam move = recalculare bilet. Necesită cont + API key.'},
-  {name:'Pinnacle Opening/Closing',status:'planned',desc:'Linia de referință pentru CLV. Permite detectarea informațiilor noi în piață.'},
-  {name:'AccuWeather WBGT',status:'planned',desc:'Stres termic per stadion. WBGT >32° → multiplicator 0.85 pe lambda total.'},
-  {name:'Transfermarkt Referee',status:'planned',desc:'Medie cartonașe/meci arbitru. Impact pe ritmul jocului și Over/Under.'},
-  {name:'Oddschecker Comparator',status:'planned',desc:'Cele mai bune cote din 30+ case. Pentru calculul CLV și valoare pariu.'},
-  {name:'Opta/Stats Perform',status:'planned',desc:'Date set piece, presing, tranziții. Furnizor primar al Sofascore și WhoScored.'},
-];
+// ── COMMENTARY FALLBACK (generat din datele Poisson) ─────────────────────────
+function buildComm(m) {
+  if (m.commentary && m.commentary.favorit) return m.commentary;
+  if (!m.probs) return null;
+  const p = m.probs, h = name(m,'home'), a = name(m,'away');
+  const p1 = p.p1||0, p2 = p.p2||0, px = p.px||0;
+  const fav = p1>=p2 ? h : a, und = fav===h ? a : h;
+  const pFav = Math.round(Math.max(p1,p2)*100);
+  const pDraw = Math.round(px*100);
+  const lH = m.lambda?.home||0, lA = m.lambda?.away||0;
+  const lT = (lH+lA).toFixed(1);
+  const o25 = Math.round((p.o25||0)*100);
+  const o35 = Math.round((p.o35||0)*100);
+  const btts = Math.round((p.btts||0)*100);
+  const o05r1 = Math.round((p.o05_r1||0)*100);
+  const csh = Math.round((p.cs_h||0)*100);
+  const csa = Math.round((p.cs_a||0)*100);
 
-// ── FETCH ────────────────────────────────────────────────────────────────────
-async function loadData() {
+  let favTxt, gTxt, bTxt, r1Txt;
+  if (pFav>=90) favTxt=`${fav} favorit copleșitor — ${pFav}% victorie (λ ${lH.toFixed(1)} vs λ ${lA.toFixed(1)}). ${und} are șanse minime.`;
+  else if (pFav>=72) favTxt=`${fav} favorit clar — ${pFav}% victorie. ${und} poate surprinde (${100-pFav-pDraw}%). Egalitate ${pDraw}%.`;
+  else favTxt=`Meci echilibrat — ${fav} ${pFav}% vs egalitate ${pDraw}%. Ambele scenarii sunt posibile.`;
+
+  if (parseFloat(lT)>=4.0) gTxt=`λ combinat ${lT} — meci cu goluri multiple așteptate. Over 2.5: ${o25}% | Over 3.5: ${o35}%.`;
+  else if (parseFloat(lT)>=2.5) gTxt=`λ combinat ${lT} — golaveraj moderat. Over 2.5: ${o25}% | Over 1.5: ${Math.round((p.o15||0)*100)}%.`;
+  else gTxt=`λ combinat ${lT} — meci defensiv. Over 2.5: ${o25}% (sub pragul de valoare).`;
+
+  if (btts>=60) bTxt=`BTTS: ${btts}% — ambele echipe au potențial ofensiv real și defensive vulnerabile.`;
+  else if (btts<=30) { const csT=csh>csa?h:a; bTxt=`BTTS improbabil (${btts}%). ${csT} are ${Math.max(csh,csa)}% șanse de clean sheet.`; }
+  else bTxt=`BTTS: ${btts}% — outsider-ul poate marca dacă prinde o tranziție rapidă sau fază fixă.`;
+
+  if (o05r1>=85) r1Txt=`Repriza 1 explozivă: ${o05r1}% cel puțin un gol | ${Math.round((p.o15_r1||0)*100)}% peste 1.5 goluri în primele 45 min.`;
+  else if (o05r1>=65) r1Txt=`Repriza 1 activă: ${o05r1}% probabilitate gol înainte de pauză.`;
+  else r1Txt=`Prima repriză prudentă — echipele pot fi conservatoare inițial (${o05r1}% gol R1).`;
+
+  const alts = m.venue && (m.alt||0)>=1500 ? `⚠️ Altitudine ${m.alt}m la ${m.venue} — efect asupra ritmului jocului și pressing.` : `Condiții standard — niciun modificator climatic activ.`;
+
+  const tiers = {S:"TIER S — cel mai probabil golaveraj ridicat. Selecție de top pentru Bet Builder.",A:"TIER A — solidă, include în sistemele principale.",B:"TIER B — bună valoare; verifică accidentările cu 1h înainte.",C:"TIER C — include în biletele speculative.",D:"TIER D — evită în biletele principale."};
+  return { favorit:favTxt, golaveraj:gTxt, btts_cs:bTxt, repriza_1:r1Txt, modificatori:alts, verdict:tiers[m.tier]||'' };
+}
+
+// ── LOAD ──────────────────────────────────────────────────────────────────────
+async function load() {
   try {
-    const res = await fetch(DATA_URL + '?t=' + Date.now());
-    if (!res.ok) throw new Error('HTTP ' + res.status);
-    const data = await res.json();
-    allMatches = data.all_72 || data.top_30 || [];
-    allTickets = data.tickets || [];
-
-    const meta = data.meta || {};
-    const ts = meta.generated_at ? new Date(meta.generated_at) : new Date();
-    document.getElementById('updatePill').innerHTML =
-      '<span class="dot"></span>Update: ' + ts.toLocaleTimeString('ro-RO',{hour:'2-digit',minute:'2-digit'});
-
-    const sv = document.querySelectorAll('.stat-val');
-    sv[0].textContent = allMatches.length;
-    sv[1].textContent = allMatches.filter(m=>m.tier==='S').length;
-    sv[2].textContent = allMatches.filter(m=>m.tier==='A').length;
-    sv[3].textContent = allTickets.length;
-
-    buildFilters();
-    renderMatches();
-    renderResults();
-    renderTickets();
-    renderSources();
-  } catch(err) {
-    document.getElementById('matchArea').innerHTML =
-      '<div class="err-msg">⚠️ Nu s-au putut încărca datele.<br>Verifică că <code>backend/output/predictii_avansate.json</code> există.<br><small>'+err.message+'</small></div>';
-    document.getElementById('updatePill').textContent = '⚠️ Eroare date';
-    document.getElementById('updatePill').classList.remove('live');
+    const r = await fetch(DATA_URL+'?t='+Date.now());
+    if (!r.ok) throw new Error('HTTP '+r.status);
+    const d = await r.json();
+    ALL = d.all_72 || d.top_30 || [];
+    TICKETS = d.tickets || [];
+    const ts = d.meta?.generated_at ? new Date(d.meta.generated_at) : new Date();
+    document.getElementById('pill').innerHTML = '<span class="dot"></span>Update: '+ts.toLocaleTimeString('ro-RO',{hour:'2-digit',minute:'2-digit'});
+    document.getElementById('s0').textContent = ALL.length;
+    document.getElementById('s1').textContent = ALL.filter(m=>(m.probs?.o25||0)>0.70).length;
+    document.getElementById('s2').textContent = ALL.filter(m=>(m.probs?.btts||0)>0.50).length;
+    document.getElementById('s3').textContent = TICKETS.length;
+    buildFilters(); renderMatches(); renderResults(); renderTickets();
+  } catch(e) {
+    document.getElementById('matchArea').innerHTML = '<div class="err">⚠️ Nu s-au putut încărca datele.<br>Verifică că <code>backend/output/predictii_avansate.json</code> există.<br><small>'+e.message+'</small></div>';
+    document.getElementById('pill').textContent='⚠️ Eroare date';
+    document.getElementById('pill').classList.remove('live');
   }
 }
 
-// ── TAB SWITCH ───────────────────────────────────────────────────────────────
-function switchTab(id, btn) {
-  activeTab = id;
-  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('act'));
-  btn.classList.add('act');
-  ['predictii','rezultate','bilete','surse'].forEach(t => {
-    document.getElementById('tab-'+t).style.display = t===id ? '' : 'none';
-  });
+// ── TAB ───────────────────────────────────────────────────────────────────────
+function sw(id,btn) {
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('act')); btn.classList.add('act');
+  ['predictii','rezultate','bilete'].forEach(t=>{ document.getElementById('tab-'+t).style.display=t===id?'':'none'; });
 }
 
-// ── FILTRE ───────────────────────────────────────────────────────────────────
+// ── FILTRE ────────────────────────────────────────────────────────────────────
 function buildFilters() {
-  const fs = [['top30','Top 30'],['all','Toate 72'],['S','Tier S'],['A','Tier A'],['B','Tier B'],['CD','Tier C+D']];
-  document.getElementById('filters').innerHTML = fs.map(([v,l]) =>
-    '<button class="fb'+(v===activeFilter?' act':'')+'" onclick="setFilter(\''+v+'\',this)">'+l+'</button>'
-  ).join('');
+  const fs=[['top30','Top 30'],['all','Toate 72'],['B','Tier B (65%+)'],['C','Tier C'],['D','Tier D']];
+  document.getElementById('filt').innerHTML=fs.map(([v,l])=>'<button class="fb'+(v===ACT_F?' act':'')+'" onclick="sf(\''+v+'\',this)">'+l+'</button>').join('');
 }
-function setFilter(v, btn) {
-  activeFilter = v;
-  document.querySelectorAll('.fb').forEach(b=>b.classList.remove('act'));
-  btn.classList.add('act');
-  renderMatches();
-}
+function sf(v,btn){ ACT_F=v; document.querySelectorAll('.fb').forEach(b=>b.classList.remove('act')); btn.classList.add('act'); renderMatches(); }
 
-// ── MATCH RENDER ─────────────────────────────────────────────────────────────
+// ── MATCHES ───────────────────────────────────────────────────────────────────
 function renderMatches() {
-  let data = allMatches;
-  if (activeFilter==='top30') data=allMatches.slice(0,30);
-  else if (activeFilter==='S') data=allMatches.filter(m=>m.tier==='S');
-  else if (activeFilter==='A') data=allMatches.filter(m=>m.tier==='A');
-  else if (activeFilter==='B') data=allMatches.filter(m=>m.tier==='B');
-  else if (activeFilter==='CD') data=allMatches.filter(m=>m.tier==='C'||m.tier==='D');
+  let data = ALL;
+  if (ACT_F==='top30') data=ALL.slice(0,30);
+  else if (ACT_F!=='all') data=ALL.filter(m=>m.tier===ACT_F);
+  const fmt=v=>(v!==undefined&&v!==null)?(v*100).toFixed(0)+'%':'—';
+  const hi=v=>v>0.65?' hi':'';
 
-  const fmt = v => (v!==undefined&&v!==null) ? (v*100).toFixed(0)+'%' : '—';
-  const hi = v => v>0.65?' hi':'';
-
-  const html = '<div class="match-grid">'+data.map((m,i) => {
-    const rank = allMatches.indexOf(m)+1;
-    const pct = Math.min(100,Math.round(m.ranking_score*10));
-    const oc = m.prediction?.outcome;
-    const cardClass = 'mc t-'+m.tier+(oc==='correct'?' correct':oc==='wrong'?' wrong':m.status==='live'?' live-now':'');
-
-    let scoreBadge = '';
-    if (m.score?.home!==null && m.score?.home!==undefined) {
-      const cls = oc==='correct'?' correct':oc==='wrong'?' wrong':m.status==='live'?' live-sc':'';
-      scoreBadge = '<span class="score-badge'+cls+'">'+m.score.home+'–'+m.score.away+'</span>';
+  document.getElementById('matchArea').innerHTML='<div class="mgrid">'+data.map(m=>{
+    const rank=ALL.indexOf(m)+1;
+    const pct=Math.min(100,Math.round(m.ranking_score*10));
+    const hn=name(m,'home'), an=name(m,'away');
+    const oc=m.prediction?.outcome;
+    const cls='mc t'+m.tier+(oc==='correct'?' ok':oc==='wrong'?' ko':m.status==='live'?' lv':'');
+    let sco='';
+    if (m.score?.home!==null&&m.score?.home!==undefined){
+      const sc=oc==='correct'?' ok':oc==='wrong'?' ko':m.status==='live'?' lv':'';
+      sco='<span class="sbadge'+sc+'">'+m.score.home+'–'+m.score.away+'</span>';
     }
-    const statusIcon = m.status==='live'?' 🔴':'';
+    const lv=m.status==='live'?' 🔴':'';
+    const cid='c'+m.id.replace(/\W/g,'_');
+    const comm=buildComm(m);
+    const cHTML=comm?[
+      ['Favorit & forță',comm.favorit],
+      ['Golaveraj așteptat (λ = goluri așteptate)',comm.golaveraj],
+      ['BTTS & Clean Sheet',comm.btts_cs],
+      ['Repriza 1',comm.repriza_1],
+      ['Modificatori contextuali',comm.modificatori],
+      ['Verdict',comm.verdict]
+    ].filter(([,v])=>v).map(([k,v])=>'<div class="cs"><strong>'+k+'</strong>'+v+'</div>').join('')
+    :'<p style="color:var(--txt3);font-size:11px">Rulează din nou Action-ul pentru commentary complet.</p>';
 
-    const commId = 'comm_'+m.id.replace(/[^a-z0-9]/gi,'_');
-    const c = m.commentary || {};
-
-    return '<div class="'+cardClass+'" id="card_'+m.id+'">'+
-      '<div class="mc-top">'+
-        '<span class="mc-rank">#'+rank+'</span>'+
-        '<span class="mc-name">'+m.home_name+' vs '+m.away_name+statusIcon+scoreBadge+'</span>'+
-        '<span class="tier-badge">T'+m.tier+'</span>'+
-      '</div>'+
+    return '<div class="'+cls+'">'+
+      '<div class="mc-top"><span class="rk">#'+rank+'</span><span class="mn">'+hn+' vs '+an+lv+sco+'</span><span class="tbadge">T'+m.tier+'</span></div>'+
       '<div class="mc-meta">Gr.'+m.group+' · MD'+m.matchday+' · '+m.date+' · '+m.venue+'</div>'+
-      '<div class="bar-wrap"><div class="bar-fill" data-target="'+pct+'"></div></div>'+
-      '<div class="bar-row"><span>Scor golaveraj</span><span style="font-family:var(--font-m);font-weight:500">'+m.ranking_score.toFixed(1)+'/10</span></div>'+
-      '<div class="mc-probs">'+
+      '<div class="bw"><div class="bf" data-t="'+pct+'"></div></div>'+
+      '<div class="brow"><span>Scor golaveraj</span><span style="font-family:var(--fm);font-weight:500">'+m.ranking_score.toFixed(1)+'/10</span></div>'+
+      '<div class="probs">'+
         '<span class="pp'+hi(m.probs?.o25)+'">O2.5: '+fmt(m.probs?.o25)+'</span>'+
         '<span class="pp'+hi(m.probs?.btts)+'">BTTS: '+fmt(m.probs?.btts)+'</span>'+
         '<span class="pp'+hi(m.probs?.o05_r1)+'">O0.5R1: '+fmt(m.probs?.o05_r1)+'</span>'+
-        '<span class="pp">λ: '+(m.lambda?.home?.toFixed(1)||'?')+'+'+(m.lambda?.away?.toFixed(1)||'?')+'</span>'+
+        '<span class="pp" title="λ = goluri așteptate per echipă">λ: '+(m.lambda?.home?.toFixed(1)||'?')+'+'+(m.lambda?.away?.toFixed(1)||'?')+'</span>'+
       '</div>'+
       '<div class="mc-bet">🎯 '+(m.bet?.description||'—')+'</div>'+
-      '<button class="comm-btn" onclick="toggleComm(\''+commId+'\',this)">'+
-        '<span>▶ Motivarea predicției</span>'+
-        '<span class="arrow">▾</span>'+
-      '</button>'+
-      '<div class="commentary" id="'+commId+'">'+
-        (c.favorit ? '<div class="comm-section"><strong>Favorit & forță</strong>'+c.favorit+'</div>' : '')+
-        (c.golaveraj ? '<div class="comm-section"><strong>Golaveraj așteptat</strong>'+c.golaveraj+'</div>' : '')+
-        (c.btts_cs ? '<div class="comm-section"><strong>BTTS & Clean Sheet</strong>'+c.btts_cs+'</div>' : '')+
-        (c.repriza_1 ? '<div class="comm-section"><strong>Repriza 1</strong>'+c.repriza_1+'</div>' : '')+
-        (c.modificatori ? '<div class="comm-section"><strong>Modificatori contextuali</strong>'+c.modificatori+'</div>' : '')+
-        (c.verdict ? '<div class="comm-section"><strong>Verdict</strong>'+c.verdict+'</div>' : '')+
-        (c.surse ? '<div class="comm-sources"><strong style="font-size:10px;text-transform:uppercase;letter-spacing:.04em;color:var(--txt-3)">Surse active pentru acest meci</strong>'+
-          c.surse.map(s=>'<div class="src-row"><span class="src-dot '+s.status+'"></span><span>'+s.name+' — '+s.detail+'</span></div>').join('')+
-        '</div>' : '')+
-      '</div>'+
+      '<button class="cbtn" onclick="tc(\''+cid+'\',this)"><span>▶ Motivarea predicției</span><span class="arr">▾</span></button>'+
+      '<div class="comm" id="'+cid+'">'+cHTML+'</div>'+
     '</div>';
   }).join('')+'</div>';
 
-  document.getElementById('matchArea').innerHTML = html;
-  requestAnimationFrame(() => {
-    document.querySelectorAll('.bar-fill[data-target]').forEach(el => {
-      setTimeout(()=>{ el.style.width=el.dataset.target+'%'; }, 50);
-    });
+  requestAnimationFrame(()=>{
+    document.querySelectorAll('.bf[data-t]').forEach(el=>{ setTimeout(()=>{ el.style.width=el.dataset.t+'%'; },50); });
   });
 }
+function tc(id,btn){ const e=document.getElementById(id); e.classList.toggle('show'); btn.classList.toggle('op'); btn.querySelector('span').textContent=e.classList.contains('show')?'▼ Motivarea predicției':'▶ Motivarea predicției'; }
 
-function toggleComm(id, btn) {
-  const el = document.getElementById(id);
-  el.classList.toggle('show');
-  btn.classList.toggle('open');
-  btn.querySelector('span').textContent = el.classList.contains('show') ? '▼ Motivarea predicției' : '▶ Motivarea predicției';
-}
-
-// ── RESULTS RENDER ───────────────────────────────────────────────────────────
+// ── RESULTS ───────────────────────────────────────────────────────────────────
 function renderResults() {
-  const played = allMatches.filter(m => m.status==='finished' && m.score?.home!==null);
-  const correct = played.filter(m => m.prediction?.outcome==='correct').length;
-  const wrong = played.filter(m => m.prediction?.outcome==='wrong').length;
-  const acc = played.length > 0 ? Math.round(correct/played.length*100) : 0;
-
-  const sv = document.querySelectorAll('#resultSummary .res-val');
-  if (sv[0]) { sv[0].textContent=correct; sv[1].textContent=wrong; sv[2].textContent=acc+'%'; }
-
-  if (played.length > 0) {
-    const ab = document.getElementById('accBar');
-    ab.style.display='flex';
-    document.getElementById('accFill').style.width=acc+'%';
-    document.getElementById('accPct').textContent=acc+'%';
-  }
-
+  const played=ALL.filter(m=>m.status==='finished'&&m.score?.home!==null&&m.score?.home!==undefined);
+  const correct=played.filter(m=>m.prediction?.outcome==='correct').length;
+  const wrong=played.filter(m=>m.prediction?.outcome==='wrong').length;
+  const acc=played.length?Math.round(correct/played.length*100):0;
+  document.getElementById('r0').textContent=correct;
+  document.getElementById('r1').textContent=wrong;
+  document.getElementById('r2').textContent=acc+'%';
+  if (played.length){ const aw=document.getElementById('accW'); aw.style.display='flex'; document.getElementById('accF').style.width=acc+'%'; document.getElementById('accP').textContent=acc+'%'; }
   if (!played.length) return;
-
-  document.getElementById('resultArea').innerHTML = played.map(m => {
-    const oc = m.prediction?.outcome;
-    const badge = oc==='correct'
-      ? '<span class="outcome-badge correct">✓ Predicție corectă</span>'
-      : oc==='wrong'
-      ? '<span class="outcome-badge wrong">✗ Predicție greșită</span>'
-      : '<span class="outcome-badge pending">Analizat</span>';
-    return '<div class="result-item">'+
-      '<div class="ri-top">'+
-        '<span class="ri-match">'+m.home_name+' vs '+m.away_name+'</span>'+
-        '<span class="ri-score" style="color:'+(oc==='correct'?'var(--green)':oc==='wrong'?'var(--red)':'var(--txt)')+'">'+m.score.home+' – '+m.score.away+'</span>'+
-      '</div>'+
-      '<div class="ri-details">'+
-        '<span>Gr.'+m.group+' · '+m.date+'</span>'+
-        '<span>Favorit prezis: <strong>'+m.prediction?.fav_name+'</strong></span>'+
-        '<span>O2.5 prob: '+Math.round((m.probs?.o25||0)*100)+'%</span>'+
-        badge+
-      '</div>'+
-    '</div>';
+  document.getElementById('resArea').innerHTML=played.map(m=>{
+    const oc=m.prediction?.outcome;
+    const badge=oc==='correct'?'<span class="ob ok">✓ Corect</span>':oc==='wrong'?'<span class="ob ko">✗ Greșit</span>':'<span class="ob nd">Analizat</span>';
+    return '<div class="ri"><div class="ri-top"><span class="ri-m">'+name(m,'home')+' vs '+name(m,'away')+'</span><span class="ri-s" style="color:'+(oc==='correct'?'var(--green)':oc==='wrong'?'var(--red)':'var(--txt)')+'">'+m.score.home+' – '+m.score.away+'</span></div><div class="ri-d"><span>Gr.'+m.group+' · '+m.date+'</span><span>Favorit prezis: <strong>'+(m.prediction?.fav_name||'?')+'</strong></span><span>O2.5: '+Math.round((m.probs?.o25||0)*100)+'%</span>'+badge+'</div></div>';
   }).join('');
 }
 
-// ── TICKETS RENDER ───────────────────────────────────────────────────────────
+// ── TICKETS ───────────────────────────────────────────────────────────────────
 function renderTickets() {
-  if (!allTickets.length) {
-    document.getElementById('ticketArea').innerHTML='<p style="color:var(--txt-2);font-size:13px">Niciun bilet generat.</p>';
-    return;
-  }
-  document.getElementById('ticketArea').innerHTML = allTickets.map(t =>
-    '<div class="tc">'+
-    '<div class="tc-label">'+t.label+'</div>'+
-    '<div class="tc-note">'+t.note+'</div>'+
-    '<div class="tc-events">'+
-      (t.events||[]).map(e =>
-        '<div><span class="ev-id">'+e.id+'</span> '+e.match+'</div>'+
-        '<div style="font-size:10px;color:var(--txt-3);margin-left:34px;margin-bottom:4px">'+e.bet+' · '+e.prob_pct+'%</div>'
-      ).join('')+
-    '</div>'+
-    '<div class="tc-foot">'+
-      '<div><div class="tc-odds">~'+t.combined_odds+'x</div><div class="tc-prob">prob. '+t.combined_prob_pct+'%</div></div>'+
-      '<div style="text-align:right;font-size:11px;color:var(--txt-3)">Miză 2 RON<br>Est. '+(t.combined_odds*2).toFixed(0)+' RON</div>'+
-    '</div></div>'
+  if (!TICKETS.length){ document.getElementById('tickArea').innerHTML='<p style="color:var(--txt2)">Niciun bilet generat.</p>'; return; }
+  document.getElementById('tickArea').innerHTML=TICKETS.map(t=>
+    '<div class="tc"><div class="tc-lbl">'+t.label+'</div><div class="tc-note">'+t.note+'</div>'+
+    '<div class="tc-evs">'+(t.events||[]).map(e=>'<div><span class="eid">'+e.id+'</span> '+e.match+'</div><div style="font-size:10px;color:var(--txt3);margin:0 0 4px 30px">'+e.bet+' · '+e.prob_pct+'%</div>').join('')+'</div>'+
+    '<div class="tc-ft"><div><div class="tc-odds">~'+t.combined_odds+'x</div><div style="color:var(--txt2);font-size:10px">prob. '+t.combined_prob_pct+'%</div></div><div style="text-align:right;color:var(--txt3)">Miză 2 RON<br>Est. '+(t.combined_odds*2).toFixed(0)+' RON</div></div></div>'
   ).join('');
 }
 
-// ── SOURCES RENDER ───────────────────────────────────────────────────────────
-function renderSources() {
-  const statusMap = {active:'activ',attempted:'încearcă',planned:'planificat'};
-  const colorMap = {active:'var(--green)',attempted:'var(--orange)',planned:'var(--txt-3)'};
-  document.getElementById('sourcesPanel').innerHTML = SOURCES_INFO.map(s =>
-    '<div class="sp-row">'+
-      '<div class="sp-status"><span class="sp-dot '+s.status+'"></span><span style="color:'+colorMap[s.status]+'">'+statusMap[s.status]+'</span></div>'+
-      '<div class="sp-info"><div class="sp-name">'+s.name+'</div><div class="sp-desc">'+s.desc+'</div></div>'+
-    '</div>'
-  ).join('');
-}
-
-loadData();
-setInterval(loadData, RELOAD_MS);
+load();
+setInterval(load, 5*60*1000);
 </script>
 </body>
 </html>
