@@ -1,10 +1,10 @@
 {
   "meta": {
-    "generated_at": "2026-06-15T04:50:11.018906+00:00",
+    "generated_at": "2026-06-17T18:10:53.933233+00:00",
     "tournament": "FIFA World Cup 2026",
     "total_matches": 72,
-    "live_available": false,
-    "model_version": "1.0-poisson"
+    "live_available": true,
+    "model_version": "1.1-poisson-contextual"
   },
   "top_30": [
     {
@@ -74,19 +74,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -167,19 +157,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -260,19 +240,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -353,19 +323,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -446,19 +406,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -539,19 +489,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -632,19 +572,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -725,19 +655,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -818,19 +738,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -911,19 +821,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -1004,19 +904,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -1097,19 +987,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -1190,19 +1070,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -1283,19 +1153,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -1376,19 +1236,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -1469,19 +1319,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -1562,19 +1402,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -1655,19 +1485,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -1748,19 +1568,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -1771,6 +1581,89 @@
           "o25_pct": 72,
           "btts_pct": 48,
           "o05_r1_pct": 82
+        }
+      }
+    },
+    {
+      "id": "D3",
+      "home": "USA",
+      "home_name": "SUA",
+      "away": "AUS",
+      "away_name": "Australia",
+      "group": "D",
+      "matchday": 2,
+      "date": "2026-06-20",
+      "venue": "Los Angeles",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "prediction": {
+        "favorite": "USA",
+        "fav_name": "SUA",
+        "outcome": null
+      },
+      "lambda": {
+        "home": 2.582,
+        "away": 0.98
+      },
+      "probs": {
+        "p1": 0.7169,
+        "px": 0.1606,
+        "p2": 0.1211,
+        "o15": 0.8691,
+        "o25": 0.6891,
+        "o35": 0.4753,
+        "btts": 0.5766,
+        "cs_h": 0.3748,
+        "cs_a": 0.0756,
+        "o05_r1": 0.7987,
+        "o15_r1": 0.4761
+      },
+      "ranking_score": 6.634,
+      "tier": "B",
+      "bet": {
+        "description": "BTTS + USA câștigă + Over 1.5 R1",
+        "probability": 0.1968
+      },
+      "commentary": {
+        "favorit": "SUA favorit clar — 72% victorie. Australia are 12% șanse reale; egalitate 16%. Un gol marcat devreme de outsider poate schimba dinamica.",
+        "golaveraj": "λ combinat 3.56 — golaveraj ridicat. Over 2.5: 69% · Over 3.5: 48%. Așteptăm 3+ goluri în scenariul de bază.",
+        "btts_cs": "BTTS moderat: 58%. Clean sheet SUA: 37% · clean sheet Australia: 8%. Outsider-ul poate marca dacă prinde o tranziție.",
+        "repriza_1": "Repriza 1 activă: 80% cel puțin un gol în prima repriză.",
+        "modificatori": "Condiții standard — niciun modificator contextual activ.",
+        "verdict": "TIER B — probabilitate 62-71%. Valoare bună; verifică accidentările cu 1h înainte.",
+        "surse": [
+          {
+            "name": "FBref xG Baseline",
+            "status": "active",
+            "detail": "xGF 1.71 / xGA 1.18 (SUA)"
+          },
+          {
+            "name": "FBref xG Baseline",
+            "status": "active",
+            "detail": "xGF 0.98 / xGA 1.62 (Australia)"
+          },
+          {
+            "name": "WorldCupAPI live",
+            "status": "attempted",
+            "detail": "Scoruri live — fallback la scheduled dacă API offline"
+          },
+          {
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
+          }
+        ],
+        "date_model": {
+          "lambda_home": 2.582,
+          "lambda_away": 0.98,
+          "lambda_total": 3.56,
+          "p_fav_pct": 72,
+          "o25_pct": 69,
+          "btts_pct": 58,
+          "o05_r1_pct": 80
         }
       }
     },
@@ -1841,19 +1734,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -1877,15 +1760,15 @@
       "matchday": 1,
       "date": "2026-06-13",
       "venue": "San Francisco",
-      "status": "scheduled",
+      "status": "finished",
       "score": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 1
       },
       "prediction": {
         "favorite": "SUI",
         "fav_name": "Elveția",
-        "outcome": null
+        "outcome": "wrong"
       },
       "lambda": {
         "home": 0.515,
@@ -1934,19 +1817,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -2027,19 +1900,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -2120,19 +1983,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -2213,19 +2066,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -2306,19 +2149,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -2399,19 +2232,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -2421,6 +2244,89 @@
           "p_fav_pct": 81,
           "o25_pct": 67,
           "btts_pct": 45,
+          "o05_r1_pct": 79
+        }
+      }
+    },
+    {
+      "id": "D1",
+      "home": "USA",
+      "home_name": "SUA",
+      "away": "PAR",
+      "away_name": "Paraguay",
+      "group": "D",
+      "matchday": 1,
+      "date": "2026-06-13",
+      "venue": "Los Angeles",
+      "status": "finished",
+      "score": {
+        "home": 4,
+        "away": 1
+      },
+      "prediction": {
+        "favorite": "USA",
+        "fav_name": "SUA",
+        "outcome": "correct"
+      },
+      "lambda": {
+        "home": 2.519,
+        "away": 0.902
+      },
+      "probs": {
+        "p1": 0.7236,
+        "px": 0.1615,
+        "p2": 0.1137,
+        "o15": 0.8543,
+        "o25": 0.6631,
+        "o35": 0.4451,
+        "btts": 0.5458,
+        "cs_h": 0.4051,
+        "cs_a": 0.0806,
+        "o05_r1": 0.7855,
+        "o15_r1": 0.4553
+      },
+      "ranking_score": 6.442,
+      "tier": "B",
+      "bet": {
+        "description": "BTTS + USA câștigă + Over 1.5 R1",
+        "probability": 0.1798
+      },
+      "commentary": {
+        "favorit": "SUA favorit clar — 72% victorie. Paraguay are 11% șanse reale; egalitate 16%. Un gol marcat devreme de outsider poate schimba dinamica.",
+        "golaveraj": "λ combinat 3.42 — golaveraj ridicat. Over 2.5: 66% · Over 3.5: 45%. Așteptăm 3+ goluri în scenariul de bază.",
+        "btts_cs": "BTTS moderat: 55%. Clean sheet SUA: 41% · clean sheet Paraguay: 8%. Outsider-ul poate marca dacă prinde o tranziție.",
+        "repriza_1": "Repriza 1 activă: 79% cel puțin un gol în prima repriză.",
+        "modificatori": "Condiții standard — niciun modificator contextual activ.",
+        "verdict": "TIER B — probabilitate 62-71%. Valoare bună; verifică accidentările cu 1h înainte.",
+        "surse": [
+          {
+            "name": "FBref xG Baseline",
+            "status": "active",
+            "detail": "xGF 1.71 / xGA 1.18 (SUA)"
+          },
+          {
+            "name": "FBref xG Baseline",
+            "status": "active",
+            "detail": "xGF 0.95 / xGA 1.58 (Paraguay)"
+          },
+          {
+            "name": "WorldCupAPI live",
+            "status": "attempted",
+            "detail": "Scoruri live — fallback la scheduled dacă API offline"
+          },
+          {
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
+          }
+        ],
+        "date_model": {
+          "lambda_home": 2.519,
+          "lambda_away": 0.902,
+          "lambda_total": 3.42,
+          "p_fav_pct": 72,
+          "o25_pct": 66,
+          "btts_pct": 55,
           "o05_r1_pct": 79
         }
       }
@@ -2492,19 +2398,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -2585,19 +2481,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -2607,192 +2493,6 @@
           "p_fav_pct": 54,
           "o25_pct": 69,
           "btts_pct": 67,
-          "o05_r1_pct": 80
-        }
-      }
-    },
-    {
-      "id": "H4",
-      "home": "CPV",
-      "home_name": "Capul Verde",
-      "away": "URU",
-      "away_name": "Uruguay",
-      "group": "H",
-      "matchday": 2,
-      "date": "2026-06-21",
-      "venue": "Atlanta",
-      "status": "scheduled",
-      "score": {
-        "home": null,
-        "away": null
-      },
-      "prediction": {
-        "favorite": "URU",
-        "fav_name": "Uruguay",
-        "outcome": null
-      },
-      "lambda": {
-        "home": 0.81,
-        "away": 2.561
-      },
-      "probs": {
-        "p1": 0.096,
-        "px": 0.1523,
-        "p2": 0.7504,
-        "o15": 0.8485,
-        "o25": 0.6534,
-        "o35": 0.434,
-        "btts": 0.5115,
-        "cs_h": 0.0772,
-        "cs_a": 0.4443,
-        "o05_r1": 0.7807,
-        "o15_r1": 0.4479
-      },
-      "ranking_score": 6.372,
-      "tier": "B",
-      "bet": {
-        "description": "BTTS + URU câștigă + Over 1.5 R1",
-        "probability": 0.1719
-      },
-      "commentary": {
-        "favorit": "Uruguay favorit clar — 75% victorie. Capul Verde are 10% șanse reale; egalitate 15%. Un gol marcat devreme de outsider poate schimba dinamica.",
-        "golaveraj": "λ combinat 3.37 — golaveraj ridicat. Over 2.5: 65% · Over 3.5: 43%. Așteptăm 3+ goluri în scenariul de bază.",
-        "btts_cs": "BTTS moderat: 51%. Clean sheet Capul Verde: 8% · clean sheet Uruguay: 44%. Outsider-ul poate marca dacă prinde o tranziție.",
-        "repriza_1": "Repriza 1 activă: 78% cel puțin un gol în prima repriză.",
-        "modificatori": "Condiții standard — niciun modificator contextual activ.",
-        "verdict": "TIER B — probabilitate 62-71%. Valoare bună; verifică accidentările cu 1h înainte.",
-        "surse": [
-          {
-            "name": "FBref xG Baseline",
-            "status": "active",
-            "detail": "xGF 0.81 / xGA 1.95 (Capul Verde)"
-          },
-          {
-            "name": "FBref xG Baseline",
-            "status": "active",
-            "detail": "xGF 1.55 / xGA 1.18 (Uruguay)"
-          },
-          {
-            "name": "WorldCupAPI live",
-            "status": "attempted",
-            "detail": "Scoruri live — fallback la scheduled dacă API offline"
-          },
-          {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
-          }
-        ],
-        "date_model": {
-          "lambda_home": 0.81,
-          "lambda_away": 2.561,
-          "lambda_total": 3.37,
-          "p_fav_pct": 75,
-          "o25_pct": 65,
-          "btts_pct": 51,
-          "o05_r1_pct": 78
-        }
-      }
-    },
-    {
-      "id": "I5",
-      "home": "FRA",
-      "home_name": "Franța",
-      "away": "NOR",
-      "away_name": "Norvegia",
-      "group": "I",
-      "matchday": 3,
-      "date": "2026-06-26",
-      "venue": "Atlanta",
-      "status": "scheduled",
-      "score": {
-        "home": null,
-        "away": null
-      },
-      "prediction": {
-        "favorite": "FRA",
-        "fav_name": "Franța",
-        "outcome": null
-      },
-      "lambda": {
-        "home": 2.059,
-        "away": 1.551
-      },
-      "probs": {
-        "p1": 0.4953,
-        "px": 0.2124,
-        "p2": 0.2919,
-        "o15": 0.875,
-        "o25": 0.6988,
-        "o35": 0.4867,
-        "btts": 0.6872,
-        "cs_h": 0.2119,
-        "cs_a": 0.1275,
-        "o05_r1": 0.803,
-        "o15_r1": 0.483
-      },
-      "ranking_score": 6.372,
-      "tier": "B",
-      "bet": {
-        "description": "BTTS + FRA câștigă + Over 1.5 R1",
-        "probability": 0.1644
-      },
-      "commentary": {
-        "favorit": "Meci echilibrat: Franța 50% — egalitate 21% — Norvegia 29%. Nicio echipă nu are avantaj statistic clar.",
-        "golaveraj": "λ combinat 3.61 — golaveraj ridicat. Over 2.5: 70% · Over 3.5: 49%. Așteptăm 3+ goluri în scenariul de bază.",
-        "btts_cs": "Ambele echipe marchează — BTTS: 69%. Ambele au offensive xG real și defensive vulnerabile.",
-        "repriza_1": "Repriza 1 activă: 80% cel puțin un gol în prima repriză.",
-        "modificatori": "Condiții standard — niciun modificator contextual activ.",
-        "verdict": "TIER B — probabilitate 62-71%. Valoare bună; verifică accidentările cu 1h înainte.",
-        "surse": [
-          {
-            "name": "FBref xG Baseline",
-            "status": "active",
-            "detail": "xGF 2.25 / xGA 0.88 (Franța)"
-          },
-          {
-            "name": "FBref xG Baseline",
-            "status": "active",
-            "detail": "xGF 2.08 / xGA 1.08 (Norvegia)"
-          },
-          {
-            "name": "WorldCupAPI live",
-            "status": "attempted",
-            "detail": "Scoruri live — fallback la scheduled dacă API offline"
-          },
-          {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
-          }
-        ],
-        "date_model": {
-          "lambda_home": 2.059,
-          "lambda_away": 1.551,
-          "lambda_total": 3.61,
-          "p_fav_pct": 50,
-          "o25_pct": 70,
-          "btts_pct": 69,
           "o05_r1_pct": 80
         }
       }
@@ -2866,19 +2566,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -2959,19 +2649,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -3052,19 +2732,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -3145,19 +2815,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -3238,19 +2898,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -3331,19 +2981,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -3424,19 +3064,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -3517,19 +3147,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -3610,19 +3230,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -3703,19 +3313,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -3796,19 +3396,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -3889,19 +3479,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -3982,19 +3562,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -4075,19 +3645,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -4168,19 +3728,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -4261,19 +3811,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -4354,19 +3894,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -4447,19 +3977,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -4540,19 +4060,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -4563,6 +4073,89 @@
           "o25_pct": 72,
           "btts_pct": 48,
           "o05_r1_pct": 82
+        }
+      }
+    },
+    {
+      "id": "D3",
+      "home": "USA",
+      "home_name": "SUA",
+      "away": "AUS",
+      "away_name": "Australia",
+      "group": "D",
+      "matchday": 2,
+      "date": "2026-06-20",
+      "venue": "Los Angeles",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "prediction": {
+        "favorite": "USA",
+        "fav_name": "SUA",
+        "outcome": null
+      },
+      "lambda": {
+        "home": 2.582,
+        "away": 0.98
+      },
+      "probs": {
+        "p1": 0.7169,
+        "px": 0.1606,
+        "p2": 0.1211,
+        "o15": 0.8691,
+        "o25": 0.6891,
+        "o35": 0.4753,
+        "btts": 0.5766,
+        "cs_h": 0.3748,
+        "cs_a": 0.0756,
+        "o05_r1": 0.7987,
+        "o15_r1": 0.4761
+      },
+      "ranking_score": 6.634,
+      "tier": "B",
+      "bet": {
+        "description": "BTTS + USA câștigă + Over 1.5 R1",
+        "probability": 0.1968
+      },
+      "commentary": {
+        "favorit": "SUA favorit clar — 72% victorie. Australia are 12% șanse reale; egalitate 16%. Un gol marcat devreme de outsider poate schimba dinamica.",
+        "golaveraj": "λ combinat 3.56 — golaveraj ridicat. Over 2.5: 69% · Over 3.5: 48%. Așteptăm 3+ goluri în scenariul de bază.",
+        "btts_cs": "BTTS moderat: 58%. Clean sheet SUA: 37% · clean sheet Australia: 8%. Outsider-ul poate marca dacă prinde o tranziție.",
+        "repriza_1": "Repriza 1 activă: 80% cel puțin un gol în prima repriză.",
+        "modificatori": "Condiții standard — niciun modificator contextual activ.",
+        "verdict": "TIER B — probabilitate 62-71%. Valoare bună; verifică accidentările cu 1h înainte.",
+        "surse": [
+          {
+            "name": "FBref xG Baseline",
+            "status": "active",
+            "detail": "xGF 1.71 / xGA 1.18 (SUA)"
+          },
+          {
+            "name": "FBref xG Baseline",
+            "status": "active",
+            "detail": "xGF 0.98 / xGA 1.62 (Australia)"
+          },
+          {
+            "name": "WorldCupAPI live",
+            "status": "attempted",
+            "detail": "Scoruri live — fallback la scheduled dacă API offline"
+          },
+          {
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
+          }
+        ],
+        "date_model": {
+          "lambda_home": 2.582,
+          "lambda_away": 0.98,
+          "lambda_total": 3.56,
+          "p_fav_pct": 72,
+          "o25_pct": 69,
+          "btts_pct": 58,
+          "o05_r1_pct": 80
         }
       }
     },
@@ -4633,19 +4226,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -4669,15 +4252,15 @@
       "matchday": 1,
       "date": "2026-06-13",
       "venue": "San Francisco",
-      "status": "scheduled",
+      "status": "finished",
       "score": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 1
       },
       "prediction": {
         "favorite": "SUI",
         "fav_name": "Elveția",
-        "outcome": null
+        "outcome": "wrong"
       },
       "lambda": {
         "home": 0.515,
@@ -4726,19 +4309,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -4819,19 +4392,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -4912,19 +4475,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -5005,19 +4558,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -5098,19 +4641,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -5191,19 +4724,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -5213,6 +4736,89 @@
           "p_fav_pct": 81,
           "o25_pct": 67,
           "btts_pct": 45,
+          "o05_r1_pct": 79
+        }
+      }
+    },
+    {
+      "id": "D1",
+      "home": "USA",
+      "home_name": "SUA",
+      "away": "PAR",
+      "away_name": "Paraguay",
+      "group": "D",
+      "matchday": 1,
+      "date": "2026-06-13",
+      "venue": "Los Angeles",
+      "status": "finished",
+      "score": {
+        "home": 4,
+        "away": 1
+      },
+      "prediction": {
+        "favorite": "USA",
+        "fav_name": "SUA",
+        "outcome": "correct"
+      },
+      "lambda": {
+        "home": 2.519,
+        "away": 0.902
+      },
+      "probs": {
+        "p1": 0.7236,
+        "px": 0.1615,
+        "p2": 0.1137,
+        "o15": 0.8543,
+        "o25": 0.6631,
+        "o35": 0.4451,
+        "btts": 0.5458,
+        "cs_h": 0.4051,
+        "cs_a": 0.0806,
+        "o05_r1": 0.7855,
+        "o15_r1": 0.4553
+      },
+      "ranking_score": 6.442,
+      "tier": "B",
+      "bet": {
+        "description": "BTTS + USA câștigă + Over 1.5 R1",
+        "probability": 0.1798
+      },
+      "commentary": {
+        "favorit": "SUA favorit clar — 72% victorie. Paraguay are 11% șanse reale; egalitate 16%. Un gol marcat devreme de outsider poate schimba dinamica.",
+        "golaveraj": "λ combinat 3.42 — golaveraj ridicat. Over 2.5: 66% · Over 3.5: 45%. Așteptăm 3+ goluri în scenariul de bază.",
+        "btts_cs": "BTTS moderat: 55%. Clean sheet SUA: 41% · clean sheet Paraguay: 8%. Outsider-ul poate marca dacă prinde o tranziție.",
+        "repriza_1": "Repriza 1 activă: 79% cel puțin un gol în prima repriză.",
+        "modificatori": "Condiții standard — niciun modificator contextual activ.",
+        "verdict": "TIER B — probabilitate 62-71%. Valoare bună; verifică accidentările cu 1h înainte.",
+        "surse": [
+          {
+            "name": "FBref xG Baseline",
+            "status": "active",
+            "detail": "xGF 1.71 / xGA 1.18 (SUA)"
+          },
+          {
+            "name": "FBref xG Baseline",
+            "status": "active",
+            "detail": "xGF 0.95 / xGA 1.58 (Paraguay)"
+          },
+          {
+            "name": "WorldCupAPI live",
+            "status": "attempted",
+            "detail": "Scoruri live — fallback la scheduled dacă API offline"
+          },
+          {
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
+          }
+        ],
+        "date_model": {
+          "lambda_home": 2.519,
+          "lambda_away": 0.902,
+          "lambda_total": 3.42,
+          "p_fav_pct": 72,
+          "o25_pct": 66,
+          "btts_pct": 55,
           "o05_r1_pct": 79
         }
       }
@@ -5284,19 +4890,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -5377,19 +4973,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -5470,19 +5056,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -5563,19 +5139,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -5656,19 +5222,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -5749,19 +5305,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -5842,19 +5388,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -5935,19 +5471,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -6028,19 +5554,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -6050,99 +5566,6 @@
           "p_fav_pct": 60,
           "o25_pct": 66,
           "btts_pct": 62,
-          "o05_r1_pct": 78
-        }
-      }
-    },
-    {
-      "id": "D3",
-      "home": "USA",
-      "home_name": "SUA",
-      "away": "AUS",
-      "away_name": "Australia",
-      "group": "D",
-      "matchday": 2,
-      "date": "2026-06-20",
-      "venue": "Los Angeles",
-      "status": "scheduled",
-      "score": {
-        "home": null,
-        "away": null
-      },
-      "prediction": {
-        "favorite": "USA",
-        "fav_name": "SUA",
-        "outcome": null
-      },
-      "lambda": {
-        "home": 2.348,
-        "away": 0.98
-      },
-      "probs": {
-        "p1": 0.6776,
-        "px": 0.18,
-        "p2": 0.1417,
-        "o15": 0.844,
-        "o25": 0.6454,
-        "o35": 0.425,
-        "btts": 0.5645,
-        "cs_h": 0.375,
-        "cs_a": 0.0956,
-        "o05_r1": 0.7763,
-        "o15_r1": 0.4413
-      },
-      "ranking_score": 6.284,
-      "tier": "B",
-      "bet": {
-        "description": "BTTS + USA câștigă + Over 1.5 R1",
-        "probability": 0.1688
-      },
-      "commentary": {
-        "favorit": "SUA favorit modest — 68% vs egalitate 18% vs Australia 14%. Meci deschis, probabilitățile sunt comprimate.",
-        "golaveraj": "λ combinat 3.33 — golaveraj ridicat. Over 2.5: 65% · Over 3.5: 42%. Așteptăm 3+ goluri în scenariul de bază.",
-        "btts_cs": "BTTS moderat: 56%. Clean sheet SUA: 38% · clean sheet Australia: 10%. Outsider-ul poate marca dacă prinde o tranziție.",
-        "repriza_1": "Repriza 1 activă: 78% cel puțin un gol în prima repriză.",
-        "modificatori": "Condiții standard — niciun modificator contextual activ.",
-        "verdict": "TIER B — probabilitate 62-71%. Valoare bună; verifică accidentările cu 1h înainte.",
-        "surse": [
-          {
-            "name": "FBref xG Baseline",
-            "status": "active",
-            "detail": "xGF 1.71 / xGA 1.18 (SUA)"
-          },
-          {
-            "name": "FBref xG Baseline",
-            "status": "active",
-            "detail": "xGF 0.98 / xGA 1.62 (Australia)"
-          },
-          {
-            "name": "WorldCupAPI live",
-            "status": "attempted",
-            "detail": "Scoruri live — fallback la scheduled dacă API offline"
-          },
-          {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
-          }
-        ],
-        "date_model": {
-          "lambda_home": 2.348,
-          "lambda_away": 0.98,
-          "lambda_total": 3.33,
-          "p_fav_pct": 68,
-          "o25_pct": 65,
-          "btts_pct": 56,
           "o05_r1_pct": 78
         }
       }
@@ -6214,19 +5637,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -6250,15 +5663,15 @@
       "matchday": 1,
       "date": "2026-06-14",
       "venue": "Boston",
-      "status": "scheduled",
+      "status": "finished",
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 1
       },
       "prediction": {
         "favorite": "SCO",
         "fav_name": "Scoția",
-        "outcome": null
+        "outcome": "correct"
       },
       "lambda": {
         "home": 0.553,
@@ -6307,19 +5720,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -6330,6 +5733,89 @@
           "o25_pct": 64,
           "btts_pct": 40,
           "o05_r1_pct": 77
+        }
+      }
+    },
+    {
+      "id": "D5",
+      "home": "USA",
+      "home_name": "SUA",
+      "away": "TUR",
+      "away_name": "Turcia",
+      "group": "D",
+      "matchday": 3,
+      "date": "2026-06-25",
+      "venue": "Seattle",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "prediction": {
+        "favorite": "USA",
+        "fav_name": "SUA",
+        "outcome": null
+      },
+      "lambda": {
+        "home": 1.977,
+        "away": 1.52
+      },
+      "probs": {
+        "p1": 0.4841,
+        "px": 0.2174,
+        "p2": 0.2983,
+        "o15": 0.8635,
+        "o25": 0.6783,
+        "o35": 0.4624,
+        "btts": 0.6729,
+        "cs_h": 0.2187,
+        "cs_a": 0.1385,
+        "o05_r1": 0.7927,
+        "o15_r1": 0.4665
+      },
+      "ranking_score": 6.202,
+      "tier": "B",
+      "bet": {
+        "description": "BTTS + USA câștigă + Over 1.5 R1",
+        "probability": 0.152
+      },
+      "commentary": {
+        "favorit": "Meci echilibrat: SUA 48% — egalitate 22% — Turcia 30%. Nicio echipă nu are avantaj statistic clar.",
+        "golaveraj": "λ combinat 3.5 — golaveraj ridicat. Over 2.5: 68% · Over 3.5: 46%. Așteptăm 3+ goluri în scenariul de bază.",
+        "btts_cs": "Ambele echipe marchează — BTTS: 67%. Ambele au offensive xG real și defensive vulnerabile.",
+        "repriza_1": "Repriza 1 activă: 79% cel puțin un gol în prima repriză.",
+        "modificatori": "Condiții standard — niciun modificator contextual activ.",
+        "verdict": "TIER B — probabilitate 62-71%. Valoare bună; verifică accidentările cu 1h înainte.",
+        "surse": [
+          {
+            "name": "FBref xG Baseline",
+            "status": "active",
+            "detail": "xGF 1.71 / xGA 1.18 (SUA)"
+          },
+          {
+            "name": "FBref xG Baseline",
+            "status": "active",
+            "detail": "xGF 1.52 / xGA 1.24 (Turcia)"
+          },
+          {
+            "name": "WorldCupAPI live",
+            "status": "attempted",
+            "detail": "Scoruri live — fallback la scheduled dacă API offline"
+          },
+          {
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
+          }
+        ],
+        "date_model": {
+          "lambda_home": 1.977,
+          "lambda_away": 1.52,
+          "lambda_total": 3.5,
+          "p_fav_pct": 48,
+          "o25_pct": 68,
+          "btts_pct": 67,
+          "o05_r1_pct": 79
         }
       }
     },
@@ -6400,19 +5886,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -6493,19 +5969,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -6529,15 +5995,15 @@
       "matchday": 1,
       "date": "2026-06-13",
       "venue": "Toronto",
-      "status": "scheduled",
+      "status": "finished",
       "score": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 1
       },
       "prediction": {
         "favorite": "CAN",
         "fav_name": "Canada",
-        "outcome": null
+        "outcome": "wrong"
       },
       "lambda": {
         "home": 2.022,
@@ -6586,19 +6052,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -6609,99 +6065,6 @@
           "o25_pct": 66,
           "btts_pct": 65,
           "o05_r1_pct": 78
-        }
-      }
-    },
-    {
-      "id": "D1",
-      "home": "USA",
-      "home_name": "SUA",
-      "away": "PAR",
-      "away_name": "Paraguay",
-      "group": "D",
-      "matchday": 1,
-      "date": "2026-06-13",
-      "venue": "Los Angeles",
-      "status": "scheduled",
-      "score": {
-        "home": null,
-        "away": null
-      },
-      "prediction": {
-        "favorite": "USA",
-        "fav_name": "SUA",
-        "outcome": null
-      },
-      "lambda": {
-        "home": 2.29,
-        "away": 0.95
-      },
-      "probs": {
-        "p1": 0.6741,
-        "px": 0.1836,
-        "p2": 0.1417,
-        "o15": 0.8333,
-        "o25": 0.6277,
-        "o35": 0.4057,
-        "btts": 0.5508,
-        "cs_h": 0.3865,
-        "cs_a": 0.1013,
-        "o05_r1": 0.7673,
-        "o15_r1": 0.428
-      },
-      "ranking_score": 6.151,
-      "tier": "B",
-      "bet": {
-        "description": "BTTS + USA câștigă + Over 1.5 R1",
-        "probability": 0.1589
-      },
-      "commentary": {
-        "favorit": "SUA favorit modest — 67% vs egalitate 18% vs Paraguay 14%. Meci deschis, probabilitățile sunt comprimate.",
-        "golaveraj": "λ combinat 3.24 — golaveraj ridicat. Over 2.5: 63% · Over 3.5: 41%. Așteptăm 3+ goluri în scenariul de bază.",
-        "btts_cs": "BTTS moderat: 55%. Clean sheet SUA: 39% · clean sheet Paraguay: 10%. Outsider-ul poate marca dacă prinde o tranziție.",
-        "repriza_1": "Repriza 1 activă: 77% cel puțin un gol în prima repriză.",
-        "modificatori": "Condiții standard — niciun modificator contextual activ.",
-        "verdict": "TIER B — probabilitate 62-71%. Valoare bună; verifică accidentările cu 1h înainte.",
-        "surse": [
-          {
-            "name": "FBref xG Baseline",
-            "status": "active",
-            "detail": "xGF 1.71 / xGA 1.18 (SUA)"
-          },
-          {
-            "name": "FBref xG Baseline",
-            "status": "active",
-            "detail": "xGF 0.95 / xGA 1.58 (Paraguay)"
-          },
-          {
-            "name": "WorldCupAPI live",
-            "status": "attempted",
-            "detail": "Scoruri live — fallback la scheduled dacă API offline"
-          },
-          {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
-          }
-        ],
-        "date_model": {
-          "lambda_home": 2.29,
-          "lambda_away": 0.95,
-          "lambda_total": 3.24,
-          "p_fav_pct": 67,
-          "o25_pct": 63,
-          "btts_pct": 55,
-          "o05_r1_pct": 77
         }
       }
     },
@@ -6772,19 +6135,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -6865,19 +6218,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -6958,19 +6301,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -7051,19 +6384,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -7144,19 +6467,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -7180,15 +6493,15 @@
       "matchday": 1,
       "date": "2026-06-13",
       "venue": "New York",
-      "status": "scheduled",
+      "status": "finished",
       "score": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 1
       },
       "prediction": {
         "favorite": "BRA",
         "fav_name": "Brazilia",
-        "outcome": null
+        "outcome": "wrong"
       },
       "lambda": {
         "home": 1.878,
@@ -7237,19 +6550,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -7273,15 +6576,15 @@
       "matchday": 1,
       "date": "2026-06-13",
       "venue": "Vancouver",
-      "status": "scheduled",
+      "status": "finished",
       "score": {
-        "home": null,
-        "away": null
+        "home": 2,
+        "away": 0
       },
       "prediction": {
         "favorite": "TUR",
         "fav_name": "Turcia",
-        "outcome": null
+        "outcome": "wrong"
       },
       "lambda": {
         "home": 1.03,
@@ -7330,19 +6633,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -7423,19 +6716,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -7446,99 +6729,6 @@
           "o25_pct": 60,
           "btts_pct": 56,
           "o05_r1_pct": 75
-        }
-      }
-    },
-    {
-      "id": "D5",
-      "home": "USA",
-      "home_name": "SUA",
-      "away": "TUR",
-      "away_name": "Turcia",
-      "group": "D",
-      "matchday": 3,
-      "date": "2026-06-25",
-      "venue": "Seattle",
-      "status": "scheduled",
-      "score": {
-        "home": null,
-        "away": null
-      },
-      "prediction": {
-        "favorite": "USA",
-        "fav_name": "SUA",
-        "outcome": null
-      },
-      "lambda": {
-        "home": 1.797,
-        "away": 1.52
-      },
-      "probs": {
-        "p1": 0.4442,
-        "px": 0.2274,
-        "p2": 0.3282,
-        "o15": 0.8433,
-        "o25": 0.6438,
-        "o35": 0.4233,
-        "btts": 0.6516,
-        "cs_h": 0.2187,
-        "cs_a": 0.1658,
-        "o05_r1": 0.7752,
-        "o15_r1": 0.4397
-      },
-      "ranking_score": 5.863,
-      "tier": "C",
-      "bet": {
-        "description": "Over 1.5 + USA câștigă",
-        "probability": 0.3746
-      },
-      "commentary": {
-        "favorit": "Meci echilibrat: SUA 44% — egalitate 23% — Turcia 33%. Nicio echipă nu are avantaj statistic clar.",
-        "golaveraj": "λ combinat 3.32 — golaveraj ridicat. Over 2.5: 64% · Over 3.5: 42%. Așteptăm 3+ goluri în scenariul de bază.",
-        "btts_cs": "Ambele echipe marchează — BTTS: 65%. Ambele au offensive xG real și defensive vulnerabile.",
-        "repriza_1": "Repriza 1 activă: 78% cel puțin un gol în prima repriză.",
-        "modificatori": "Condiții standard — niciun modificator contextual activ.",
-        "verdict": "TIER C — probabilitate 52-61%. Include doar în biletele speculative sau ca flex.",
-        "surse": [
-          {
-            "name": "FBref xG Baseline",
-            "status": "active",
-            "detail": "xGF 1.71 / xGA 1.18 (SUA)"
-          },
-          {
-            "name": "FBref xG Baseline",
-            "status": "active",
-            "detail": "xGF 1.52 / xGA 1.24 (Turcia)"
-          },
-          {
-            "name": "WorldCupAPI live",
-            "status": "attempted",
-            "detail": "Scoruri live — fallback la scheduled dacă API offline"
-          },
-          {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
-          }
-        ],
-        "date_model": {
-          "lambda_home": 1.797,
-          "lambda_away": 1.52,
-          "lambda_total": 3.32,
-          "p_fav_pct": 44,
-          "o25_pct": 64,
-          "btts_pct": 65,
-          "o05_r1_pct": 78
         }
       }
     },
@@ -7609,19 +6799,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -7702,19 +6882,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -7795,19 +6965,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -7888,19 +7048,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -7981,19 +7131,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -8074,19 +7214,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -8167,19 +7297,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -8203,15 +7323,15 @@
       "matchday": 1,
       "date": "2026-06-11",
       "venue": "Mexico City",
-      "status": "scheduled",
+      "status": "finished",
       "score": {
-        "home": null,
-        "away": null
+        "home": 2,
+        "away": 0
       },
       "prediction": {
         "favorite": "MEX",
         "fav_name": "Mexic",
-        "outcome": null
+        "outcome": "correct"
       },
       "lambda": {
         "home": 1.991,
@@ -8260,19 +7380,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -8353,19 +7463,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -8446,19 +7546,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -8539,19 +7629,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -8632,19 +7712,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -8655,99 +7725,6 @@
           "o25_pct": 54,
           "btts_pct": 57,
           "o05_r1_pct": 72
-        }
-      }
-    },
-    {
-      "id": "A6",
-      "home": "RSA",
-      "home_name": "Africa de Sud",
-      "away": "KOR",
-      "away_name": "Coreea de Sud",
-      "group": "A",
-      "matchday": 3,
-      "date": "2026-06-24",
-      "venue": "Guadalajara",
-      "status": "scheduled",
-      "score": {
-        "home": null,
-        "away": null
-      },
-      "prediction": {
-        "favorite": "KOR",
-        "fav_name": "Coreea de Sud",
-        "outcome": null
-      },
-      "lambda": {
-        "home": 0.807,
-        "away": 1.847
-      },
-      "probs": {
-        "p1": 0.1585,
-        "px": 0.2215,
-        "p2": 0.6199,
-        "o15": 0.7427,
-        "o25": 0.4949,
-        "o35": 0.2757,
-        "btts": 0.4664,
-        "cs_h": 0.1577,
-        "cs_a": 0.4461,
-        "o05_r1": 0.6971,
-        "o15_r1": 0.3353
-      },
-      "ranking_score": 5.131,
-      "tier": "C",
-      "bet": {
-        "description": "Over 1.5 + KOR câștigă",
-        "probability": 0.4604
-      },
-      "commentary": {
-        "favorit": "Coreea de Sud favorit modest — 62% vs egalitate 22% vs Africa de Sud 16%. Meci deschis, probabilitățile sunt comprimate.",
-        "golaveraj": "λ combinat 2.65 — golaveraj moderat. Over 2.5: 49% · Over 1.5: 74%. Meciul poate produce 2-3 goluri.",
-        "btts_cs": "BTTS moderat: 47%. Clean sheet Africa de Sud: 16% · clean sheet Coreea de Sud: 45%. Outsider-ul poate marca dacă prinde o tranziție.",
-        "repriza_1": "Repriza 1 activă: 70% cel puțin un gol în prima repriză.",
-        "modificatori": "⚠️ Altitudine moderată 1558m (Guadalajara) — efect mic aplicat în model.",
-        "verdict": "TIER C — probabilitate 52-61%. Include doar în biletele speculative sau ca flex.",
-        "surse": [
-          {
-            "name": "FBref xG Baseline",
-            "status": "active",
-            "detail": "xGF 0.87 / xGA 1.68 (Africa de Sud)"
-          },
-          {
-            "name": "FBref xG Baseline",
-            "status": "active",
-            "detail": "xGF 1.41 / xGA 1.19 (Coreea de Sud)"
-          },
-          {
-            "name": "WorldCupAPI live",
-            "status": "attempted",
-            "detail": "Scoruri live — fallback la scheduled dacă API offline"
-          },
-          {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
-          }
-        ],
-        "date_model": {
-          "lambda_home": 0.807,
-          "lambda_away": 1.847,
-          "lambda_total": 2.65,
-          "p_fav_pct": 62,
-          "o25_pct": 49,
-          "btts_pct": 47,
-          "o05_r1_pct": 70
         }
       }
     },
@@ -8818,19 +7795,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -8841,6 +7808,172 @@
           "o25_pct": 52,
           "btts_pct": 55,
           "o05_r1_pct": 71
+        }
+      }
+    },
+    {
+      "id": "D6",
+      "home": "PAR",
+      "home_name": "Paraguay",
+      "away": "AUS",
+      "away_name": "Australia",
+      "group": "D",
+      "matchday": 3,
+      "date": "2026-06-25",
+      "venue": "Kansas City",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "prediction": {
+        "favorite": "PAR",
+        "fav_name": "Paraguay",
+        "outcome": null
+      },
+      "lambda": {
+        "home": 1.565,
+        "away": 1.181
+      },
+      "probs": {
+        "p1": 0.4621,
+        "px": 0.2503,
+        "p2": 0.2875,
+        "o15": 0.7595,
+        "o25": 0.5175,
+        "o35": 0.296,
+        "btts": 0.5481,
+        "cs_h": 0.307,
+        "cs_a": 0.2091,
+        "o05_r1": 0.7094,
+        "o15_r1": 0.3502
+      },
+      "ranking_score": 5.025,
+      "tier": "C",
+      "bet": {
+        "description": "Over 1.5 + PAR câștigă",
+        "probability": 0.351
+      },
+      "commentary": {
+        "favorit": "Meci echilibrat: Paraguay 46% — egalitate 25% — Australia 29%. Nicio echipă nu are avantaj statistic clar.",
+        "golaveraj": "λ combinat 2.75 — golaveraj moderat. Over 2.5: 52% · Over 1.5: 76%. Meciul poate produce 2-3 goluri.",
+        "btts_cs": "BTTS moderat: 55%. Clean sheet Paraguay: 31% · clean sheet Australia: 21%. Outsider-ul poate marca dacă prinde o tranziție.",
+        "repriza_1": "Repriza 1 activă: 71% cel puțin un gol în prima repriză.",
+        "modificatori": "Condiții standard — niciun modificator contextual activ.",
+        "verdict": "TIER C — probabilitate 52-61%. Include doar în biletele speculative sau ca flex.",
+        "surse": [
+          {
+            "name": "FBref xG Baseline",
+            "status": "active",
+            "detail": "xGF 0.95 / xGA 1.58 (Paraguay)"
+          },
+          {
+            "name": "FBref xG Baseline",
+            "status": "active",
+            "detail": "xGF 0.98 / xGA 1.62 (Australia)"
+          },
+          {
+            "name": "WorldCupAPI live",
+            "status": "attempted",
+            "detail": "Scoruri live — fallback la scheduled dacă API offline"
+          },
+          {
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
+          }
+        ],
+        "date_model": {
+          "lambda_home": 1.565,
+          "lambda_away": 1.181,
+          "lambda_total": 2.75,
+          "p_fav_pct": 46,
+          "o25_pct": 52,
+          "btts_pct": 55,
+          "o05_r1_pct": 71
+        }
+      }
+    },
+    {
+      "id": "A6",
+      "home": "RSA",
+      "home_name": "Africa de Sud",
+      "away": "KOR",
+      "away_name": "Coreea de Sud",
+      "group": "A",
+      "matchday": 3,
+      "date": "2026-06-24",
+      "venue": "Guadalajara",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "prediction": {
+        "favorite": "KOR",
+        "fav_name": "Coreea de Sud",
+        "outcome": null
+      },
+      "lambda": {
+        "home": 0.969,
+        "away": 1.662
+      },
+      "probs": {
+        "p1": 0.2196,
+        "px": 0.2439,
+        "p2": 0.5364,
+        "o15": 0.7384,
+        "o25": 0.4892,
+        "o35": 0.2707,
+        "btts": 0.5027,
+        "cs_h": 0.1897,
+        "cs_a": 0.3796,
+        "o05_r1": 0.6939,
+        "o15_r1": 0.3315
+      },
+      "ranking_score": 4.974,
+      "tier": "D",
+      "bet": {
+        "description": "Over 1.5 + KOR câștigă",
+        "probability": 0.3961
+      },
+      "commentary": {
+        "favorit": "Meci echilibrat: Africa de Sud 22% — egalitate 24% — Coreea de Sud 54%. Nicio echipă nu are avantaj statistic clar.",
+        "golaveraj": "λ combinat 2.63 — golaveraj moderat. Over 2.5: 49% · Over 1.5: 74%. Meciul poate produce 2-3 goluri.",
+        "btts_cs": "BTTS moderat: 50%. Clean sheet Africa de Sud: 19% · clean sheet Coreea de Sud: 38%. Outsider-ul poate marca dacă prinde o tranziție.",
+        "repriza_1": "Repriza 1 activă: 69% cel puțin un gol în prima repriză.",
+        "modificatori": "⚠️ Altitudine moderată 1558m (Guadalajara) — efect mic aplicat în model.",
+        "verdict": "TIER D — sub 52%. Evită în biletele principale.",
+        "surse": [
+          {
+            "name": "FBref xG Baseline",
+            "status": "active",
+            "detail": "xGF 0.87 / xGA 1.68 (Africa de Sud)"
+          },
+          {
+            "name": "FBref xG Baseline",
+            "status": "active",
+            "detail": "xGF 1.41 / xGA 1.19 (Coreea de Sud)"
+          },
+          {
+            "name": "WorldCupAPI live",
+            "status": "attempted",
+            "detail": "Scoruri live — fallback la scheduled dacă API offline"
+          },
+          {
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
+          }
+        ],
+        "date_model": {
+          "lambda_home": 0.969,
+          "lambda_away": 1.662,
+          "lambda_total": 2.63,
+          "p_fav_pct": 54,
+          "o25_pct": 49,
+          "btts_pct": 50,
+          "o05_r1_pct": 69
         }
       }
     },
@@ -8911,19 +8044,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -8947,15 +8070,15 @@
       "matchday": 1,
       "date": "2026-06-12",
       "venue": "Guadalajara",
-      "status": "scheduled",
+      "status": "finished",
       "score": {
-        "home": null,
-        "away": null
+        "home": 2,
+        "away": 1
       },
       "prediction": {
         "favorite": "KOR",
         "fav_name": "Coreea de Sud",
-        "outcome": null
+        "outcome": "correct"
       },
       "lambda": {
         "home": 1.44,
@@ -9004,19 +8127,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -9097,19 +8210,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -9190,19 +8293,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -9213,99 +8306,6 @@
           "o25_pct": 45,
           "btts_pct": 48,
           "o05_r1_pct": 67
-        }
-      }
-    },
-    {
-      "id": "D6",
-      "home": "PAR",
-      "home_name": "Paraguay",
-      "away": "AUS",
-      "away_name": "Australia",
-      "group": "D",
-      "matchday": 3,
-      "date": "2026-06-25",
-      "venue": "Kansas City",
-      "status": "scheduled",
-      "score": {
-        "home": null,
-        "away": null
-      },
-      "prediction": {
-        "favorite": "AUS",
-        "fav_name": "Australia",
-        "outcome": null
-      },
-      "lambda": {
-        "home": 1.304,
-        "away": 1.312
-      },
-      "probs": {
-        "p1": 0.3667,
-        "px": 0.2629,
-        "p2": 0.3704,
-        "o15": 0.7358,
-        "o25": 0.4857,
-        "o35": 0.2676,
-        "btts": 0.5324,
-        "cs_h": 0.2692,
-        "cs_a": 0.2714,
-        "o05_r1": 0.6919,
-        "o15_r1": 0.3292
-      },
-      "ranking_score": 4.56,
-      "tier": "D",
-      "bet": {
-        "description": "Over 1.5 + AUS câștigă",
-        "probability": 0.2725
-      },
-      "commentary": {
-        "favorit": "Meci echilibrat: Paraguay 37% — egalitate 26% — Australia 37%. Nicio echipă nu are avantaj statistic clar.",
-        "golaveraj": "λ combinat 2.62 — golaveraj moderat. Over 2.5: 49% · Over 1.5: 74%. Meciul poate produce 2-3 goluri.",
-        "btts_cs": "BTTS moderat: 53%. Clean sheet Paraguay: 27% · clean sheet Australia: 27%. Outsider-ul poate marca dacă prinde o tranziție.",
-        "repriza_1": "Repriza 1 activă: 69% cel puțin un gol în prima repriză.",
-        "modificatori": "Condiții standard — niciun modificator contextual activ.",
-        "verdict": "TIER D — sub 52%. Evită în biletele principale.",
-        "surse": [
-          {
-            "name": "FBref xG Baseline",
-            "status": "active",
-            "detail": "xGF 0.95 / xGA 1.58 (Paraguay)"
-          },
-          {
-            "name": "FBref xG Baseline",
-            "status": "active",
-            "detail": "xGF 0.98 / xGA 1.62 (Australia)"
-          },
-          {
-            "name": "WorldCupAPI live",
-            "status": "attempted",
-            "detail": "Scoruri live — fallback la scheduled dacă API offline"
-          },
-          {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
-          }
-        ],
-        "date_model": {
-          "lambda_home": 1.304,
-          "lambda_away": 1.312,
-          "lambda_total": 2.62,
-          "p_fav_pct": 37,
-          "o25_pct": 49,
-          "btts_pct": 53,
-          "o05_r1_pct": 69
         }
       }
     },
@@ -9376,19 +8376,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
@@ -9469,19 +8459,9 @@
             "detail": "Scoruri live — fallback la scheduled dacă API offline"
           },
           {
-            "name": "RotoWire injuries",
-            "status": "planned",
-            "detail": "Accidentări T-24h — în development"
-          },
-          {
-            "name": "Betfair/Pinnacle odds",
-            "status": "planned",
-            "detail": "Mișcare cote — în development"
-          },
-          {
-            "name": "AccuWeather WBGT",
-            "status": "planned",
-            "detail": "Condiții climatice — în development"
+            "name": "API-Sports Statistics",
+            "status": "active",
+            "detail": "Statistici echipe din API-Sports"
           }
         ],
         "date_model": {
