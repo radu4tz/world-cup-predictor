@@ -122,29 +122,102 @@ TEAM_NAMES_RO = {
     "COD":"Congo DR","UZB":"Uzbekistan","CUR":"Curaçao","QAT":"Qatar",
 }
 
-# ─── FIXTURES (72 meciuri) — aceleași ca în original, nu le rescriu complet ──
-# (se păstrează lista originală, o includ doar pe scurt pentru context)
+# ─── PROGRAM MECIURI — toate 72 ──────────────────────────────────────────────
+
 FIXTURES = [
-    # ... (toate cele 72 de meciuri, identice cu cele din main.py original)
-    # Pentru concizie, nu le re-scriu aici, dar în codul final trebuie să fie prezente.
-    # Le voi include în fișierul final complet.
+    # ── GRUPA A ──────────────────────────────────────────────────────────────
+    {"id":"A1","home":"MEX","away":"RSA","group":"A","md":1,"date":"2026-06-11","venue":"Mexico City","alt":2240},
+    {"id":"A2","home":"KOR","away":"CZE","group":"A","md":1,"date":"2026-06-12","venue":"Guadalajara","alt":1558},
+    {"id":"A3","home":"MEX","away":"KOR","group":"A","md":2,"date":"2026-06-18","venue":"Guadalajara","alt":1558},
+    {"id":"A4","home":"RSA","away":"CZE","group":"A","md":2,"date":"2026-06-18","venue":"Atlanta","alt":320},
+    {"id":"A5","home":"MEX","away":"CZE","group":"A","md":3,"date":"2026-06-24","venue":"Mexico City","alt":2240},
+    {"id":"A6","home":"RSA","away":"KOR","group":"A","md":3,"date":"2026-06-24","venue":"Guadalajara","alt":1558},
+    # ── GRUPA B ──────────────────────────────────────────────────────────────
+    {"id":"B1","home":"CAN","away":"BIH","group":"B","md":1,"date":"2026-06-13","venue":"Toronto","alt":76},
+    {"id":"B2","home":"QAT","away":"SUI","group":"B","md":1,"date":"2026-06-13","venue":"San Francisco","alt":5},
+    {"id":"B3","home":"CAN","away":"QAT","group":"B","md":2,"date":"2026-06-19","venue":"Vancouver","alt":5},
+    {"id":"B4","home":"BIH","away":"SUI","group":"B","md":2,"date":"2026-06-19","venue":"Seattle","alt":5},
+    {"id":"B5","home":"CAN","away":"SUI","group":"B","md":3,"date":"2026-06-24","venue":"Vancouver","alt":5},
+    {"id":"B6","home":"BIH","away":"QAT","group":"B","md":3,"date":"2026-06-24","venue":"Toronto","alt":76},
+    # ── GRUPA C ──────────────────────────────────────────────────────────────
+    {"id":"C1","home":"BRA","away":"MAR","group":"C","md":1,"date":"2026-06-13","venue":"New York","alt":5},
+    {"id":"C2","home":"HAI","away":"SCO","group":"C","md":1,"date":"2026-06-14","venue":"Boston","alt":5},
+    {"id":"C3","home":"BRA","away":"SCO","group":"C","md":2,"date":"2026-06-20","venue":"Philadelphia","alt":12},
+    {"id":"C4","home":"HAI","away":"MAR","group":"C","md":2,"date":"2026-06-19","venue":"New York","alt":5},
+    {"id":"C5","home":"BRA","away":"HAI","group":"C","md":3,"date":"2026-06-24","venue":"Miami","alt":2},
+    {"id":"C6","home":"SCO","away":"MAR","group":"C","md":3,"date":"2026-06-24","venue":"Boston","alt":5},
+    # ── GRUPA D ──────────────────────────────────────────────────────────────
+    {"id":"D1","home":"USA","away":"PAR","group":"D","md":1,"date":"2026-06-13","venue":"Los Angeles","alt":86},
+    {"id":"D2","home":"AUS","away":"TUR","group":"D","md":1,"date":"2026-06-13","venue":"Vancouver","alt":5},
+    {"id":"D3","home":"USA","away":"AUS","group":"D","md":2,"date":"2026-06-20","venue":"Los Angeles","alt":86},
+    {"id":"D4","home":"PAR","away":"TUR","group":"D","md":2,"date":"2026-06-20","venue":"Dallas","alt":142},
+    {"id":"D5","home":"USA","away":"TUR","group":"D","md":3,"date":"2026-06-25","venue":"Seattle","alt":5},
+    {"id":"D6","home":"PAR","away":"AUS","group":"D","md":3,"date":"2026-06-25","venue":"Kansas City","alt":270},
+    # ── GRUPA E ──────────────────────────────────────────────────────────────
+    {"id":"E1","home":"GER","away":"CUR","group":"E","md":1,"date":"2026-06-14","venue":"Houston","alt":14},
+    {"id":"E2","home":"CIV","away":"ECU","group":"E","md":1,"date":"2026-06-14","venue":"Philadelphia","alt":12},
+    {"id":"E3","home":"GER","away":"CIV","group":"E","md":2,"date":"2026-06-20","venue":"Houston","alt":14},
+    {"id":"E4","home":"CUR","away":"ECU","group":"E","md":2,"date":"2026-06-19","venue":"Dallas","alt":142},
+    {"id":"E5","home":"GER","away":"ECU","group":"E","md":3,"date":"2026-06-25","venue":"Houston","alt":14},
+    {"id":"E6","home":"CIV","away":"CUR","group":"E","md":3,"date":"2026-06-25","venue":"Philadelphia","alt":12},
+    # ── GRUPA F ──────────────────────────────────────────────────────────────
+    {"id":"F1","home":"NED","away":"JPN","group":"F","md":1,"date":"2026-06-14","venue":"Los Angeles","alt":86},
+    {"id":"F2","home":"SWE","away":"TUN","group":"F","md":1,"date":"2026-06-14","venue":"Seattle","alt":5},
+    {"id":"F3","home":"NED","away":"SWE","group":"F","md":2,"date":"2026-06-22","venue":"Los Angeles","alt":86},
+    {"id":"F4","home":"JPN","away":"TUN","group":"F","md":2,"date":"2026-06-23","venue":"Dallas","alt":142},
+    {"id":"F5","home":"NED","away":"TUN","group":"F","md":3,"date":"2026-06-27","venue":"Los Angeles","alt":86},
+    {"id":"F6","home":"JPN","away":"SWE","group":"F","md":3,"date":"2026-06-27","venue":"Seattle","alt":5},
+    # ── GRUPA G ──────────────────────────────────────────────────────────────
+    {"id":"G1","home":"BEL","away":"EGY","group":"G","md":1,"date":"2026-06-15","venue":"Philadelphia","alt":12},
+    {"id":"G2","home":"IRN","away":"NZL","group":"G","md":1,"date":"2026-06-16","venue":"Seattle","alt":5},
+    {"id":"G3","home":"BEL","away":"IRN","group":"G","md":2,"date":"2026-06-21","venue":"Philadelphia","alt":12},
+    {"id":"G4","home":"EGY","away":"NZL","group":"G","md":2,"date":"2026-06-22","venue":"Boston","alt":5},
+    {"id":"G5","home":"BEL","away":"NZL","group":"G","md":3,"date":"2026-06-27","venue":"Philadelphia","alt":12},
+    {"id":"G6","home":"EGY","away":"IRN","group":"G","md":3,"date":"2026-06-27","venue":"Seattle","alt":5},
+    # ── GRUPA H ──────────────────────────────────────────────────────────────
+    {"id":"H1","home":"ESP","away":"CPV","group":"H","md":1,"date":"2026-06-15","venue":"Kansas City","alt":270},
+    {"id":"H2","home":"KSA","away":"URU","group":"H","md":1,"date":"2026-06-15","venue":"Miami","alt":2},
+    {"id":"H3","home":"ESP","away":"KSA","group":"H","md":2,"date":"2026-06-21","venue":"Kansas City","alt":270},
+    {"id":"H4","home":"CPV","away":"URU","group":"H","md":2,"date":"2026-06-21","venue":"Atlanta","alt":320},
+    {"id":"H5","home":"ESP","away":"URU","group":"H","md":3,"date":"2026-06-26","venue":"Miami","alt":2},
+    {"id":"H6","home":"CPV","away":"KSA","group":"H","md":3,"date":"2026-06-26","venue":"Kansas City","alt":270},
+    # ── GRUPA I ──────────────────────────────────────────────────────────────
+    {"id":"I1","home":"FRA","away":"SEN","group":"I","md":1,"date":"2026-06-16","venue":"Atlanta","alt":320},
+    {"id":"I2","home":"IRQ","away":"NOR","group":"I","md":1,"date":"2026-06-16","venue":"Boston","alt":5},
+    {"id":"I3","home":"FRA","away":"IRQ","group":"I","md":2,"date":"2026-06-22","venue":"Atlanta","alt":320},
+    {"id":"I4","home":"SEN","away":"NOR","group":"I","md":2,"date":"2026-06-22","venue":"Miami","alt":2},
+    {"id":"I5","home":"FRA","away":"NOR","group":"I","md":3,"date":"2026-06-26","venue":"Atlanta","alt":320},
+    {"id":"I6","home":"SEN","away":"IRQ","group":"I","md":3,"date":"2026-06-26","venue":"Boston","alt":5},
+    # ── GRUPA J ──────────────────────────────────────────────────────────────
+    {"id":"J1","home":"ARG","away":"ALG","group":"J","md":1,"date":"2026-06-16","venue":"Dallas","alt":142},
+    {"id":"J2","home":"AUT","away":"JOR","group":"J","md":1,"date":"2026-06-16","venue":"Miami","alt":2},
+    {"id":"J3","home":"ARG","away":"AUT","group":"J","md":2,"date":"2026-06-22","venue":"Dallas","alt":142},
+    {"id":"J4","home":"ALG","away":"JOR","group":"J","md":2,"date":"2026-06-22","venue":"Atlanta","alt":320},
+    {"id":"J5","home":"ARG","away":"JOR","group":"J","md":3,"date":"2026-06-27","venue":"Dallas","alt":142},
+    {"id":"J6","home":"ALG","away":"AUT","group":"J","md":3,"date":"2026-06-27","venue":"Miami","alt":2},
+    # ── GRUPA K ──────────────────────────────────────────────────────────────
+    {"id":"K1","home":"POR","away":"COD","group":"K","md":1,"date":"2026-06-17","venue":"Kansas City","alt":270},
+    {"id":"K2","home":"UZB","away":"COL","group":"K","md":1,"date":"2026-06-17","venue":"Los Angeles","alt":86},
+    {"id":"K3","home":"POR","away":"UZB","group":"K","md":2,"date":"2026-06-23","venue":"Kansas City","alt":270},
+    {"id":"K4","home":"COD","away":"COL","group":"K","md":2,"date":"2026-06-23","venue":"Los Angeles","alt":86},
+    {"id":"K5","home":"POR","away":"COL","group":"K","md":3,"date":"2026-06-27","venue":"New York","alt":5},
+    {"id":"K6","home":"COD","away":"UZB","group":"K","md":3,"date":"2026-06-27","venue":"San Francisco","alt":5},
+    # ── GRUPA L ──────────────────────────────────────────────────────────────
+    {"id":"L1","home":"ENG","away":"CRO","group":"L","md":1,"date":"2026-06-17","venue":"San Francisco","alt":5},
+    {"id":"L2","home":"GHA","away":"PAN","group":"L","md":1,"date":"2026-06-17","venue":"New York","alt":5},
+    {"id":"L3","home":"ENG","away":"GHA","group":"L","md":2,"date":"2026-06-23","venue":"San Francisco","alt":5},
+    {"id":"L4","home":"CRO","away":"PAN","group":"L","md":2,"date":"2026-06-23","venue":"Seattle","alt":5},
+    {"id":"L5","home":"ENG","away":"PAN","group":"L","md":3,"date":"2026-06-27","venue":"San Francisco","alt":5},
+    {"id":"L6","home":"GHA","away":"CRO","group":"L","md":3,"date":"2026-06-27","venue":"New York","alt":5},
 ]
 
 # ─── FUNCȚII API-Sports ────────────────────────────────────────────────────
 
 def fetch_team_statistics(team_name: str, league_id: int = 1, season: int = 2026) -> dict:
-    """
-    Interoghează API-Sports pentru statisticile echipei.
-    Returnează un dict cu medii de atac, posesie, etc.
-    Dacă eșuează, returnează dict gol.
-    """
+    """Interoghează API-Sports pentru statisticile echipei."""
     if not API_FOOTBALL_KEY or not REQUESTS_AVAILABLE:
         return {}
     try:
-        # Întâi căutăm ID-ul echipei după nume (sau cod)
-        # Pentru simplitate, folosim un mapping manual între codurile noastre și numele API.
-        # În realitate, am face un search după nume.
-        # Aici folosim un mapping static rapid pentru echipele principale.
         team_name_map = {
             "ARG": "Argentina", "FRA": "France", "BRA": "Brazil", "ENG": "England",
             "ESP": "Spain", "GER": "Germany", "NED": "Netherlands", "POR": "Portugal",
@@ -172,7 +245,6 @@ def fetch_team_statistics(team_name: str, league_id: int = 1, season: int = 2026
             return {}
         team_id = data["response"][0]["team"]["id"]
 
-        # Acum luăm statisticile echipei pentru sezonul curent
         stats_url = f"{API_BASE_URL}/teams/statistics"
         stats_params = {"team": team_id, "league": league_id, "season": season}
         stats_resp = requests.get(stats_url, headers=headers, params=stats_params, timeout=8)
@@ -182,8 +254,6 @@ def fetch_team_statistics(team_name: str, league_id: int = 1, season: int = 2026
         if not stats_data.get("response"):
             return {}
         stats = stats_data["response"]
-        # Extragem medii: goluri, posesie, cartonașe, etc.
-        # Structura poate varia; folosim ce găsim.
         result = {
             "avg_goals_scored": stats.get("goals", {}).get("for", {}).get("average", {}).get("total", 0.0),
             "avg_goals_conceded": stats.get("goals", {}).get("against", {}).get("average", {}).get("total", 0.0),
@@ -193,7 +263,6 @@ def fetch_team_statistics(team_name: str, league_id: int = 1, season: int = 2026
             "avg_yellow": stats.get("cards", {}).get("yellow", {}).get("average", 0.0),
             "avg_red": stats.get("cards", {}).get("red", {}).get("average", 0.0),
         }
-        # Conversie la float
         for k in result:
             try:
                 result[k] = float(result[k])
@@ -204,22 +273,17 @@ def fetch_team_statistics(team_name: str, league_id: int = 1, season: int = 2026
         return {}
 
 def enrich_team_data_from_api(teams_dict: dict) -> dict:
-    """
-    Îmbogățește datele echipelor cu statistici din API.
-    Pentru echipele unde API nu răspunde, păstrează datele statice.
-    """
+    """Îmbogățește datele echipelor cu statistici din API."""
     if not API_FOOTBALL_KEY:
         return teams_dict
     new_teams = teams_dict.copy()
     for code in list(new_teams.keys()):
         stats = fetch_team_statistics(code)
         if stats:
-            # Override xgf, xga cu cele din API dacă sunt disponibile
             if stats["avg_goals_scored"] > 0:
                 new_teams[code]["xgf"] = stats["avg_goals_scored"]
             if stats["avg_goals_conceded"] > 0:
                 new_teams[code]["xga"] = stats["avg_goals_conceded"]
-            # Adăugăm câmpuri suplimentare pentru modificatorul contextual
             new_teams[code]["possession"] = stats.get("avg_possession", 50.0)
             new_teams[code]["fouls"] = stats.get("avg_fouls", 0.0)
             new_teams[code]["cards"] = stats.get("avg_yellow", 0.0) + stats.get("avg_red", 0.0) * 3
@@ -232,20 +296,17 @@ def load_results_manual() -> dict:
     try:
         with open(RESULTS_FILE, "r", encoding="utf-8") as f:
             data = json.load(f)
-            # Elimină cheile care nu sunt ID-uri de meci
             return {k: v for k, v in data.items() if isinstance(v, dict) and "home_score" in v}
     except (FileNotFoundError, json.JSONDecodeError):
         return {}
 
 def get_team_gd(team_code: str, results: dict) -> float:
-    """
-    Calculează golaverajul total al echipei din meciurile jucate.
-    """
+    """Calculează golaverajul total al echipei din meciurile jucate."""
     gd = 0.0
     for fx in FIXTURES:
         if fx["home"] == team_code or fx["away"] == team_code:
             rid = fx["id"]
-            if rid in results and results[rid]["status"] == "finished":
+            if rid in results and results[rid].get("status") == "finished":
                 hs = results[rid]["home_score"]
                 as_ = results[rid]["away_score"]
                 if fx["home"] == team_code:
@@ -255,59 +316,47 @@ def get_team_gd(team_code: str, results: dict) -> float:
     return gd
 
 def aplica_modificator_contextual(echipa_ataca: str, echipa_apara: str, faza_competitie: int, results: dict) -> tuple[float, float]:
-    """
-    Ajustează lambda pentru atac și apărare pe baza golaverajului, necesităților de calificare.
-    Returnează (factor_atac, factor_aparare) - multiplicatori pentru lambda.
-    """
+    """Ajustează lambda pentru atac și apărare pe baza golaverajului, necesităților de calificare."""
     factor_atac = 1.0
     factor_aparare = 1.0
 
-    # 1. Golaveraj masiv pozitiv (ex: Germania 7-1)
     gd_atac = get_team_gd(echipa_ataca, results)
     gd_apara = get_team_gd(echipa_apara, results)
 
     if gd_atac >= 5:
-        factor_atac *= 1.25   # atacă mai agresiv
+        factor_atac *= 1.25
     elif gd_atac >= 3:
         factor_atac *= 1.10
 
     if gd_apara <= -5:
-        factor_aparare *= 0.85  # defensivă slabă, atacul adversarului crește
+        factor_aparare *= 0.85
     elif gd_apara <= -3:
         factor_aparare *= 0.95
 
-    # 2. Faza competiției (md)
     if faza_competitie == 3:
-        # Ultima rundă: verificăm necesitățile de calificare (simplificat)
-        # Folosim un scor aproximativ pentru a decide dacă echipa are nevoie de victorie.
-        # Aici am putea calcula punctele din grupa, dar pentru simplitate folosim golaverajul.
-        # Dacă echipa are golaveraj negativ, probabil are nevoie de victorie.
         if gd_atac < 0:
-            factor_atac *= 1.20   # atacă totul
-            factor_aparare *= 0.90 # riscă defensiv
+            factor_atac *= 1.20
+            factor_aparare *= 0.90
         elif gd_atac > 3:
-            factor_atac *= 0.90   # se mulțumește cu egal
-            factor_aparare *= 1.10 # se apără
+            factor_atac *= 0.90
+            factor_aparare *= 1.10
     elif faza_competitie == 2:
-        # Runda 2: echipele cu golaveraj mare pot gestiona
         if gd_atac >= 4:
             factor_atac *= 0.95
             factor_aparare *= 1.05
 
-    # 3. Cartonașe / intensitate (dacă avem date)
-    # Dacă avem câmpul "cards" în TEAMS, îl folosim
     if "cards" in TEAMS.get(echipa_ataca, {}):
         cards = TEAMS[echipa_ataca].get("cards", 0.0)
         if cards > 3.0:
-            factor_atac *= 0.95  # joc mai dur, mai puțin control
+            factor_atac *= 0.95
     if "cards" in TEAMS.get(echipa_apara, {}):
         cards = TEAMS[echipa_apara].get("cards", 0.0)
         if cards > 3.0:
-            factor_aparare *= 1.05  # adversarul poate profita de indisciplină
+            factor_aparare *= 1.05
 
     return factor_atac, factor_aparare
 
-# ─── MODEL POISSON (funcții existente) ────────────────────────────────────
+# ─── MODEL POISSON ──────────────────────────────────────────────────────────
 
 def poisson_pmf(lam: float, k: int) -> float:
     if lam <= 0:
@@ -493,9 +542,10 @@ def generate_commentary(fx: dict, probs: dict, lam_h: float, lam_a: float,
 # ─── FUNCȚIE PRINCIPALĂ ──────────────────────────────────────────────────────
 
 def run():
-    global TEAMS 
+    global TEAMS
     print(f"[{datetime.now(timezone.utc).isoformat()}] WC2026 Predictor pornit.")
-     # 1. Audit
+
+    # 1. Audit
     try:
         run_full_audit(TEAMS, FIXTURES)
     except DataIntegrityError as exc:
@@ -504,14 +554,14 @@ def run():
         print(str(exc), file=sys.stderr)
         sys.exit(1)
 
-    # 2. Încărcare rezultate manuale pentru modificatorul contextual
+    # 2. Încărcare rezultate manuale
     results = load_results_manual()
     print(f"  → Rezultate manuale încărcate: {len(results)} meciuri.")
 
-    # 3. Îmbogățire date echipe din API-Sports (dacă e disponibil)
+    # 3. Îmbogățire date echipe din API-Sports
     if API_FOOTBALL_KEY:
         print("  → Se încearcă îmbogățirea datelor echipelor din API-Sports...")
-        TEAMS = enrich_team_data_from_api(TEAMS)   # acum funcționează
+        TEAMS = enrich_team_data_from_api(TEAMS)
         print("  → Date îmbogățite.")
     else:
         print("  → API-Sports key lipsă, se folosesc date statice.")
@@ -523,22 +573,18 @@ def run():
         th = TEAMS[h]
         ta = TEAMS[a]
 
-        # Lambdele de bază
         lam_h = th["xgf"] * (ta["xga"] / GLOBAL_AVG_XGA)
         lam_a = ta["xgf"] * (th["xga"] / GLOBAL_AVG_XGA)
 
-        # Modificator altitudine
         if fx.get("alt", 0) >= ALT_THRESHOLD:
             lam_h *= ALT_FACTOR
             lam_a *= ALT_FACTOR
 
-        # Modificator contextual dinamic
         faza = fx.get("md", 1)
         factor_atac, factor_aparare = aplica_modificator_contextual(h, a, faza, results)
         lam_h *= factor_atac
         lam_a *= factor_aparare
 
-        # Probabilități
         probs = calc_probs(lam_h, lam_a)
         fav_strength = abs(probs["p1"] - probs["p2"])
         score = (probs["o25"] * 0.45 + probs["btts"] * 0.25
@@ -546,7 +592,6 @@ def run():
         tier = assign_tier(score)
         bet = build_bet(probs, tier, h, a)
 
-        # Scor live (din results_manual.json)
         rid = fx["id"]
         if rid in results and results[rid].get("status") == "finished":
             actual_h = results[rid]["home_score"]
@@ -600,7 +645,6 @@ def run():
             "commentary": commentary,
         })
 
-    # Sortare și bilete
     results_list.sort(key=lambda x: x["ranking_score"], reverse=True)
     top = [r for r in results_list if r["tier"] in ("S", "A", "B")][:15]
 
