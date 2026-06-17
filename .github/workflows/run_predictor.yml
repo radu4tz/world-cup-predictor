@@ -1,18 +1,55 @@
-- name: Commit and Push predictions
-  run: |
-    git config --global user.name "WC2026-Bot"
-    git config --global user.email "bot@wc2026-predictor.io"
-    
-    # 1. Aducem modificările remote înainte de orice schimbare locală
-    git pull --rebase origin main
-    
-    # 2. Adăugăm fișierul generat
-    git add backend/output/predictii_avansate.json
-    
-    # 3. Verificăm dacă există modificări în staging
-    if ! git diff --staged --quiet; then
-      git commit -m "Update predictions $(date -u +'%Y-%m-%d %H:%M UTC')"
-      git push origin main
-    else
-      echo "Nicio modificare de commit; skip."
-    fi
+name: WC2026 Predictor Auto Update
+
+on:
+  schedule:
+    - cron: '0 0,6,12,18 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  run-predictor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+          cache-dependency-path: 'backend/requirements.txt'
+
+      - name: Install dependencies
+        run: pip install -r backend/requirements.txt
+
+      - name: Run Predictor
+        env:
+          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+          OPENWEATHER_KEY: ${{ secrets.OPENWEATHER_KEY }}
+        run: python backend/main.py
+
+      - name: Commit and Push predictions
+        run: |
+          git config --global user.name "WC2026-Bot"
+          git config --global user.email "bot@wc2026-predictor.io"
+          
+          # 1. Aducem modificările remote înainte de orice schimbare locală
+          git pull --rebase origin main
+          
+          # 2. Adăugăm fișierul generat
+          git add backend/output/predictii_avansate.json
+          
+          # 3. Verificăm dacă există modificări în staging
+          if ! git diff --staged --quiet; then
+            git commit -m "Update predictions $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git push origin main
+          else
+            echo "Nicio modificare de commit; skip."
+          fi
