@@ -54,7 +54,6 @@ API_FOOTBALL_KEY = os.getenv("API_FOOTBALL_KEY")
 if not API_FOOTBALL_KEY:
     print("AVERTISMENT: API_FOOTBALL_KEY nu este setat. Se va folosi doar fallback static.", file=sys.stderr)
 API_BASE_URL = "https://v3.football.api-sports.io"
-
 # ─── DATE STATICE (fallback) ──────────────────────────────────────────────
 TEAMS = {
     "ARG": {"xgf":2.31,"xga":0.82,"form":7.9,"rank":1},
@@ -211,6 +210,77 @@ FIXTURES = [
     {"id":"L6","home":"GHA","away":"CRO","group":"L","md":3,"date":"2026-06-27","venue":"New York","alt":5},
 ]
 
+def fetch_team_statistics(team_code: str, league_id: int = 1, season: int = 2026) -> dict:
+    """
+    Interoghează API-Football pentru statisticile unei echipe.
+    Returnează dict cu medii de goluri, posesie, cartonașe etc.
+    Dacă eșuează, returnează dict gol.
+    """
+    if not API_FOOTBALL_KEY or not REQUESTS_AVAILABLE:
+        return {}
+
+    # hartă cod → nume engleză (API)
+    code_to_name = {
+        "ARG": "Argentina", "FRA": "France", "BRA": "Brazil", "ENG": "England",
+        "ESP": "Spain", "GER": "Germany", "NED": "Netherlands", "POR": "Portugal",
+        "BEL": "Belgium", "COL": "Colombia", "JPN": "Japan", "KOR": "Korea Republic",
+        "URU": "Uruguay", "SUI": "Switzerland", "NOR": "Norway", "SWE": "Sweden",
+        "MEX": "Mexico", "AUT": "Austria", "TUR": "Turkey", "SEN": "Senegal",
+        "MAR": "Morocco", "USA": "USA", "CRO": "Croatia", "EGY": "Egypt",
+        "CZE": "Czech Republic", "SCO": "Scotland", "CAN": "Canada", "ECU": "Ecuador",
+        "ALG": "Algeria", "BIH": "Bosnia-Herzegovina", "KSA": "Saudi Arabia",
+        "AUS": "Australia", "GHA": "Ghana", "PAR": "Paraguay", "CIV": "Côte d'Ivoire",
+        "IRN": "Iran", "RSA": "South Africa", "IRQ": "Iraq", "TUN": "Tunisia",
+        "CPV": "Cape Verde", "HAI": "Haiti", "JOR": "Jordan", "PAN": "Panama",
+        "NZL": "New Zealand", "COD": "DR Congo", "UZB": "Uzbekistan", "CUR": "Curaçao",
+        "QAT": "Qatar"
+    }
+
+    team_name = code_to_name.get(team_code)
+    if not team_name:
+        return {}
+
+    try:
+        # 1. Căutăm ID-ul echipei
+        url_search = f"{API_BASE_URL}/teams"
+        params = {"name": team_name}
+        headers = {"x-apisports-key": API_FOOTBALL_KEY}
+        resp = requests.get(url_search, headers=headers, params=params, timeout=8)
+        if resp.status_code != 200:
+            return {}
+        data = resp.json()
+        if not data.get("response"):
+            return {}
+        team_id = data["response"][0]["team"]["id"]
+
+        # 2. Luăm statisticile
+        url_stats = f"{API_BASE_URL}/teams/statistics"
+        params_stats = {"team": team_id, "league": league_id, "season": season}
+        resp_stats = requests.get(url_stats, headers=headers, params=params_stats, timeout=8)
+        if resp_stats.status_code != 200:
+            return {}
+        stats_data = resp_stats.json()
+        if not stats_data.get("response"):
+            return {}
+
+        stats = stats_data["response"]
+        result = {
+            "avg_goals_scored": stats.get("goals", {}).get("for", {}).get("average", {}).get("total", 0.0),
+            "avg_goals_conceded": stats.get("goals", {}).get("against", {}).get("average", {}).get("total", 0.0),
+            "avg_possession": stats.get("possession", 0.0),
+            "avg_shots": stats.get("shots", {}).get("total", {}).get("average", 0.0),
+            "avg_fouls": stats.get("fouls", {}).get("average", 0.0),
+            "avg_yellow": stats.get("cards", {}).get("yellow", {}).get("average", 0.0),
+            "avg_red": stats.get("cards", {}).get("red", {}).get("average", 0.0),
+        }
+        for k in result:
+            try:
+                result[k] = float(result[k])
+            except (TypeError, ValueError):
+                result[k] = 0.0
+        return result
+    except Exception:
+        return {}
 # ─── FUNCȚII API-Sports (pentru statistici echipe) ──────────────────────────
 
 def enrich_team_data_from_api(teams_dict: dict) -> dict:
@@ -593,11 +663,15 @@ def run():
         print(f"  → Calea căutată: {RESULTS_FILE}")
         print(f"  → Există fișierul? {os.path.exists(RESULTS_FILE)}")
         
-    # 3. Îmbogățire date echipe din API-Sports
+    # 3. Îmbogățire date echipe din API-Sports (cu try/except)
     if API_FOOTBALL_KEY:
         print("  → Se încearcă îmbogățirea datelor echipelor din API-Sports...")
-        TEAMS = enrich_team_data_from_api(TEAMS)
-        print("  → Date îmbogățite.")
+        try:
+            TEAMS = enrich_team_data_from_api(TEAMS)
+            print("  → Date îmbogățite cu succes.")
+        except Exception as e:
+            print(f"  ⚠️ Eroare la îmbogățirea datelor: {e}")
+            print("  → Se continuă cu datele statice existente.")
     else:
         print("  → API-Sports key lipsă, se folosesc date statice.")
 
