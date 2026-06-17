@@ -40,8 +40,8 @@ jobs:
           git config --global user.name "WC2026-Bot"
           git config --global user.email "bot@wc2026-predictor.io"
           
-          # 1. Aducem modificările remote înainte de orice schimbare locală
-          git pull --rebase origin main
+          # 1. Aducem modificările remote, salvând temporar modificările locale dacă există
+          git pull --rebase --autostash origin main
           
           # 2. Adăugăm fișierul generat
           git add backend/output/predictii_avansate.json
