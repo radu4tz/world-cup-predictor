@@ -241,7 +241,7 @@ function name(m, side) {
   return m[side+'_name'] || NAMES[m[side]] || m[side] || '?';
 }
 
-// ── COMMENTARY FALLBACK (generat din datele Poisson) ─────────────────────────
+// ── COMMENTARY FALLBACK (dacă lipsește) ──────────────────────────────────────
 function buildComm(m) {
   if (m.commentary && m.commentary.favorit) return m.commentary;
   if (!m.probs) return null;
@@ -374,19 +374,37 @@ function tc(id,btn){ const e=document.getElementById(id); e.classList.toggle('sh
 
 // ── RESULTS ───────────────────────────────────────────────────────────────────
 function renderResults() {
-  const played=ALL.filter(m=>m.status==='finished'&&m.score?.home!==null&&m.score?.home!==undefined);
-  const correct=played.filter(m=>m.prediction?.outcome==='correct').length;
-  const wrong=played.filter(m=>m.prediction?.outcome==='wrong').length;
-  const acc=played.length?Math.round(correct/played.length*100):0;
-  document.getElementById('r0').textContent=correct;
-  document.getElementById('r1').textContent=wrong;
-  document.getElementById('r2').textContent=acc+'%';
-  if (played.length){ const aw=document.getElementById('accW'); aw.style.display='flex'; document.getElementById('accF').style.width=acc+'%'; document.getElementById('accP').textContent=acc+'%'; }
-  if (!played.length) return;
-  document.getElementById('resArea').innerHTML=played.map(m=>{
-    const oc=m.prediction?.outcome;
-    const badge=oc==='correct'?'<span class="ob ok">✓ Corect</span>':oc==='wrong'?'<span class="ob ko">✗ Greșit</span>':'<span class="ob nd">Analizat</span>';
-    return '<div class="ri"><div class="ri-top"><span class="ri-m">'+name(m,'home')+' vs '+name(m,'away')+'</span><span class="ri-s" style="color:'+(oc==='correct'?'var(--green)':oc==='wrong'?'var(--red)':'var(--txt)')+'">'+m.score.home+' – '+m.score.away+'</span></div><div class="ri-d"><span>Gr.'+m.group+' · '+m.date+'</span><span>Favorit prezis: <strong>'+(m.prediction?.fav_name||'?')+'</strong></span><span>O2.5: '+Math.round((m.probs?.o25||0)*100)+'%</span>'+badge+'</div></div>';
+  // Folosește direct datele din ALL (care conțin scorurile și outcome)
+  const played = ALL.filter(m => m.status === 'finished' && m.score?.home !== null && m.score?.home !== undefined);
+  const correct = played.filter(m => m.prediction?.outcome === 'correct').length;
+  const wrong = played.filter(m => m.prediction?.outcome === 'wrong').length;
+  const total = played.length;
+  const acc = total ? Math.round((correct / total) * 100) : 0;
+
+  document.getElementById('r0').textContent = correct;
+  document.getElementById('r1').textContent = wrong;
+  document.getElementById('r2').textContent = acc + '%';
+
+  const aw = document.getElementById('accW');
+  if (total > 0) {
+    aw.style.display = 'flex';
+    document.getElementById('accF').style.width = acc + '%';
+    document.getElementById('accP').textContent = acc + '%';
+  } else {
+    aw.style.display = 'none';
+  }
+
+  if (!total) {
+    document.getElementById('resArea').innerHTML = '<p style="color:var(--txt2);font-size:13px">Niciun meci jucat încă sau scorurile nu sunt disponibile.</p>';
+    return;
+  }
+
+  document.getElementById('resArea').innerHTML = played.map(m => {
+    const oc = m.prediction?.outcome;
+    const badge = oc === 'correct' ? '<span class="ob ok">✓ Corect</span>' :
+                  oc === 'wrong' ? '<span class="ob ko">✗ Greșit</span>' :
+                  '<span class="ob nd">Analizat</span>';
+    return '<div class="ri"><div class="ri-top"><span class="ri-m">' + name(m,'home') + ' vs ' + name(m,'away') + '</span><span class="ri-s" style="color:' + (oc==='correct'?'var(--green)':oc==='wrong'?'var(--red)':'var(--txt)') + '">' + m.score.home + ' – ' + m.score.away + '</span></div><div class="ri-d"><span>Gr.' + m.group + ' · ' + m.date + '</span><span>Favorit prezis: <strong>' + (m.prediction?.fav_name || '?') + '</strong></span><span>O2.5: ' + Math.round((m.probs?.o25||0)*100) + '%</span>' + badge + '</div></div>';
   }).join('');
 }
 

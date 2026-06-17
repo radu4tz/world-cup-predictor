@@ -16,6 +16,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # pentru a avea istoric complet, necesar pentru rebase
 
       - name: Setup Python 3.11
         uses: actions/setup-python@v5
@@ -37,6 +39,17 @@ jobs:
         run: |
           git config --global user.name "WC2026-Bot"
           git config --global user.email "bot@wc2026-predictor.io"
+          
+          # Adăugăm fișierul generat
           git add backend/output/predictii_avansate.json
-          git diff --staged --quiet || git commit -m "Update predictions $(date -u +'%Y-%m-%d %H:%M UTC')"
-          git push
+          
+          # Verificăm dacă există modificări în staging
+          if ! git diff --staged --quiet; then
+            # Facem pull --rebase pentru a prelua eventualele modificări remote
+            git pull --rebase origin main
+            # Commit și push
+            git commit -m "Update predictions $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git push origin main
+          else
+            echo "Nicio modificare de commit; skip."
+          fi

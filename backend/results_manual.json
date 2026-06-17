@@ -1,7 +1,4 @@
 {
-  "_info": "Rezultate confirmate manual din FIFA.com, CBS Sports, Yahoo Sports.",
-  "_update": "Adauga scoruri dupa fiecare meci. ID-uri: A1=MEX-RSA, A2=KOR-CZE, B1=CAN-BIH, B2=QAT-SUI, C1=BRA-MAR, C2=HAI-SCO, D1=USA-PAR, D2=AUS-TUR etc.",
-
   "A1": {"home_score": 2, "away_score": 0, "status": "finished"},
   "A2": {"home_score": 2, "away_score": 1, "status": "finished"},
   "B1": {"home_score": 1, "away_score": 1, "status": "finished"},
