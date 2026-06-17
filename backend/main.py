@@ -557,6 +557,10 @@ def run():
     # 2. Încărcare rezultate manuale
     results = load_results_manual()
     print(f"  → Rezultate manuale încărcate: {len(results)} meciuri.")
+    if len(results) == 0:
+    print("  ⚠️  ATENȚIE: Nu s-au încărcat rezultate! Verifică calea fișierului.")
+    print(f"  → Calea căutată: {RESULTS_FILE}")
+    print(f"  → Există fișierul? {os.path.exists(RESULTS_FILE)}")
 
     # 3. Îmbogățire date echipe din API-Sports
     if API_FOOTBALL_KEY:
