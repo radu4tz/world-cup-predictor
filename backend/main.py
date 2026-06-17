@@ -213,63 +213,88 @@ FIXTURES = [
 
 # ─── FUNCȚII API-Sports ────────────────────────────────────────────────────
 
-def fetch_team_statistics(team_name: str, league_id: int = 1, season: int = 2026) -> dict:
-    """Interoghează API-Sports pentru statisticile echipei."""
+def fetch_live_fixtures_from_api(league_id: int = 1, season: int = 2026) -> dict:
+    """
+    Interoghează API-Football pentru toate meciurile din CM 2026.
+    Returnează dict cu ID-ul nostru (ex: "A1") -> scoruri și status.
+    """
     if not API_FOOTBALL_KEY or not REQUESTS_AVAILABLE:
         return {}
     try:
-        team_name_map = {
-            "ARG": "Argentina", "FRA": "France", "BRA": "Brazil", "ENG": "England",
-            "ESP": "Spain", "GER": "Germany", "NED": "Netherlands", "POR": "Portugal",
-            "BEL": "Belgium", "COL": "Colombia", "JPN": "Japan", "KOR": "South Korea",
-            "URU": "Uruguay", "SUI": "Switzerland", "NOR": "Norway", "SWE": "Sweden",
-            "MEX": "Mexico", "AUT": "Austria", "TUR": "Turkey", "SEN": "Senegal",
-            "MAR": "Morocco", "USA": "USA", "CRO": "Croatia", "EGY": "Egypt",
-            "CZE": "Czech Republic", "SCO": "Scotland", "CAN": "Canada", "ECU": "Ecuador",
-            "ALG": "Algeria", "BIH": "Bosnia-Herzegovina", "KSA": "Saudi Arabia",
-            "AUS": "Australia", "GHA": "Ghana", "PAR": "Paraguay", "CIV": "Ivory Coast",
-            "IRN": "Iran", "RSA": "South Africa", "IRQ": "Iraq", "TUN": "Tunisia",
-            "CPV": "Cape Verde", "HAI": "Haiti", "JOR": "Jordan", "PAN": "Panama",
-            "NZL": "New Zealand", "COD": "Congo DR", "UZB": "Uzbekistan", "CUR": "Curacao",
-            "QAT": "Qatar"
-        }
-        search_name = team_name_map.get(team_name, team_name)
-        url = f"{API_BASE_URL}/teams"
-        params = {"name": search_name}
+        url = f"{API_BASE_URL}/fixtures"
+        params = {"league": league_id, "season": season}
         headers = {"x-apisports-key": API_FOOTBALL_KEY}
-        resp = requests.get(url, headers=headers, params=params, timeout=8)
+        resp = requests.get(url, headers=headers, params=params, timeout=10)
         if resp.status_code != 200:
+            print(f"  ⚠️ API-Football a răspuns cu status {resp.status_code}")
             return {}
         data = resp.json()
         if not data.get("response"):
             return {}
-        team_id = data["response"][0]["team"]["id"]
 
-        stats_url = f"{API_BASE_URL}/teams/statistics"
-        stats_params = {"team": team_id, "league": league_id, "season": season}
-        stats_resp = requests.get(stats_url, headers=headers, params=stats_params, timeout=8)
-        if stats_resp.status_code != 200:
-            return {}
-        stats_data = stats_resp.json()
-        if not stats_data.get("response"):
-            return {}
-        stats = stats_data["response"]
-        result = {
-            "avg_goals_scored": stats.get("goals", {}).get("for", {}).get("average", {}).get("total", 0.0),
-            "avg_goals_conceded": stats.get("goals", {}).get("against", {}).get("average", {}).get("total", 0.0),
-            "avg_possession": stats.get("possession", 0.0),
-            "avg_shots": stats.get("shots", {}).get("total", {}).get("average", 0.0),
-            "avg_fouls": stats.get("fouls", {}).get("average", 0.0),
-            "avg_yellow": stats.get("cards", {}).get("yellow", {}).get("average", 0.0),
-            "avg_red": stats.get("cards", {}).get("red", {}).get("average", 0.0),
+        # HARTĂ: numele din API (engleză) → codul nostru (3 litere)
+        # Acoperă toate cele 48 de echipe
+        api_name_to_code = {
+            "Argentina": "ARG", "France": "FRA", "Brazil": "BRA", "England": "ENG",
+            "Spain": "ESP", "Germany": "GER", "Netherlands": "NED", "Portugal": "POR",
+            "Belgium": "BEL", "Colombia": "COL", "Japan": "JPN", "South Korea": "KOR",
+            "Korea Republic": "KOR", "Uruguay": "URU", "Switzerland": "SUI", "Norway": "NOR",
+            "Sweden": "SWE", "Mexico": "MEX", "Austria": "AUT", "Turkey": "TUR",
+            "Senegal": "SEN", "Morocco": "MAR", "USA": "USA", "United States": "USA",
+            "Croatia": "CRO", "Egypt": "EGY", "Czech Republic": "CZE", "Scotland": "SCO",
+            "Canada": "CAN", "Ecuador": "ECU", "Algeria": "ALG", "Bosnia-Herzegovina": "BIH",
+            "Saudi Arabia": "KSA", "Australia": "AUS", "Ghana": "GHA", "Paraguay": "PAR",
+            "Ivory Coast": "CIV", "Côte d'Ivoire": "CIV", "Iran": "IRN", "South Africa": "RSA",
+            "Iraq": "IRQ", "Tunisia": "TUN", "Cape Verde": "CPV", "Haiti": "HAI",
+            "Jordan": "JOR", "Panama": "PAN", "New Zealand": "NZL", "Congo DR": "COD",
+            "DR Congo": "COD", "Uzbekistan": "UZB", "Curacao": "CUR", "Curaçao": "CUR",
+            "Qatar": "QAT"
         }
-        for k in result:
-            try:
-                result[k] = float(result[k])
-            except (TypeError, ValueError):
-                result[k] = 0.0
+
+        result = {}
+        for m in data["response"]:
+            home_api = m.get("teams", {}).get("home", {}).get("name")
+            away_api = m.get("teams", {}).get("away", {}).get("name")
+
+            home_code = api_name_to_code.get(home_api)
+            away_code = api_name_to_code.get(away_api)
+
+            if home_code is None or away_code is None:
+                # Încercare fallback: caută în FIXTURES după numele API
+                # (pentru cazuri rare, dar mai bine să le adăugăm în hartă)
+                continue
+
+            # Găsim meciul nostru după codurile de 3 litere
+            our_fixture = None
+            for fx in FIXTURES:
+                if fx["home"] == home_code and fx["away"] == away_code:
+                    our_fixture = fx
+                    break
+
+            if not our_fixture:
+                continue
+
+            our_id = our_fixture["id"]
+            goals = m.get("goals", {})
+            status_short = m.get("fixture", {}).get("status", {}).get("short", "NS")
+
+            if status_short in ("FT", "AET", "PEN"):
+                status_str = "finished"
+            elif status_short in ("LIVE", "HT", "1H", "2H"):
+                status_str = "live"
+            else:
+                status_str = "scheduled"
+
+            result[our_id] = {
+                "home_score": goals.get("home"),
+                "away_score": goals.get("away"),
+                "status": status_str,
+            }
+
         return result
-    except Exception:
+
+    except Exception as e:
+        print(f"  ⚠️ Eroare la preluarea fixture-urilor din API: {e}")
         return {}
 
 def enrich_team_data_from_api(teams_dict: dict) -> dict:
@@ -288,7 +313,63 @@ def enrich_team_data_from_api(teams_dict: dict) -> dict:
             new_teams[code]["fouls"] = stats.get("avg_fouls", 0.0)
             new_teams[code]["cards"] = stats.get("avg_yellow", 0.0) + stats.get("avg_red", 0.0) * 3
     return new_teams
-
+    
+def fetch_live_fixtures_from_api(league_id: int = 1, season: int = 2026) -> dict:
+    """
+    Interoghează API-Football pentru toate meciurile din CM 2026.
+    Returnează un dict cu fixture_id -> {home_score, away_score, status}.
+    Dacă API-ul nu răspunde, returnează dict gol.
+    """
+    if not API_FOOTBALL_KEY or not REQUESTS_AVAILABLE:
+        return {}
+    try:
+        url = f"{API_BASE_URL}/fixtures"
+        params = {
+            "league": league_id,
+            "season": season,
+        }
+        headers = {"x-apisports-key": API_FOOTBALL_KEY}
+        resp = requests.get(url, headers=headers, params=params, timeout=10)
+        if resp.status_code != 200:
+            print(f"  ⚠️ API-Football a răspuns cu status {resp.status_code}")
+            return {}
+        data = resp.json()
+        if not data.get("response"):
+            return {}
+        result = {}
+        for m in data["response"]:
+            fixture = m.get("fixture", {})
+            fixture_id = fixture.get("id")
+            # Mapează ID-ul numeric la ID-ul nostru (A1, B2, etc.)
+            # Vom face mapping invers: în FIXTURES avem deja id-urile noastre.
+            # Dar API-ul returnează un ID numeric. Trebuie să găsim meciul după echipe și dată.
+            # O soluție simplă: căutăm în FIXTURES după numele echipelor.
+            home_team = m.get("teams", {}).get("home", {}).get("name")
+            away_team = m.get("teams", {}).get("away", {}).get("name")
+            # Găsim fixture-ul nostru
+            for fx in FIXTURES:
+                if TEAM_NAMES_RO.get(fx["home"]) == home_team and TEAM_NAMES_RO.get(fx["away"]) == away_team:
+                    our_id = fx["id"]
+                    goals = m.get("goals", {})
+                    status = m.get("fixture", {}).get("status", {}).get("short", "NS")
+                    # status: "FT" = finished, "LIVE" = in desfășurare, "NS" = not started, "HT" = half-time, etc.
+                    if status in ("FT", "AET", "PEN"):
+                        status_str = "finished"
+                    elif status in ("LIVE", "HT", "1H", "2H"):
+                        status_str = "live"
+                    else:
+                        status_str = "scheduled"
+                    result[our_id] = {
+                        "home_score": goals.get("home"),
+                        "away_score": goals.get("away"),
+                        "status": status_str,
+                    }
+                    break
+        return result
+    except Exception as e:
+        print(f"  ⚠️ Eroare la preluarea fixture-urilor din API: {e}")
+        return {}
+        
 # ─── MODIFICATOR CONTEXTUAL DINAMIC ───────────────────────────────────────
 
 def load_results_manual() -> dict:
@@ -555,8 +636,12 @@ def run():
         sys.exit(1)
 
     # 2. Încărcare rezultate manuale
-    results = load_results_manual()
-    print(f"  → Rezultate manuale încărcate: {len(results)} meciuri.")
+    results = fetch_live_fixtures_from_api()
+    print(f"  → Rezultate live încărcate din API: {len(results)} meciuri.")
+    if not results:
+        print("  ⚠️ API-Football nu a returnat date. Se folosește fallback manual.")
+        results = load_results_manual()
+        print(f"  → Fallback manual: {len(results)} meciuri.")
     if len(results) == 0:
         print("  ⚠️  ATENȚIE: Nu s-au încărcat rezultate! Verifică calea fișierului.")
         print(f"  → Calea căutată: {RESULTS_FILE}")
