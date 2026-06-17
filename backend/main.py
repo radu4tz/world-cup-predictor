@@ -493,8 +493,9 @@ def generate_commentary(fx: dict, probs: dict, lam_h: float, lam_a: float,
 # ─── FUNCȚIE PRINCIPALĂ ──────────────────────────────────────────────────────
 
 def run():
+    global TEAMS 
     print(f"[{datetime.now(timezone.utc).isoformat()}] WC2026 Predictor pornit.")
-    # 1. Audit
+     # 1. Audit
     try:
         run_full_audit(TEAMS, FIXTURES)
     except DataIntegrityError as exc:
@@ -508,10 +509,9 @@ def run():
     print(f"  → Rezultate manuale încărcate: {len(results)} meciuri.")
 
     # 3. Îmbogățire date echipe din API-Sports (dacă e disponibil)
-    global TEAMS
     if API_FOOTBALL_KEY:
         print("  → Se încearcă îmbogățirea datelor echipelor din API-Sports...")
-        TEAMS = enrich_team_data_from_api(TEAMS)
+        TEAMS = enrich_team_data_from_api(TEAMS)   # acum funcționează
         print("  → Date îmbogățite.")
     else:
         print("  → API-Sports key lipsă, se folosesc date statice.")
